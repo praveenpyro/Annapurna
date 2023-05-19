@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Household flow</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/typography.css" />
+    <link rel="stylesheet" type="text/css" href="household.css" />
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</head>
+
+<body>
+    <main class="main-wrap">
+        <header class="header">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="hamburger-wrap">
+                        <a href="javascript:void(0)" class="open-sidebar"><img src="../assets/images/Hamburger.svg"
+                                alt="Hamburger Icon" /></a>
+                    </div>
+                    <div class="brand">
+                        <a href="../dashboard.html"><img src="../assets/images/Annapurna-small-logo.svg"
+                                alt="Annapurna Logo" /></a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="right-inner">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" class="open-info">
+                                    <img src="../assets/images/info-ic.svg" alt="Info Icon" />
+                                </a>
+                                <ul class="info-dropdown">
+                                    <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                    <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                    <li><a href="../help/faq.html">FAQs</a></li>
+                                    <li><a href="../help/video.html">Videos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../notification/notification.html"><img src="../assets/images/notification-icon.svg" alt="Notification Icon" /></a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="profile-wrap">
+                        <a href="javascript:void(0)" class="user-wrap">
+                            <img src="../assets/images/profile-ic.svg" class="mr-10" alt="Profile Icon" />
+                            <span>Vivek Sharma</span>
+                            <img src="../assets/images/arrow-down.svg" alt="Arrow Down Icon" />
+                        </a>
+                        <ul class="user-info-dropdown">
+                            <li><a href="../change-password.html">Change Password</a></li>
+                            <li><a data-toggle="modal" data-target="#logOutDialog">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <div class="user-info">
+                <figure>
+                    <img src="../assets/images/user-pic.png" alt="User Pic" />
+                </figure>
+                <div class="info-user">
+                    <h4 class="name">Vivek Sharma</h4>
+                    <p class="designation">Field Credit Officer</p>
+                </div>
+                <a href="javascript:void(0)" class="close-sidebar"><img src="../assets/images/close-sidebar.svg"
+                        alt="Close Sidebar" /></a>
+            </div>
+            <div class="navigation-logout-wrap">
+                <div class="navigation-wrap">
+                    <ul>
+                        <li>
+                            <a href="../new-application/search-client.html">
+                                <figure><img src="../assets/images/new-application-ic.svg" alt="New Application Icon" />
+                                </figure><span>New Application</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../laf-status/search-client.html">
+                                <figure><img src="../assets/images/laf-status-ic.svg" alt="LAF Status Icon" /></figure>
+                                <span>LAF Status</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../luc-check/search-client.html">
+                                <figure><img src="../assets/images/luc-check-ic.svg" alt="LUC Check Icon" /></figure>
+                                <span>LUC Check</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../village/get-location.html">
+                                <figure><img src="../assets/images/village-addition-ic.svg"
+                                        alt="Village Addition Icon" /></figure><span>Village Addition</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../cb-deviation/cb-deviation.html">
+                                <figure><img src="../assets/images/cb-approval-ic.svg"
+                                        alt="CB Rejection Data Icon" /></figure><span>CB Rejection Data</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../fee-and-charges/list.html">
+                                <figure><img src="../assets/images/fees-and-charges-ic.svg"
+                                        alt="Fees and Charges Icon" /></figure><span>Fees and Charges</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../notification/notification.html"><figure><img src="../assets/images/ic-notification.svg" alt="Notification Icon" /></figure><span>Notification</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="parent-menu"><figure><img src="../assets/images/help-ic.svg" alt="Help Icon"/></figure><span>Help</span></a>
+                            <ul class="sub-menu">
+                                <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                <li><a href="../help/faq.html">FAQs</a></li>
+                                <li><a href="../help/video.html">Videos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../change-password.html">
+                                <figure><img src="../assets/images/change-password-ic.svg" alt="Change Password Icon" />
+                                </figure><span>Change Password</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logout-wrap">
+                    <a data-toggle="modal" data-target="#logOutDialog"  class="logout">Logout</a>
+                </div>
+                <p class="version">Version 1.0.0</p>
+            </div>
+        </aside>
+        <div class="breadcrumb-cover">
+            <ul class="breadcrumb-wrap">
+                <li><a href="../dashboard.html">Home</a></li>
+                <li><a href="household.html">Household Cashflow Details</a></li>
+                <li>HH Monthly income</li>
+            </ul>
+        </div>
+        <div class="household-page pb-40">
+            <div class="center-bg-white medium">
+                <div class="custom-tabs">
+                    <button class="tablinks active" data-tag="monthlyIncome">
+                        HH Monthly Income </button>
+                    <button class="tablinks" data-tag="expenses">
+                        HH Expenses </button>
+                    <button class="tablinks" data-tag="liability">
+                        HH Liability
+                    </button>
+                    <button class="tablinks" data-tag="loanEligibility">
+                        Loan Eligibility
+                    </button>
+                </div>
+                <div id="monthlyIncome" class="tabcontent">
+                    <div class="accordian mt-20 mt-xs-10">
+                        <div class="accordian-heading active">
+                            <h3 class="bold">Applicant</h3>
+                            <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image" />
+                        </div>
+                        <div class="accordian-content">
+                            <div class="append-container">
+                                <div class="row mt-10">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Name</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Relationship</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="Husband" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Type of source</label>
+                                        <div class="form-group">
+                                            <select name="selectName" id="applicantSelect" class="form-control" aria-placeholder="Select">
+                                                <option value="Business">Business</option>
+                                                <option value="Agriculture">Agriculture</option>
+                                                <option value="Agri-Allied">Agri-Allied</option>
+                                                <option value="Dairy">Dairy</option>
+                                                <option value="Service (Salaried)">Service (Salaried)</option>
+                                                <option value="Daily Wages">Daily Wages</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Avg. Daily Transaction</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">No. of Days in a Month</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter Days" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Monthly Gross Sale</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Raw Materials Consume (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Rent For Shop (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Labour/Wages (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Electricity (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Conveyance-Fuel & Maintenance (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Other Manufacturing (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Admin and Operating Expenses (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Total Business Expenses (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Avg. Daily Expenditure</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Avg. Net Profit Daily</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select name="selectName" id="selectId" class="form-control"
+                                                aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Net Business Income Monthly</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Net Business Income Monthly (Margin %)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-agriculture hide">
+                                        <label class="form-label">Monthly Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-agriculture hide">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-agriculture hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Avg. Daily Transaction</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Avg. Daily Expenditure</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Avg. Net Profit Daily</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" disabled/>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">No. of Days in a Month</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Monthly Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Name of the Animal</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Total milking animal</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" class="form-control" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Total Avg. milk production per day (in Ltr.)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Marketable surplus per day (In Ltr.)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" class="form-control" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Rate at which milk is sold</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Total Income monthly</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" disabled/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Total Expenditure monthly (Feeder & Medicine)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" 
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Value Added product</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Total Income (For Value Added
+                                            Product)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" 
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Net Dairy Income Monthly</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-service-Salaried hide">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-service-Salaried hide">
+                                        <label class="form-label">Monthly Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0"  class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-service-Salaried hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-daily-wages hide">
+                                        <label class="form-label">Avg. Daily Wages</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-daily-wages hide">
+                                        <label class="form-label">No. of Days in a Month</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-daily-wages hide">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-daily-wages hide">
+                                        <label class="form-label">Monthly Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-daily-wages hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Activity Name</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Avg. Daily Transaction</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Avg. Daily Expenditure</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Avg. Net Profit Daily</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">No. of Days in a Month</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Monthly Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 col-sm-12">
+                                        </div>
+                                        <div class="col-6 col-sm-12">
+                                            <button class="btn underline w-100 add-more-income">Add More Income +</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordian-heading active">
+                            <h3 class="bold">Earning Member 2</h3>
+                            <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image" />
+                        </div>
+                        <div class="accordian-content">
+                            <div class="append-container-second">
+                                <div class="row mt-10">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Name</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Relationship</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="Husband" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Type of source</label>
+                                        <div class="form-group">
+                                            <select name="selectName" id="earningMemberSelect" class="form-control"
+                                                aria-placeholder="Select">
+                                                <option value="Business">Business</option>
+                                                <option value="Agriculture">Agriculture</option>
+                                                <option value="Agri-Allied">Agri-Allied</option>
+                                                <option value="Dairy">Dairy</option>
+                                                <option value="Service (Salaried)">Service (Salaried)</option>
+                                                <option value="Daily Wages">Daily Wages</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Avg. Daily Transaction</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">No. of Days in a Month</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter Days" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Monthly Gross Sale</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Raw Materials Consume (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Rent For Shop (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Labour/Wages (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Electricity (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Conveyance-Fuel & Maintenance (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Other Manufacturing (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Admin and Operating Expenses (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Total Business Expenses (Monthly)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Avg. Daily Expenditure</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Avg. Net Profit Daily</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control"
+                                                aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Net Business Income Monthly</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Net Business Income Monthly (Margin %)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-business">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-agriculture hide">
+                                        <label class="form-label">Monthly Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-agriculture hide">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-agriculture hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Avg. Daily Transaction</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Avg. Daily Expenditure</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Avg. Net Profit Daily</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" disabled/>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">No. of Days in a Month</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Monthly Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 agri-allied hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Name of the Animal</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Total milking animal</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" class="form-control" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Total Avg. milk production per day (in Ltr.)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Marketable surplus per day (In Ltr.)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" class="form-control" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Rate at which milk is sold</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Total Income monthly</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" disabled/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Total Expenditure monthly (Feeder & Medicine)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" 
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Value Added product</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Total Income (For Value Added
+                                            Product)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0"
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Net Dairy Income Monthly</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-dairy hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-service-Salaried hide">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-service-Salaried hide">
+                                        <label class="form-label">Monthly Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0"  class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-service-Salaried hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-daily-wages hide">
+                                        <label class="form-label">Avg. Daily Wages</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-daily-wages hide">
+                                        <label class="form-label">No. of Days in a Month</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-daily-wages hide">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-daily-wages hide">
+                                        <label class="form-label">Monthly Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-daily-wages hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Activity Name</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Avg. Daily Transaction</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Avg. Daily Expenditure</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Avg. Net Profit Daily</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">No. of Days in a Month</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="0" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Monthly Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Income frequency</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Select">Select</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12 for-others hide">
+                                        <label class="form-label">Annual Income</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 col-sm-12">
+                                        </div>
+                                        <div class="col-6 col-sm-12">
+                                            <button class="btn underline w-100 add-earning-member">Add More Income +</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-350 mb-20" disabled>Save & Next</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="expenses" class="tabcontent hide">
+                    <div class="regular-expenses">
+                        <div class="heading-strip mt-20 mb-20 mt-xs-10 mb-xs-10">
+                            <h4 class="bold">Regular Expenses (Monthly)</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Accommodation/Rent</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon active" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon"/>
+                                        <img src="./../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon"/>
+                                        <img src="./../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Food and Cooking Fuel</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon"/>
+                                        <img src="./../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon"/>
+                                        <img src="./../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Clothes</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon"/>
+                                        <img src="./../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon"/>
+                                        <img src="./../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Regular Education Expenses</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon"/>
+                                        <img src="./../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon"/>
+                                        <img src="./../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Electricity/Phone/Data/Cable</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon"/>
+                                        <img src="./../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon"/>
+                                        <img src="./../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Regular Medical Costs</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon"/>
+                                        <img src="./../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon"/>
+                                        <img src="./../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Transport</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon"/>
+                                        <img src="./../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon"/>
+                                        <img src="./../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Entertainment/Social Obligations</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon"/>
+                                        <img src="./../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon"/>
+                                        <img src="./../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Savings</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon"/>
+                                        <img src="./../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon"/>
+                                        <img src="./../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Others</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon"/>
+                                        <img src="./../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon"/>
+                                        <img src="./../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Total Regular Expense (Monthly)</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-350">Save & Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="irregular-expenses hide">
+                        <div class="heading-strip mt-20 mb-20 mt-xs-10 mb-xs-10">
+                            <h4 class="bold">Irregular Expenses (Annually)</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Medical/Health</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon active" data-toggle="modal" data-target="#addRemarkDialog">
+                                        <img src="../assets/images/chat-gray-icon.svg" alt="search" class="chat-gray-icon">
+                                        <img src="../assets/images/chat-border-icon.svg" alt="search" class="chat-border-icon">
+                                        <img src="../assets/images/chat-fill-icon.svg" alt="search" class="chat-fill-icon">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">House Renovation</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Purchase of household goods</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Functions</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Education</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Others</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="0" class="form-control" />
+                                    <a class="chat-icon">
+                                        <img src="./../assets/images/chat-gray-icon.svg" alt="search" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Total Irregular Expense (Monthly)</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Total Irregular Expense (Annually)</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="-" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-350">Save & Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="liability" class="tabcontent hide">
+                    <div class="hh-liability">
+                        <div class="white-card mt-10">
+                            <div class="row detail-wrapper">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Member Name</label>
+                                    <p>Sandeep Sharma</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Institution Type</label>
+                                    <p>Own</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Institution Name</label>
+                                    <p>Name of institution</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Loan Account No.</label>
+                                    <p>12387766553</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Outstanding Balance</label>
+                                    <p>20,000</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>EMI</label>
+                                    <p>3000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Foreclosure</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="No">No</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Account Status</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="Active">Active</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Balance Transfer (BT)</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="No">No</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-strip mt-20 mb-20 mt-xs-10 mb-xs-10">
+                            <h4 class="bold">Member Two</h4>
+                        </div>
+                        <div class="white-card">
+                            <div class="row detail-wrapper">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Member Name</label>
+                                    <p>Rakesh Sharma</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Institution Type</label>
+                                    <p>Own</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Institution Name</label>
+                                    <p>Name of institution</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Loan Account No.</label>
+                                    <p>12387766553</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Outstanding Balance</label>
+                                    <p>20,000</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>EMI</label>
+                                    <p>3000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Foreclosure</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="No">No</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Account Status</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="Active">Active</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Balance Transfer (BT)</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="No">No</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Light-gray">
+                            <div class="row detail-wrapper">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Total Household Liability</label>
+                                    <p>20,000</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Own Liability</label>
+                                    <p>2000</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Other Household Liability</label>
+                                    <p>1000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <a class="btn mt-20 w-100 member-add">
+                                    <img src="../assets/images/plus-circle.svg" alt="Plus Icon"/> <span>Add</span>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <button type="button" class="btn btn-primary mt-20 w-100">
+                                    Next </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-member hide">
+                        <div class="row mt-20">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Member Name</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="Select">Select</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Institution Type</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="Select">Select</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Institution Name</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Loan Account No.</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Outstanding Balance</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">EMI</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Foreclosure</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="No">No</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Account Status</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="Active">Active</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Balance Transfer (BT)</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                                        <option value="No">No</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-350">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="loanEligibility" class="tabcontent hide">
+                    <div class="white-card mt-10">
+                        <div class="row detail-wrapper">
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>Member Loan Cycle</label>
+                                <p>1</p>
+                            </div>
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>ROI</label>
+                                <p>10%</p>
+                            </div>
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>EMI Eligibility</label>
+                                <p>2000</p>
+                            </div>
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>Loan Eligibility</label>
+                                <p>20,000</p>
+                            </div>
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>Tenure</label>
+                                <p>36</p>
+                            </div>
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>Household Income</label>
+                                <p>36</p>
+                            </div>
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>Household Expenditure</label>
+                                <p>20,10,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-sm-12">
+                            <button type="submit" class="btn w-100 mt-xs-10 mb-xs-15" data-toggle="modal"
+                                data-target="#loanEligibilitySuccessDialog">Check Loan Eligibility</button>
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <button type="button" class="btn btn-primary w-100" onclick="openLoanDetail()">Save & Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- addRemark dialog -->
+    <div class="modal fade" id="addRemarkDialog" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h1 class="mb-20">Accommodation/Rent</h1>
+                <div class="form-group">
+                    <textarea rows="3" type="text" placeholder="Add Remarks" class="form-control"></textarea>
+                </div>
+                <button class="btn btn-primary w-280 mt-30" type="button" data-dismiss="modal">Submit</button>
+                <button class="btn w-280 mt-30" type="button" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- loanEligibilitySuccess dialog -->
+    <div class="modal fade" id="loanEligibilitySuccessDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/successfully-checked.svg" />
+                </div>
+                <h2 class="center">Loan eligibility check done
+                    successful!</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- contactUsDialog dialog -->
+    <div class="modal fade" id="contactUsDialog" role="dialog">
+        <div class="modal-dialog large">
+            <div class="modal-content">
+                <h1 class="center mb-30 mt-0 bold">Contact Us</h1>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/call-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Support No.</h4>
+                            <h3 class="semi-bold">+91-9663546786</h3>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/mail-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Email Address</h4>
+                            <h3 class="semi-bold">support@annapurna.com</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn w-280 mt-30" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- enrollment restricted dialog -->
+    <div class="modal fade" id="restrictedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Enrolment Restricted! Contact Administrator.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+    <!-- Logout dialog -->
+    <div class="modal fade" id="logOutDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Are you sure you want to log out?</h2>
+                <a href="../login.html" class="btn btn-primary w-100 mt-30">Yes</a>
+                <button class="btn w-100 mt-20" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').niceSelect();
+            var count = 1;
+            var earningMemberSelected = $("#earningMemberSelect").val();
+            let applicantSelected = $("#applicantSelect").val();
+            console.log(applicantSelected,earningMemberSelected);
+            $(".add-more-income").on('click', function(e){
+                let applicantSelected = $("#applicantSelect").val();
+                if(applicantSelected=="Business") {
+                    setTimeout(function(){
+                        $(".append-container").append(`<div class="appended-wrap" id="${++count}"><div class="row appended-action-wrap"><div class="col-6 col-sm-12"><h3>Income <span>${count}</span></h3></div><div class="col-6 col-sm-12"><div class="remove-item-wrap"><a class="removeItem"><img src="../assets/images/remove-ic.svg" alt="Remove Icon"/><span>Remove Income</span></a></div></div></div><div class="row mt-10"><div class="col-6 col-sm-12"><label class="form-label">Name</label><div class="form-group"><input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Relationship</label><div class="form-group"><input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Type of source</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="Business">Business</option><option value="Agriculture">Agriculture</option><option value="Agri-Allied">Agri-Allied</option><option value="Dairy">Dairy</option><option value="Service (Salaried)">Service (Salaried)</option><option value="Daily Wages">Daily Wages</option><option value="Others">Others</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Avg. Daily Transaction</label><div class="form-group"><input type="text" placeholder="0" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">No. of Days in a Month</label><div class="form-group"><input type="text" placeholder="Enter Days" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Monthly Gross Sale</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Raw Materials Consume (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Rent For Shop (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Labour/Wages (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Electricity (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Conveyance-Fuel & Maintenance (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Other Manufacturing (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Admin and Operating Expenses (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Total Business Expenses (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Avg. Daily Expenditure</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Avg. Net Profit Daily</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Income frequency</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="Select">Select</option><option value="lorem">lorem</option><option value="lorem2">lorem2</option><option value="lorem3">lorem3</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Net Business Income Monthly</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Net Business Income Monthly (Margin %)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Annual Income</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div></div></div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(applicantSelected=="Agriculture") {
+                    setTimeout(function(){
+                        $(".append-container").append(`<div class="appended-wrap" id="${++count}"><div class="row appended-action-wrap"><div class="col-6 col-sm-12"><h3>Income <span>${count}</span></h3></div><div class="col-6 col-sm-12"><div class="remove-item-wrap"><a class="removeItem"><img src="../assets/images/remove-ic.svg" alt="Remove Icon"/><span>Remove Income</span></a></div></div></div><div class="row mt-10"><div class="col-6 col-sm-12"><label class="form-label">Name</label><div class="form-group"><input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Relationship</label><div class="form-group"><input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Type of source</label><div class="form-group"><select name="selectName" class="form-control" aria-placeholder="Select"><option value="Business">Business</option><option value="Agriculture">Agriculture</option><option value="Agri-Allied">Agri-Allied</option><option value="Dairy">Dairy</option><option value="Service (Salaried)">Service (Salaried)</option><option value="Daily Wages">Daily Wages</option><option value="Others">Others</option></select></div></div><div class="col-6 col-sm-12 for-agriculture"><label class="form-label">Monthly Income</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12 for-agriculture"><label class="form-label">Income frequency</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="Select">Select</option><option value="lorem">lorem</option><option value="lorem2">lorem2</option><option value="lorem3">lorem3</option></select></div></div><div class="col-6 col-sm-12 for-agriculture"><label class="form-label">Annual Income</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div></div></div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(applicantSelected=="Agri-Allied") {
+                    setTimeout(function(){
+                        $(".append-container").append(`<div class="appended-wrap" id="${++count}"> <div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${count}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeItem"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Avg. Daily Transaction</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Avg. Daily Expenditure</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Avg. Net Profit Daily</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" disabled/> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">No. of Days in a Month</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control"/> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Income frequency</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Monthly Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div></div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(applicantSelected == "Dairy") {
+                    setTimeout(function(){
+                        $(".append-container").append(`<div class="appended-wrap" id="${++count}"> <div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${count}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeItem"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Name of the Animal</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Total milking animal</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Total Avg. milk production per day (in Ltr.)</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Marketable surplus per day (In Ltr.)</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Rate at which milk is sold</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Total Income monthly</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" disabled/> </div> </div> <div class="col-12 col-sm-12 for-dairy"> <label class="form-label">Total Expenditure monthly (Feeder & Medicine)</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0"  class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Value Added product</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Total Income (For Value Added Product)</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Net Dairy Income Monthly</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div></div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(applicantSelected == "Service (Salaried)") {
+                    setTimeout(function(){
+                        $(".append-container").append(`<div class="appended-wrap" id="${++count}"> <div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${count}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeItem"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 for-service-Salaried"> <label class="form-label">Income frequency</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-service-Salaried"> <label class="form-label">Monthly Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-service-Salaried"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div></div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(applicantSelected == "Daily Wages") {
+                    setTimeout(function(){
+                        $(".append-container").append(`<div class="appended-wrap" id="${++count}"> <div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${count}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeItem"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 for-daily-wages"> <label class="form-label">Avg. Daily Wages</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-daily-wages"> <label class="form-label">No. of Days in a Month</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-daily-wages"> <label class="form-label">Income frequency</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-daily-wages"> <label class="form-label">Monthly Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-daily-wages"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div></div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(applicantSelected == "Others") {
+                    setTimeout(function(){
+                        $(".append-container").append(`<div class="appended-wrap" id="${++count}"> <div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${count}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeItem"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Activity Name</label> <div class="form-group"> <input type="text" placeholder="Enter" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Avg. Daily Transaction</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Avg. Daily Expenditure</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Avg. Net Profit Daily</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">No. of Days in a Month</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Monthly Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Income frequency</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div></div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+            });
+            $(".append-container").on('click', '.removeItem', function(e){
+                var child = $(this).closest('.appended-wrap').nextAll();
+                child.each(function () {
+                    var id = $(this).attr('id');
+                    var idx = $(this).children('.appended-action-wrap').children(".col-6.col-sm-12").children("h3").children("span");
+                    var dig = parseInt(id.substring(0));
+                    idx.html(`${dig - 1}`);
+                    $(this).attr('id', `${dig - 1}`);
+                });
+                $(this).closest(".appended-wrap").fadeOut('200', function() { 
+                    $(this).closest(".appended-wrap").remove();
+                });
+                count--;
+            });
+
+            var memberCount = 1;
+            $(".add-earning-member").on('click', function(e){
+                var earningMemberSelected = $("#earningMemberSelect").val();
+                if(earningMemberSelected == "Business"){
+                    setTimeout(function(){
+                        $(".append-container-second").append(`<div class="appended-earning-wrap" id="${++memberCount}"><div class="row appended-action-wrap"><div class="col-6 col-sm-12"><h3>Income <span>${memberCount}</span></h3></div><div class="col-6 col-sm-12"><div class="remove-item-wrap"><a class="removeMember"><img src="../assets/images/remove-ic.svg" alt="Remove Icon"/><span>Remove Income</span></a></div></div></div><div class="row mt-10"><div class="col-6 col-sm-12"><label class="form-label">Name</label><div class="form-group"><input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Relationship</label><div class="form-group"><input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Type of source</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="Business">Business</option><option value="Agriculture">Agriculture</option><option value="Agri-Allied">Agri-Allied</option><option value="Dairy">Dairy</option><option value="Service (Salaried)">Service (Salaried)</option><option value="Daily Wages">Daily Wages</option><option value="Others">Others</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Avg. Daily Transaction</label><div class="form-group"><input type="text" placeholder="0" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">No. of Days in a Month</label><div class="form-group"><input type="text" placeholder="Enter Days" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Monthly Gross Sale</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Raw Materials Consume (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Rent For Shop (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Labour/Wages (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Electricity (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Conveyance-Fuel & Maintenance (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Other Manufacturing (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Admin and Operating Expenses (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Total Business Expenses (Monthly)</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Avg. Daily Expenditure</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Avg. Net Profit Daily</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Income frequency</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="Select">Select</option><option value="lorem">lorem</option><option value="lorem2">lorem2</option><option value="lorem3">lorem3</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Net Business Income Monthly</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Net Business Income Monthly (Margin %)</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Annual Income</label><div class="form-group"><input type="text" placeholder="Enter" value="-" disabled class="form-control" /></div></div></div></div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(earningMemberSelected == "Agriculture") {
+                    setTimeout(function(){
+                        $(".append-container-second").append(`<div class="appended-earning-wrap" id="${++memberCount}"><div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${memberCount}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeMember"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 for-agriculture"> <label class="form-label">Monthly Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-agriculture"> <label class="form-label">Income frequency</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-agriculture"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div></div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(earningMemberSelected == "Agri-Allied") {
+                    setTimeout(function(){
+                        $(".append-container-second").append(`<div class="appended-earning-wrap" id="${++memberCount}"> <div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${memberCount}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeItem"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Avg. Daily Transaction</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Avg. Daily Expenditure</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Avg. Net Profit Daily</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" disabled/> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">No. of Days in a Month</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control"/> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Income frequency</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Monthly Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 agri-allied"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div></div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(earningMemberSelected == "Dairy") {
+                    setTimeout(function(){
+                        $(".append-container-second").append(`<div class="appended-earning-wrap" id="${++memberCount}"> <div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${memberCount}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeItem"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Name of the Animal</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Total milking animal</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Total Avg. milk production per day (in Ltr.)</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Marketable surplus per day (In Ltr.)</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Rate at which milk is sold</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Total Income monthly</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" disabled/> </div> </div> <div class="col-12 col-sm-12 for-dairy"> <label class="form-label">Total Expenditure monthly (Feeder & Medicine)</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0"  class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Value Added product</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Total Income (For Value Added Product)</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Net Dairy Income Monthly</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-dairy"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div> </div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(earningMemberSelected == "Service (Salaried)") {
+                    setTimeout(function(){
+                        $(".append-container-second").append(`<div class="appended-earning-wrap" id="${++memberCount}"> <div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${memberCount}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeItem"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 for-service-Salaried"> <label class="form-label">Income frequency</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-service-Salaried"> <label class="form-label">Monthly Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-service-Salaried"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div> </div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(earningMemberSelected == "Daily Wages") {
+                    setTimeout(function(){
+                        $(".append-container-second").append(`<div class="appended-earning-wrap" id="${++memberCount}"> <div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${memberCount}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeItem"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 for-daily-wages"> <label class="form-label">Avg. Daily Wages</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-daily-wages"> <label class="form-label">No. of Days in a Month</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-daily-wages"> <label class="form-label">Income frequency</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-daily-wages"> <label class="form-label">Monthly Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-daily-wages"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div> </div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+                else if(earningMemberSelected == "Others") {
+                    setTimeout(function(){
+                        $(".append-container-second").append(`<div class="appended-earning-wrap" id="${++memberCount}"> <div class="row appended-action-wrap"> <div class="col-6 col-sm-12"> <h3>Income <span>${memberCount}</span></h3> </div> <div class="col-6 col-sm-12"> <div class="remove-item-wrap"> <a class="removeItem"> <img src="../assets/images/remove-ic.svg" alt="Remove Icon"/> <span>Remove Income</span> </a> </div> </div> </div> <div class="row mt-10"> <div class="col-6 col-sm-12"> <label class="form-label">Name</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Rajesh Kumar" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Relationship</label> <div class="form-group"> <input type="text" placeholder="Enter" value="Husband" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12"> <label class="form-label">Type of source</label> <div class="form-group"> <select name="selectName" class="form-control" aria-placeholder="Select"> <option value="Business">Business</option> <option value="Agriculture">Agriculture</option> <option value="Agri-Allied">Agri-Allied</option> <option value="Dairy">Dairy</option> <option value="Service (Salaried)">Service (Salaried)</option> <option value="Daily Wages">Daily Wages</option> <option value="Others">Others</option> </select> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Activity Name</label> <div class="form-group"> <input type="text" placeholder="Enter" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Avg. Daily Transaction</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Avg. Daily Expenditure</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Avg. Net Profit Daily</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">No. of Days in a Month</label> <div class="form-group"> <input type="text" placeholder="Enter" value="0" class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Monthly Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Income frequency</label> <div class="form-group"> <select class="form-control" aria-placeholder="Select"> <option value="Select">Select</option> <option value="lorem">lorem</option> <option value="lorem2">lorem2</option> <option value="lorem3">lorem3</option> </select> </div> </div> <div class="col-6 col-sm-12 for-others"> <label class="form-label">Annual Income</label> <div class="form-group"> <input type="text" placeholder="Enter" value="-" disabled class="form-control" /> </div> </div> </div> </div>`);
+                        $('select').niceSelect();
+                    },10);
+                }
+            });
+    
+            $(".append-container-second").on('click', '.removeMember', function(e){
+                var childEarning = $(this).closest('.appended-earning-wrap').nextAll();
+                childEarning.each(function () {
+                    var id1 = $(this).attr('id');
+                    var idx1 = $(this).children('.appended-action-wrap').children(".col-6.col-sm-12").children("h3").children("span");
+                    var dig1 = parseInt(id1.substring(0));
+                    idx1.html(`${dig1 - 1}`);
+                    $(this).attr('id1', `${dig1 - 1}`);
+                });
+                $(this).closest(".appended-earning-wrap").fadeOut('200', function() { 
+                    $(this).closest(".appended-earning-wrap").remove();
+                });
+                memberCount--;
+            });
+            $("#applicantSelect").on("change", function () {
+                var applicantSelected = $("#applicantSelect").val();
+                if(applicantSelected=="Business") {
+                    $(this).parents(".row").find(".for-business").removeClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(applicantSelected=="Agriculture") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").removeClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(applicantSelected=="Agri-Allied") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").removeClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(applicantSelected=="Dairy") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").removeClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(applicantSelected=="Service (Salaried)") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").removeClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(applicantSelected=="Daily Wages") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").removeClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(applicantSelected=="Others") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").removeClass("hide");
+                }
+            });
+            $("#earningMemberSelect").on("change", function () {
+                var earningMemberSelected = $("#earningMemberSelect").val();
+                if(earningMemberSelected=="Business") {
+                    $(this).parents(".row").find(".for-business").removeClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(earningMemberSelected=="Agriculture") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").removeClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(earningMemberSelected=="Agri-Allied") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").removeClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(earningMemberSelected=="Dairy") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").removeClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(earningMemberSelected=="Service (Salaried)") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").removeClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(earningMemberSelected=="Daily Wages") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").removeClass("hide");
+                    $(this).parents(".row").find(".for-others").addClass("hide");
+                }
+                else if(earningMemberSelected=="Others") {
+                    $(this).parents(".row").find(".for-business").addClass("hide");
+                    $(this).parents(".row").find(".for-agriculture").addClass("hide");
+                    $(this).parents(".row").find(".agri-allied").addClass("hide");
+                    $(this).parents(".row").find(".for-dairy").addClass("hide");
+                    $(this).parents(".row").find(".for-service-Salaried").addClass("hide");
+                    $(this).parents(".row").find(".for-daily-wages").addClass("hide");
+                    $(this).parents(".row").find(".for-others").removeClass("hide");
+                }
+            });
+
+            $(".chat-icon").on("click", function(){
+                $("#addRemarkDialog").find("h1").text($(this).parents(".col-6").find(".form-label").text());
+            });
+            $(".regular-expenses").on("click", ".btn-primary", function(){
+                $(this).parents(".regular-expenses").addClass("hide");
+                $(".irregular-expenses").removeClass("hide");
+            });
+            $(".hh-liability").on("click", ".member-add", function(){
+                $(this).parents(".hh-liability").addClass("hide");
+                $(".add-member").removeClass("hide");
+            });
+        });
+    </script>
+    <script>
+         $(document).ready(function(){
+            $('.tablinks').click(function(){
+                $('.tablinks').removeClass('active');
+                $(this).addClass('active');
+                var tagid = $(this).data('tag');
+                $('.tabcontent').removeClass('active').addClass('hide');
+                $('#'+tagid).addClass('active').removeClass('hide');
+            });
+        });
+        function openLoanDetail() {
+            window.location.href = "../loan-detail/loan-detail.html";
+        }
+    </script>
+    <script>
+        var acc = document.getElementsByClassName("accordian");
+        var accHeading = document.getElementsByClassName("accordian-heading");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+          accHeading[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+          });
+        }
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Application page</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/typography.css" />
+    <link rel="stylesheet" type="text/css" href="new-application.css" />
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</head>
+
+<body>
+    <main class="main-wrap">
+        <header class="header">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="hamburger-wrap">
+                        <a href="javascript:void(0)" class="open-sidebar"><img src="../assets/images/Hamburger.svg"
+                                alt="Hamburger Icon" /></a>
+                    </div>
+                    <div class="brand">
+                        <a href="../dashboard.html"><img src="../assets/images/Annapurna-small-logo.svg" alt="Annapurna Logo" /></a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="right-inner">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" class="open-info">
+                                    <img src="../assets/images/info-ic.svg" alt="Info Icon" />
+                                </a>
+                                <ul class="info-dropdown">
+                                    <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                    <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                    <li><a href="../help/faq.html">FAQs</a></li>
+                                    <li><a href="../help/video.html">Videos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../notification/notification.html"><img src="../assets/images/notification-icon.svg" alt="Notification Icon" /></a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="profile-wrap">
+                        <a href="javascript:void(0)" class="user-wrap">
+                            <img src="../assets/images/profile-ic.svg" class="mr-10" alt="Profile Icon" />
+                            <span>Vivek Sharma</span>
+                            <img src="../assets/images/arrow-down.svg" alt="Arrow Down Icon" />
+                        </a>
+                        <ul class="user-info-dropdown">
+                            <li><a href="../change-password.html">Change Password</a></li>
+                            <li><a data-toggle="modal" data-target="#logOutDialog">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <div class="user-info">
+                <figure>
+                    <img src="../assets/images/user-pic.png" alt="User Pic" />
+                </figure>
+                <div class="info-user">
+                    <h4 class="name">Vivek Sharma</h4>
+                    <p class="designation">Field Credit Officer</p>
+                </div>
+                <a href="javascript:void(0)" class="close-sidebar"><img src="../assets/images/close-sidebar.svg"
+                        alt="Close Sidebar" /></a>
+            </div>
+            <div class="navigation-logout-wrap">
+                <div class="navigation-wrap">
+                    <ul>
+                        <li>
+                            <a href="../new-application/search-client.html"><figure><img src="../assets/images/new-application-ic.svg" alt="New Application Icon" /></figure><span>New Application</span></a>
+                        </li>
+                        <li>
+                            <a href="../laf-status/search-client.html"><figure><img src="../assets/images/laf-status-ic.svg" alt="LAF Status Icon" /></figure><span>LAF Status</span></a>
+                        </li>
+                        <li>
+                            <a href="../luc-check/search-client.html"><figure><img src="../assets/images/luc-check-ic.svg" alt="LUC Check Icon" /></figure><span>LUC Check</span></a>
+                        </li>
+                        <li>
+                            <a href="../village/get-location.html"><figure><img src="../assets/images/village-addition-ic.svg" alt="Village Addition Icon" /></figure><span>Village Addition</span></a>
+                        </li>
+                        <li>
+                            <a href="../cb-deviation/cb-deviation.html"><figure><img src="../assets/images/cb-approval-ic.svg" alt="CB Rejection Data Icon" /></figure><span>CB Rejection Data</span></a>
+                        </li>
+                        <li>
+                            <a href="../fee-and-charges/list.html"><figure><img src="../assets/images/fees-and-charges-ic.svg" alt="Fees and Charges Icon" /></figure><span>Fees and Charges</span></a>
+                        </li>
+                        <li>
+                            <a href="../notification/notification.html"><figure><img src="../assets/images/ic-notification.svg" alt="Notification Icon" /></figure><span>Notification</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="parent-menu"><figure><img src="../assets/images/help-ic.svg" alt="Help Icon"/></figure><span>Help</span></a>
+                            <ul class="sub-menu">
+                                <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                <li><a href="../help/faq.html">FAQs</a></li>
+                                <li><a href="../help/video.html">Videos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../change-password.html"><figure><img src="../assets/images/change-password-ic.svg" alt="Change Password Icon" /></figure><span>Change Password</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logout-wrap">
+                    <a data-toggle="modal" data-target="#logOutDialog" class="logout">Logout</a>
+                </div>
+                <p class="version">Version 1.0.0</p>
+            </div>
+        </aside>
+        <div class="breadcrumb-cover">
+            <ul class="breadcrumb-wrap">
+                <li><a href="../dashboard.html">Home</a></li>
+                <li><a href="search-client.html">New Application</a></li>
+                <li>Basic Details</li>
+            </ul>
+        </div>
+        <div class="basic-detail-page">
+            <div class="center-bg-white medium">
+                <div class="custom-tabs">
+                    <button class="tablinks active" data-tag="basicDetailsBorrower">
+                        Basic Details (Borrower)
+                    </button>
+                    <button class="tablinks" data-tag="earningMemberDetails">
+                        Earning Member Details
+                    </button>
+                    <button class="tablinks" data-tag="householdDetails">
+                        Household Details
+                    </button>
+                </div>
+                <div id="basicDetailsBorrower" class="tabcontent">
+                    <div class="white-card no-flex">
+                        <div class="row detail-wrapper">
+                            <div class="col-6 col-sm-12">
+                                <div class="profile-info-cover">
+                                    <img src="../assets/images/client-pic.svg" alt="client image">
+                                    <div>
+                                        <label>Name</label>
+                                        <p>Sandeep Sharma</p>
+                                    </div>
+                                    <a class="show-basic-details">
+                                        <i class="accordian-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12 right">
+                                <button type="submit" class="btn btn-add mb-xs-20 mt-xs-10" style="margin-left: auto;"
+                                onclick="addEarningMember()">
+                                    <img src="../assets/images/add-member-icon.svg" class="mr-10" alt="add">Add
+                                    Earning Member</button>
+                            </div>
+                        </div>
+                        <div class="custom-accordian">
+                            <div class="row">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Spouse</label>
+                                    <p>Lata Kumari</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Father</label>
+                                    <p>Kant Sharma</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Mobile Number</label>
+                                    <p>+91-9887766553</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>POI KYC Type</label>
+                                    <p>Digital KYC</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>POI KYC ID</label>
+                                    <p>12345678</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>KYC Images</label>
+                                    <a href="javascript:void(0)" class="link-with-icon pointer bold underline show-image-cover">
+                                        <img src="../assets/images/view-image-ic.svg" alt="">
+                                        <span>View Images</span>
+                                    </a>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Earning Members</label>
+                                    <p>2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="images-data-cover hide basic-image-data">
+                        <h3 class="bold">Images Data</h3>
+                        <p>Click on the thumbnail for full image preview</p>
+                        <ul class="images-list">
+                            <li>
+                                <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                    <img src="../assets/images/client-image.png" alt="Client Image">
+                                </figure>
+                                <p>Client</p>
+                            </li>
+                            <li>
+                                <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                    <img src="../assets/images/POI.png" alt="POI Image">
+                                </figure>
+                                <p>POI Front</p>
+                            </li>
+                            <li>
+                                <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                    <img src="../assets/images/POI.png" alt="POI Image">
+                                </figure>
+                                <p>POI Rear</p>
+                            </li>
+                            <li>
+                                <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                    <img src="../assets/images/POA.png" alt="POA Image">
+                                </figure>
+                                <p>POA Front</p>
+                            </li>
+                            <li>
+                                <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                    <img src="../assets/images/POA.png" alt="POA Image">
+                                </figure>
+                                <p>POA Rear</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">PAN ID</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="PAN ID" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Loan Purpose</label>
+                                <div class="form-group">
+                                    <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                        <option value="Select">Select</option>
+                                        <option value="Education">Education</option>
+                                        <option value="Education">Education</option>
+                                        <option value="Education">Education</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Applied Amount</label>
+                                <div class="form-group">
+                                    <input type="number" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary w-350" data-toggle="modal"
+                            data-target="#singleEarningMemberDialog">Next</button>
+                    </form>
+                </div>
+                <div id="earningMemberDetails" class="tabcontent hide">
+                    <div class="white-card no-flex">
+                        <div class="row detail-wrapper">
+                            <div class="col-6 col-sm-12">
+                                <div class="profile-info-cover">
+                                    <img src="../assets/images/client-pic.svg" alt="client image">
+                                    <div>
+                                        <label>Name</label>
+                                        <p>Jay Prakash</p>
+                                        <a class="show-basic-details">
+                                            <i class="accordian-arrow"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12 right">
+                                <button type="button" class="btn btn-danger mb-xs-20 mt-xs-10"
+                                 style="margin-left: auto;" 
+                                data-toggle="modal"
+                                    data-target="#removeMemberDialog">
+                                    <img src="../assets/images/cross-button.svg" class="mr-10" alt="cross">Remove
+                                    Earning Member</button>
+                            </div>
+                        </div>
+                        <div class="custom-accordian">
+                            <div class="row">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Spouse</label>
+                                    <p>Lata Kumari</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Father</label>
+                                    <p>Kant Sharma</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Mobile Number</label>
+                                    <p>+91-9887766553</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>POI KYC Type</label>
+                                    <p>Digital KYC</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>POI KYC ID</label>
+                                    <p>12345678</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>KYC Images</label>
+                                    <a href="javascript:void(0)" class="link-with-icon show-kyc-images">
+                                        <img src="../assets/images/view-image-ic.svg" alt="">
+                                        <span>View Images</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="images-data-cover hide kyc-images">
+                        <h3 class="bold">Images Data</h3>
+                        <p>Click on the thumbnail for full image preview</p>
+                        <ul class="images-list">
+                            <li>
+                                <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                    <img src="../assets/images/client-image.png" alt="Client Image">
+                                </figure>
+                                <p>Client</p>
+                            </li>
+                            <li>
+                                <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                    <img src="../assets/images/POI.png" alt="POI Image">
+                                </figure>
+                                <p>POI Front</p>
+                            </li>
+                            <li>
+                                <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                    <img src="../assets/images/POI.png" alt="POI Image">
+                                </figure>
+                                <p>POI Rear</p>
+                            </li>
+                            <li>
+                                <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                    <img src="../assets/images/POA.png" alt="POA Image">
+                                </figure>
+                                <p>POA Front</p>
+                            </li>
+                            <li>
+                                <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                    <img src="../assets/images/POA.png" alt="POA Image">
+                                </figure>
+                                <p>POA Rear</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="form-label">Relationship with Client</label>
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter" value="Father" class="form-control" disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn w-350 mt-10 mb-10" disabled>Save & Next</button>
+                </div>
+                <div id="householdDetails" class="tabcontent hide">
+                    <div class="household-first-part">
+                        <div class="row mt-20">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Family Type</label>
+                                <div class="form-group">
+                                    <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                        <option value="Select">Select</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Non-Earning Members</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Total Household Family Members</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="4" disabled class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">No. of Unmarried Children</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">No. of Dependents</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="5" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Type of Roof</label>
+                                <div class="form-group">
+                                    <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                        <option value="Select">Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Type Of Ownership</label>
+                                <div class="form-group">
+                                    <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                        <option value="Select">Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Locality</label>
+                                <div class="form-group">
+                                    <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                        <option value="Select">Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Religion /Community</label>
+                                <div class="form-group">
+                                    <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                        <option value="Select">Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Caste/Category</label>
+                                <div class="form-group">
+                                    <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                        <option value="Select">Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-350 mt-10 mb-10">Save & Next</button>
+                    </div>
+                    <div class="household-second-part hide">
+                        <form>
+                            <div class="row mt-20">
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Electricity</label>
+                                    <div class="form-group">
+                                        <select id="electricity" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12 hide" id="customer-id">
+                                    <label class="form-label">Customer ID</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="90001536" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Water</label>
+                                    <div class="form-group">
+                                        <select id="water" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Toilet</label>
+                                    <div class="form-group">
+                                        <select id="toilet" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Land</label>
+                                    <div class="form-group">
+                                        <select id="land" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12 hide" id="land-unit" >
+                                    <label class="form-label">Land Unit (In Acre)</label>
+                                    <div class="form-group">
+                                        <select class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="2.5-3">2.5-3</option>
+                                            <option value="2.5-3">2.5-2</option>
+                                            <option value="2.5-3">2.5-1</option>
+                                            <option value="2.5-3">2.5-4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Sewage</label>
+                                    <div class="form-group">
+                                        <select id="Sewage" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">LPG</label>
+                                    <div class="form-group">
+                                        <select id="lpg" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12 hide" id="lpg-consumer-no">
+                                    <label class="form-label">LPG Consumer No.</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="987654321" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Livestock</label>
+                                    <div class="form-group">
+                                        <select id="livestock" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 hide" id="type-of-livestoks">
+                                    <div class="append-wrapper">
+                                        <div class="row">
+                                            <div class="col-6 col-sm-12">
+                                                <label class="form-label">Type of Livestock</label>
+                                                <div class="form-group">
+                                                    <select id="type-of-livestock" class="form-control" aria-placeholder="Select">
+                                                        <option value="">Select</option>
+                                                        <option value="Cow">Cow</option>
+                                                        <option value="Buffalo">Buffalo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-12">
+                                                <label class="form-label">Count</label>
+                                                <div class="count-cover">
+                                                    <div class="form-group" style="flex: 1;">
+                                                        <input type="text" placeholder="2" class="form-control" />
+                                                    </div>
+                                                    <div class="flex-start">
+                                                        <a href="javscript:void(0)" class="plus add-livestock">
+                                                            <img src="../assets/images/plus-circle.svg" alt="plus" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Vehicle</label>
+                                    <div class="form-group">
+                                        <select id="vehicle" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 hide" id="vehicle-list">
+                                    <div class="append-vehicle-wrapper">
+                                        <div class="row">
+                                            <div class="col-6 col-sm-12">
+                                                <label class="form-label">Type of Vehicle</label>
+                                                <div class="form-group">
+                                                    <select id="type-of-vehicle" class="form-control" aria-placeholder="Select">
+                                                        <option value="">Select</option>
+                                                        <option value="Two Wheeler">Two Wheeler</option>
+                                                        <option value="Three Wheeler">Three Wheeler</option>
+                                                        <option value="Four Wheeler">Four Wheeler</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-12">
+                                                <label class="form-label">Count</label>
+                                                <div class="count-cover">
+                                                    <div class="form-group" style="flex: 1;">
+                                                        <input type="text" placeholder="2" class="form-control" />
+                                                    </div>
+                                                    <div class="flex-start">
+                                                        <a href="javascript:void(0)" class="plus add-vehicle">
+                                                            <img src="../assets/images/plus-circle.svg" alt="plus" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Furniture</label>
+                                    <div class="form-group">
+                                        <select id="furniture" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Smartphone</label>
+                                    <div class="form-group">
+                                        <select name="cars" id="smartphone" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Electronic items </label>
+                                    <div class="form-group">
+                                        <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary w-350 mt-10 mb-10" onclick="openHouseholdCashflow()">Save & Next</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- imageViewer dialog -->
+    <div class="modal fade" id="imageViewerDialog" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="popup-view-image">
+                    <figure>
+                        <img src="../assets/images/client-image.png" alt="Image"/>
+                    </figure>
+                </div>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- addCenter dialog -->
+    <div class="modal fade" id="addCenterDialog" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/add-center-icon.svg" />
+                </div>
+                <h1 class="bold mb-20">Add New Center</h1>
+                <div class="row">
+                    <div class="col-12">
+                        <label class="form-label">Center Meeting Day</label>
+                        <div class="form-group">
+                            <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                <option value="Select">Select</option>
+                                <option value="37">37</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Center Meeting Week</label>
+                        <div class="form-group">
+                            <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                <option value="Select">Select</option>
+                                <option value="37">37</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary w-280" type="button" data-dismiss="modal" data-toggle="modal"
+                    data-target="#centerCreatedDialog">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- singleEarningMember dialog -->
+    <div class="modal fade" id="singleEarningMemberDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/person-with-money-icon.svg" />
+                </div>
+                <h2 class="center">Proceed with Single Earning Member?</h2>
+                <a class="btn btn-primary w-100 mt-30" href="basic-details-center-address.html">Yes</a>
+                <button class="btn w-100 mt-30" type="button" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- removeMember dialog -->
+    <div class="modal fade" id="removeMemberDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Are you sure you want to remove Jay Prakash?</h2>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal" type="button" data-toggle="modal" data-target="#removeEarningMember">Yes</button>
+                <button class="btn w-100 mt-20" type="button" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- centerCreated dialog -->
+    <div class="modal fade" id="centerCreatedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/successfully-checked.svg" />
+                </div>
+                <h2 class="center"> Darkrang C2 Center created
+                    successfully!</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- contactUsDialog dialog -->
+    <div class="modal fade" id="contactUsDialog" role="dialog">
+        <div class="modal-dialog large">
+            <div class="modal-content">
+                <h1 class="center mb-30 mt-0 bold">Contact Us</h1>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/call-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Support No.</h4>
+                            <h3 class="semi-bold">+91-9663546786</h3>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/mail-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Email Address</h4>
+                            <h3 class="semi-bold">support@annapurna.com</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn w-280 mt-30" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- enrollment restricted dialog -->
+    <div class="modal fade" id="restrictedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Enrolment Restricted! Contact Administrator.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+    <!-- Logout dialog -->
+    <div class="modal fade" id="logOutDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Are you sure you want to log out?</h2>
+                <a href="../login.html" class="btn btn-primary w-100 mt-30">Yes</a>
+                <button class="btn w-100 mt-20" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+     <!-- Remove Earning Member Successfully dialog -->
+     <div class="modal fade" id="removeEarningMember" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/check-icon.svg" />
+                </div>
+                <h2 class="regular center">Jay Prakash Removed Successfully!</h2>
+                <button class="btn w-100 mt-20" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').niceSelect();
+            $(".show-basic-details").on("click", function(){
+                $(this).toggleClass("active");
+                $(this).parents().next(".custom-accordian").slideToggle();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.tablinks').click(function(){
+                $('.tablinks').removeClass('active');
+                $(this).addClass('active');
+                var tagid = $(this).data('tag');
+                $('.tabcontent').removeClass('active').addClass('hide');
+                $('#'+tagid).addClass('active').removeClass('hide');
+            });
+            $(".show-image-cover").on("click", function(){
+                $(".basic-image-data").toggleClass("hide");
+                $(this).find("span").text($(this).find("span").text() == 'Hide Images' ? 'View Images' : 'Hide Images');
+            });
+            $(".show-kyc-images").on("click", function(){
+                $(".kyc-images").toggleClass("hide");
+                $(this).find("span").text($(this).find("span").text() == 'Hide Images' ? 'View Images' : 'Hide Images');
+            });
+            $(".images-list").on("click", "figure", function(){
+                var getImagePath=$(this).find("img").attr("src");
+                $("#imageViewerDialog").on('shown.bs.modal', function(){
+                    setTimeout(function(){
+                        $("#imageViewerDialog").find("img").attr("src",getImagePath);
+                    },10);
+                });
+            }); 
+            $(".household-first-part").on("click", ".btn-primary", function(){
+                $(this).parents(".household-first-part").addClass("hide");
+                $(".household-second-part").removeClass("hide");
+            });
+
+            $(".add-livestock").on('click', function(e){
+                setTimeout(function(){
+                    $(".append-wrapper").append(`<div class="appended-wrap"><div class="row"><div class="col-6 col-sm-12"><label class="form-label">Type of Livestock</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="">Select</option><option value="Cow">Cow</option><option value="Buffalo">Buffalo</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Count</label><div class="count-cover"><div class="form-group" style="flex: 1;"><input type="text" placeholder="2" class="form-control" /></div><div class="flex-start"><a href="javascript:void(0)" class="plus remove-livestock"><img src="../assets/images/delete-button.svg" alt="Delete" /></a></div></div></div></div></div>`);
+                    $('select').niceSelect();
+                },10);
+            });
+            $(".append-wrapper").on('click', '.remove-livestock', function(e){
+                $(this).closest(".appended-wrap").fadeOut('200', function() { 
+                    $(this).closest(".appended-wrap").remove();
+                });
+            });
+            $(".add-vehicle").on('click', function(e){
+                setTimeout(function(){
+                    $(".append-vehicle-wrapper").append(`<div class="appended-wrap"><div class="row"><div class="col-6 col-sm-12"><label class="form-label">Type Of Vehicle</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="">Select</option><option value="Cow">Cow</option><option value="Buffalo">Buffalo</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Count</label><div class="count-cover"><div class="form-group" style="flex: 1;"><input type="text" placeholder="2" class="form-control" /></div><div class="flex-start"><a href="javascript:void(0)" class="plus remove-vehicle"><img src="../assets/images/delete-button.svg" alt="Delete" /></a></div></div></div></div></div>`);
+                    $('select').niceSelect();
+                },10);
+            });
+            $(".append-vehicle-wrapper").on('click', '.remove-vehicle', function(e){
+                $(this).closest(".appended-wrap").fadeOut('200', function() { 
+                    $(this).closest(".appended-wrap").remove();
+                });
+            });
+            
+        });
+    </script>
+    <script>
+        function addEarningMember(){
+            window.location.href = "search-client.html"
+        }
+        function openHouseholdCashflow(){
+            window.location.href = "../household-flow/household.html";
+        }
+        $(document).ready(function(){
+            $("#electricity").on("change", function () {
+                let selected = $("#electricity").val();
+                if(selected=="Yes") {
+                    $("#customer-id").removeClass("hide");
+                }
+                else{
+                    $("#customer-id").addClass("hide");
+                }
+            });
+            $("#land").on("change", function () {
+                let selected = $("#land").val();
+                if(selected=="Yes") {
+                    $("#land-unit").removeClass("hide");
+                }
+                else{
+                    $("#land-unit").addClass("hide");
+                }
+            });
+            $("#lpg").on("change", function () {
+                let selected = $("#lpg").val();
+                if(selected=="Yes") {
+                    $("#lpg-consumer-no").removeClass("hide");
+                }
+                else{
+                    $("#lpg-consumer-no").addClass("hide");
+                }
+            });
+            $("#livestock").on("change", function () {
+                let selected = $("#livestock").val();
+                if(selected=="Yes") {
+                    $("#type-of-livestoks").removeClass("hide");
+                }
+                else{
+                    $("#type-of-livestoks").addClass("hide");
+                }
+            });
+            $("#vehicle").on("change", function () {
+                let selected = $("#vehicle").val();
+                if(selected=="Yes") {
+                    $("#vehicle-list").removeClass("hide");
+                }
+                else{
+                    $("#vehicle-list").addClass("hide");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

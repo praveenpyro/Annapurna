@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAF Detail</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/typography.css" />
+    <link rel="stylesheet" type="text/css" href="loan-detail.css" />
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</head>
+<body>
+    <main class="main-wrap">
+        <header class="header">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="hamburger-wrap">
+                        <a href="javascript:void(0)" class="open-sidebar"><img src="../assets/images/Hamburger.svg"
+                                alt="Hamburger Icon" /></a>
+                    </div>
+                    <div class="brand">
+                        <a href="../dashboard.html"><img src="../assets/images/Annapurna-small-logo.svg"
+                                alt="Annapurna Logo" /></a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="right-inner">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" class="open-info">
+                                    <img src="../assets/images/info-ic.svg" alt="Info Icon" />
+                                </a>
+                                <ul class="info-dropdown">
+                                    <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                    <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                    <li><a href="../help/faq.html">FAQs</a></li>
+                                    <li><a href="../help/video.html">Videos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../notification/notification.html"><img src="../assets/images/notification-icon.svg" alt="Notification Icon" /></a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="profile-wrap">
+                        <a href="javascript:void(0)" class="user-wrap">
+                            <img src="../assets/images/profile-ic.svg" class="mr-10" alt="Profile Icon" />
+                            <span>Vivek Sharma</span>
+                            <img src="../assets/images/arrow-down.svg" alt="Arrow Down Icon" />
+                        </a>
+                        <ul class="user-info-dropdown">
+                            <li><a href="../change-password.html">Change Password</a></li>
+                            <li><a data-toggle="modal" data-target="#logOutDialog">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <div class="user-info">
+                <figure>
+                    <img src="../assets/images/user-pic.png" alt="User Pic" />
+                </figure>
+                <div class="info-user">
+                    <h4 class="name">Vivek Sharma</h4>
+                    <p class="designation">Field Credit Officer</p>
+                </div>
+                <a href="javascript:void(0)" class="close-sidebar"><img src="../assets/images/close-sidebar.svg"
+                        alt="Close Sidebar" /></a>
+            </div>
+            <div class="navigation-logout-wrap">
+                <div class="navigation-wrap">
+                    <ul>
+                        <li>
+                            <a href="../new-application/search-client.html">
+                                <figure><img src="../assets/images/new-application-ic.svg" alt="New Application Icon" />
+                                </figure><span>New Application</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../laf-status/search-client.html">
+                                <figure><img src="../assets/images/laf-status-ic.svg" alt="LAF Status Icon" /></figure>
+                                <span>LAF Status</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../luc-check/search-client.html">
+                                <figure><img src="../assets/images/luc-check-ic.svg" alt="LUC Check Icon" /></figure>
+                                <span>LUC Check</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../village/get-location.html">
+                                <figure><img src="../assets/images/village-addition-ic.svg"
+                                        alt="Village Addition Icon" /></figure><span>Village Addition</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../cb-deviation/cb-deviation.html">
+                                <figure><img src="../assets/images/cb-approval-ic.svg"
+                                        alt="CB Rejection Data Icon" /></figure><span>CB Rejection Data</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../fee-and-charges/list.html">
+                                <figure><img src="../assets/images/fees-and-charges-ic.svg"
+                                        alt="Fees and Charges Icon" /></figure><span>Fees and Charges</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../notification/notification.html"><figure><img src="../assets/images/ic-notification.svg" alt="Notification Icon" /></figure><span>Notification</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="parent-menu"><figure><img src="../assets/images/help-ic.svg" alt="Help Icon"/></figure><span>Help</span></a>
+                            <ul class="sub-menu">
+                                <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                <li><a href="../help/faq.html">FAQs</a></li>
+                                <li><a href="../help/video.html">Videos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../change-password.html">
+                                <figure><img src="../assets/images/change-password-ic.svg" alt="Change Password Icon" />
+                                </figure><span>Change Password</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logout-wrap">
+                    <a data-toggle="modal" data-target="#logOutDialog" class="logout">Logout</a>
+                </div>
+                <p class="version">Version 1.0.0</p>
+            </div>
+        </aside>
+        <div class="breadcrumb-cover">
+            <ul class="breadcrumb-wrap">
+                <li><a href="../dashboard.html">Home</a></li>
+                <li><a href="loan-detail.html">LAF Status</a></li>
+                <li>Loan Details</li>
+            </ul>
+        </div>
+        <div class="loan-details-page">
+            <div class="center-bg-white">
+                <div class="custom-tabs">
+                    <button class="tablinks active" data-tag="loanDetails">
+                        Loan Details
+                    </button>
+                    <button class="tablinks" data-tag="guarantorDetails">
+                        Guarantor’s Details
+                    </button>
+                    <button class="tablinks" data-tag="insuranceDetails">
+                        Insurance Details
+                    </button>
+                    <button class="tablinks" data-tag="bankDetails">
+                        Bank Details
+                    </button>
+                </div>
+                <div id="loanDetails" class="tabcontent">
+                    <div class="white-card">
+                        <div class="row detail-wrapper">
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>Loan Eligibility</label>
+                                <p>30,000</p>
+                            </div>
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>ROI</label>
+                                <p>12%</p>
+                            </div>
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>EMI</label>
+                                <p>2000</p>
+                            </div>
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>Meeting Day</label>
+                                <p>Monday</p>
+                            </div>
+                            <div class="col-4 col-md-6 col-sm-12">
+                                <label>Meeting Week</label>
+                                <p>1st Week</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Loan Type</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select" id="loan-type">
+                                        <option value="">Select</option>
+                                        <option value="Group">Group</option>
+                                        <option value="Individual">Individual</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Loan Purpose</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Loan Purpose" value="Education" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Loan Product</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select" id="loan-product">
+                                        <option value="">Select</option>
+                                        <option value="JLG">JLG</option>
+                                        <option value="Dairy">Dairy</option>
+                                        <option value="Samarth">Samarth</option>
+                                        <option value="HIL">HIL</option>
+                                        <option value="Business">Business</option>
+                                        <option value="CDL">CDL</option>
+                                        <option value="Swasth">Swasth</option>
+                                        <option value="Education">Education</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12" id="loan-product-code">
+                                <label class="form-label">Loan Product Code</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="456">456</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12" id="applied-amount">
+                                <label class="form-label">Applied Amount</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Amount" value="10,000" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12" id="tenure-in-month">
+                                <label class="form-label">Tenure (in months)</label>
+                                <div class="form-group">
+                                    <select name="selectName" class="form-control" aria-placeholder="Select">
+                                        <option value="">Select</option>
+                                        <option value="12">12</option>
+                                        <option value="24">24</option>
+                                        <option value="36">36</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row for-jlg hide">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">JIT Loan Opt-In</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Yes">Yes</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row for-jlg hide">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">JIT Applied Amount</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Zone" value="10,000" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">CDL Tenure (in months)</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="36" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">JIT ROI</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="12%" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">JIT EMI</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="278" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">CDL Loan Opt-In</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Yes">Yes</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">CDL Select Sub Product</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Product Name">Product Name</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">CDL Product Price</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="1200" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">CDL Down Payment (Optional)</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="500" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">CDL Applied Amount</label>
+                                <div class="form-group">
+                                    <input type="number" placeholder="Enter" value="500" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">JIT Tenure (in months)</label>
+                                <div class="form-group">
+                                    <input type="number" placeholder="Enter" value="500" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">JIT ROI</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="12%" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">JIT EMI</label>
+                                <div class="form-group">
+                                    <input type="number" placeholder="Enter" value="500" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-12" id="recommened-amount">
+                                <label class="form-label">Recommeded Amount</label>
+                                <div class="form-group">
+                                    <input type="number" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12" id="choice-of-repayment">
+                                <label class="form-label">Choice of Repayment</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select">
+                                        <option value="Monthly">Monthly</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12" id="client-politically">
+                                <label class="form-label">Is the Client Politically exposed
+                                    Person</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select">
+                                        <option value="Monthly">Monthly</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12" id="client-related-politically">
+                                <label class="form-label">Is the Client related to any Politically Exposed Person</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select">
+                                        <option value="Monthly">Monthly</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="education hide">
+                            <div class="row">
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Name of school/institution</label>
+                                    <div class="form-group">
+                                        <input type="number" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Name of the student</label>
+                                    <div class="form-group">
+                                        <input type="number" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Student Date of birth</label>
+                                    <div class="form-group">
+                                        <input type="number" placeholder="DD MM YYYY" class="form-control date-picker" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Age</label>
+                                    <div class="form-group">
+                                        <input type="number" value="-" class="form-control" disabled/>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Relationship with student</label>
+                                    <div class="form-group">
+                                        <select class="form-control" aria-placeholder="Select">
+                                            <option value="Select">Select</option>
+                                            <option value="Lorem Ipsum">Lorem Ipsum</option>
+                                            <option value="Lorem Ipsum">Lorem Ipsum</option>
+                                            <option value="Lorem Ipsum">Lorem Ipsum</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Admission Number</label>
+                                    <div class="form-group">
+                                        <input type="number" placeholder="Enter" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Class of the student</label>
+                                    <div class="form-group">
+                                        <input type="number" placeholder="Enter" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Annual course fee</label>
+                                    <div class="form-group">
+                                        <input type="number" placeholder="Enter" class="form-control"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label class="form-label">Aadhar Card/Birth Certificate proof</label>
+                                    <div class="form-group">
+                                        <div class="capture-wrap">
+                                            <input type="file">
+                                            <img src="../assets/images/camera-ic.svg" alt="Camera Icon">
+                                            <span>Capture Document</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Admission offer letter</label>
+                                    <div class="form-group">
+                                        <div class="capture-wrap">
+                                            <input type="file">
+                                            <img src="../assets/images/camera-ic.svg" alt="Camera Icon">
+                                            <span>Capture Document</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Fee Structure</label>
+                                    <div class="form-group">
+                                        <div class="capture-wrap">
+                                            <input type="file">
+                                            <img src="../assets/images/camera-ic.svg" alt="Camera Icon">
+                                            <span>Capture Document</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian co-applicant-details hide">
+                            <div class="accordian-heading active">
+                                <h3 class="bold">CO- Applicant Details</h3>
+                                <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                            </div>
+                            <div class="accordian-content">
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Co-Applicant Name</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="456">456</option>
+                                                <option value="456">456</option>
+                                                <option value="456">456</option>
+                                                <option value="456">456</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12">
+                                        <label class="form-label">Co-Applicant Relationship with Client</label>
+                                        <div class="form-group">
+                                            <input type="text" value="-" disabled class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian technical-evaluation hide">
+                            <div class="accordian-heading active">
+                                <h3 class="bold">Technical Evaluation</h3>
+                                <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                            </div>
+                            <div class="accordian-content">
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Full address/location of the house and cattle farm</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Marketable surplus</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Total milk production per day</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Total Area of Cattle Shed(Sq.ft.)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Market Price for selling milk</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Mode of payment received</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="">Select</option>
+                                                <option value="Debit Card">Debit Card</option>
+                                                <option value="Credit Card">Credit Card</option>
+                                                <option value="Net Banking">Net Banking</option>
+                                                <option value="UPI">UPI</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Experience in Dairy (In Years)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian existing-dairy-income-details hide">
+                            <div class="accordian-heading active">
+                                <h3 class="bold">Existing Dairy Income Details</h3>
+                                <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                            </div>
+                            <div class="accordian-content">
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Name of breed</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Total milking animal</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Total Avg. milk production (in ltr.)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Marketable surplus per day (in ltr.)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Rate at which milk is sold</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Total Income monthly</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Value Added product</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="">Select</option>
+                                                <option value="Lorem Ipsum">Lorem Ipsum</option>
+                                                <option value="Lorem Ipsum1">Lorem Ipsum1</option>
+                                                <option value="Lorem Ipsum2">Lorem Ipsum2</option>
+                                                <option value="Lorem Ipsum3">Lorem Ipsum3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian selling-value-added-product hide">
+                            <div class="accordian-heading active">
+                                <h3 class="bold">If selling value added product</h3>
+                                <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                            </div>
+                            <div class="accordian-content">
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Name of the value added product made</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Quantity</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Rate at which it is sold</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Total Income monthly</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Cattle Shed Amount</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Cattle Insurance amount</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian disability-details hide">
+                            <div class="accordian-heading active">
+                                <h3 class="bold">Disability Details</h3>
+                                <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                            </div>
+                            <div class="accordian-content">
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Enter Disability Type</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Enter Disability Percentage</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Disability Certificate No.</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Disability Certificate</label>
+                                        <div class="form-group">
+                                            <div class="capture-wrap">
+                                                <input type="file"/>
+                                                <img src="../assets/images/camera-ic.svg" alt="Camera Icon"/>
+                                                <span>Capture Document</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian land-title-ror-details hide">
+                            <div class="accordian-heading active">
+                                <h3 class="bold">Land Title/ROR Details</h3>
+                                <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                            </div>
+                            <div class="accordian-content">
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Total Land Unit (in acre)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Total Home Stead Land( in sqft.)</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Extent of land Area for construction</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Type of Land Document</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="">Select</option>
+                                                <option value="Lorem Ipsum">Lorem Ipsum</option>
+                                                <option value="Lorem Ipsum1">Lorem Ipsum1</option>
+                                                <option value="Lorem Ipsum2">Lorem Ipsum2</option>
+                                                <option value="Lorem Ipsum3">Lorem Ipsum3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Land Title belongs to</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Title Holder  Name</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Plot No.</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Record No.</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Tehsil Name</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">NOC Document</label>
+                                        <div class="form-group">
+                                            <div class="capture-wrap">
+                                                <input type="file"/>
+                                                <img src="../assets/images/camera-ic.svg" alt="Camera Icon"/>
+                                                <span>Capture Document</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Land Document</label>
+                                        <div class="form-group">
+                                            <div class="land-document">
+                                                <p><strong>Browse File</strong> .jpeg .jpg, .png</p>
+                                                <div class="upload-icon">
+                                                    <img src="../assets/images/upload-image.svg" alt="Upload Icon"/>
+                                                    <input type="file"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Type of Home Improvement</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="">Select</option>
+                                                <option value="Lorem Ipsum">Lorem Ipsum</option>
+                                                <option value="Lorem Ipsum1">Lorem Ipsum1</option>
+                                                <option value="Lorem Ipsum2">Lorem Ipsum2</option>
+                                                <option value="Lorem Ipsum3">Lorem Ipsum3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">NOC Remarks</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="-" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian business-details hide">
+                            <div class="accordian-heading active">
+                                <h3 class="bold">Business Details 1</h3>
+                                <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                            </div>
+                            <div class="accordian-content">
+                                <div class="row detail-wrapper">
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>Type of Business</label>
+                                        <p>Shop</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>Area Name</label>
+                                        <p>Urban</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>Total Business Experience</label>
+                                        <p>12 Years</p>
+                                    </div>
+                                </div>
+                                <div class="fill-btn-wrap">
+                                    <a href="business-fill.html" class="btn btn-primary">Fill</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian product-details hide">
+                            <div class="accordian-heading active">
+                                <h3 class="bold">Product - 1</h3>
+                                <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                            </div>
+                            <div class="accordian-content">
+                                <div class="append-container">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-12">
+                                            <label class="form-label">Sub Products Name</label>
+                                            <div class="form-group">
+                                                <select class="form-control" aria-placeholder="Select">
+                                                    <option value="Sub Product Name">Sub Product Name</option>
+                                                    <option value="lorem">lorem</option>
+                                                    <option value="lorem2">lorem2</option>
+                                                    <option value="lorem3">lorem3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-12">
+                                            <label class="form-label">Loan Product Code</label>
+                                            <div class="form-group">
+                                                <select class="form-control" aria-placeholder="Select">
+                                                    <option value="456">456</option>
+                                                    <option value="lorem">lorem</option>
+                                                    <option value="lorem2">lorem2</option>
+                                                    <option value="lorem3">lorem3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-12">
+                                            <label class="form-label">Product Price</label>
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Enter" value="2100" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-12">
+                                            <label class="form-label">Total Product Price</label>
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Enter" value="20,000"  class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-12">
+                                            <label class="form-label">Downpayment</label>
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Enter" value="20,000"  class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-12">
+                                            <button type="button" class="btn underline w-100 add-sub-product"><img src="../assets/images/plus-circle.svg" alt="Plus Icon"/>Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Applied Amount</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="2100" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Recommended Amount</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="20,000"  class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Choice of Repayment</label>
+                                        <div class="form-group">
+                                            <select class="form-control" aria-placeholder="Select">
+                                                <option value="Monthly">Monthly</option>
+                                                <option value="lorem">lorem</option>
+                                                <option value="lorem2">lorem2</option>
+                                                <option value="lorem3">lorem3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Downpayment</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="10,000"  class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label class="form-label">Total Downpayment needs to be paid</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="20,000"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-12">
+                                        <label class="form-label">Loan Amount</label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter" value="20,000"  class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary  w-350" data-toggle="modal"
+                            data-target="#politicallyExposedDialog">
+                            Next </button>
+                    </form>
+                </div>
+                <div id="guarantorDetails" class="tabcontent hide">
+                    <form>
+                        <div class="row mt-10">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Select</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Mr.">Mr.</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Guarantor’ Name</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="Deepak" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Date of Birth</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="DD MM YYYY" class="form-control date-picker" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Guarantor’ Age</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="31" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Gender</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Male">Male</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Marital Status</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Married">Married</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Spouse</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="Mahi" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Father</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="Rajesh" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Mobile Number</label>
+                                <div class="form-group">
+                                    <input type="number" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <div class="send-otp-group">
+                                    <a href="" class="link-with-icon" data-toggle="modal"
+                                        data-target="#otpDialog">
+                                        Send OTP
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Primary KYC</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="723643" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">KYC No.</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="VOTE37423" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Guarantor’ Occupation</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Present Address</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter"
+                                        value="Adresss-123 Address, Village- Village 1" disabled class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <button type="submit" class="btn w-100">Back</button>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <button type="button" class="btn btn-primary w-100 mt-xs-15">Next</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="insuranceDetails" class="tabcontent hide">
+                    <form>
+                        <div class="row mt-10">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Select Nominee</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Other">Other</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Nominee Name</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="Ramesh" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Relationship with client</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Uncle">Uncle</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Date of Birth</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="DD MM YYYY" class="form-control date-picker" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Nominee Age</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="22" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Nominee Guardian Name</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="Jai Prakash" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-gray mb-20" style="background-color: #cecece;">
+                                    <h3 class="bold">Insurance Details</h3>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Sum Assured</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="22" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Nominee Insurance </label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Yes">Yes</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Total Insurance Amount</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="22000" disabled class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary w-350">
+                            Next </button>
+                    </form>
+                </div>
+                <div id="bankDetails" class="tabcontent hide">
+                    <form>
+                        <div class="row mt-10 flex-start">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Enter Code</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="IDUSYG" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12 ">
+                                <button type="button" class="btn btn-primary underline w-100 mt-25 mt-xs-0 mb-xs-20"
+                                    data-toggle="modal" data-target="#accountAlreadyExistDialog">
+                                    Validate </button>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-gray mb-20">
+                                    <h4 style="color: #808080;">Branch Address</h4>
+                                    <h3 class="bold">Bank of India</h3>
+                                    <p>Manik Chhak,at Po Karanjia,dist Mayurbhanj,orissa - 757037</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Account Holder Type</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Single">Single</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Account Holder Name</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Jai Prakash">Jai Prakash</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Account Type</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Jai Prakash">Jai Prakash</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Account No.</label>
+                                <div class="form-group">
+                                    <input type="number" placeholder="Enter" value="2343" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Confirm Account No.</label>
+                                <div class="form-group">
+                                    <input type="number" placeholder="Enter" value="234324" disabled
+                                        class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Digital payment</label>
+                                <div class="form-group">
+                                    <select name="selectName" id="selectId" class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="Yes">Jai Prakash</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">UPI ID</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="@upi" disabled class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Bank Passbook</label>
+                                <div class="passbook-cover">
+                                    <input type="file" id="passbook-upload">
+                                    <img src="./../assets/images/cam-icon.svg" alt="Cam Icon" class="cam-icon">
+                                    <img id="imgPreview" src="#" alt="pic" class="hide"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-20">
+                            <div class="col-6 col-sm-12">
+                                <button type="button" class="btn btn-primary w-100 mb-xs-15" data-toggle="modal"
+                                    data-target="#beneCheckFailedDialog">Bene Check</button>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <button type="button" class="btn btn-primary w-100"
+                                    onclick="goToCGT()">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Politically Exposed dialog -->
+
+    <div class="modal fade" id="politicallyExposedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">The Client is a politically Exposed Person/Related to a Politically Exposed Person
+                    therefore the proposal shall be subjected to scrutiny by Higher Authorities,
+                    Do you wish to continue?</h2>
+                <button class="btn btn-primary w-100 mt-30" type="button" data-dismiss="modal">Yes</button>
+                <button class="btn w-100 mt-30" type="button" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="viewSample" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+               <h3>Sample document of proof of Business</h3>
+               <h4>Lease agreement</h4>
+               <div class="sample-list">
+                    <ul>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                    </ul>
+               </div>
+               <h4>Other Document</h4>
+               <div class="sample-list">
+                    <ul>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                    </ul>
+                </div>
+                <div class="button-wrap">
+                    <button class="btn w-320" type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- otpDialog dialog -->
+    <div class="modal fade" id="otpDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/successfully-checked.svg" />
+                </div>
+                <h2 class="center">OTP Sent Successfully!</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal" data-toggle="modal"
+                    data-target="#verifyNumberDialog">Okay</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- verifyNumber dialog -->
+    <div class="modal fade" id="verifyNumberDialog" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/verify-mobile-number.svg" />
+                </div>
+                <h1 class="bold mb-20">Verify Mobile Number</h1>
+                <label class="form-label">OTP</label>
+                <div class="form-group">
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                </div>
+                <h4>(Please enter verification code sent on your number)</h4>
+                <button class="btn btn-primary w-280 mt-30" type="button" data-dismiss="modal">Submit</button>
+                <button class="btn w-280 mt-30" type="button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- accountAlreadyExist dialog -->
+    <div class="modal fade" id="accountAlreadyExistDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Bank account number already exists with borrower ID 341.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- beneCheckFailed dialog -->
+    <div class="modal fade" id="beneCheckFailedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Bene check failed.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal" data-toggle="modal"
+                    data-target="#beneCheckSuccessDialog">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- beneCheckSuccess dialog -->
+    <div class="modal fade" id="beneCheckSuccessDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/successfully-checked.svg" />
+                </div>
+                <h2 class="center">Bene check Successful!</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+    <!-- contactUsDialog dialog -->
+    <div class="modal fade" id="contactUsDialog" role="dialog">
+        <div class="modal-dialog large">
+            <div class="modal-content">
+                <h1 class="center mb-30 mt-0 bold">Contact Us</h1>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/call-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Support No.</h4>
+                            <h3 class="semi-bold">+91-9663546786</h3>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/mail-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Email Address</h4>
+                            <h3 class="semi-bold">support@annapurna.com</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn w-280 mt-30" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- enrollment restricted dialog -->
+    <div class="modal fade" id="restrictedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Enrolment Restricted! Contact Administrator.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+    <!-- Logout dialog -->
+    <div class="modal fade" id="logOutDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Are you sure you want to log out?</h2>
+                <a href="../login.html" class="btn btn-primary w-100 mt-30">Yes</a>
+                <button class="btn w-100 mt-20" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/datepicker.min.js"></script>
+    <script src="../assets/js/moment.min.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').niceSelect();
+            $('.date-picker').datepicker({
+                format: 'dd/mm/yyyy',
+                todayHighlight: 'TRUE',
+                autoclose: true,
+            });
+            $(".add-sub-product").on('click', function(e){
+                setTimeout(function(){
+                    $(".append-container").append(`<div class="appended-wrap"><div class="row"><div class="col-6 col-sm-12"><label class="form-label">Sub Products Name</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="Sub Product Name">Sub Product Name</option><option value="lorem">lorem</option><option value="lorem2">lorem2</option><option value="lorem3">lorem3</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Loan Product Code</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="456">456</option><option value="lorem">lorem</option><option value="lorem2">lorem2</option><option value="lorem3">lorem3</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Product Price</label><div class="form-group"><input type="text" placeholder="Enter" value="2100" class="form-control"></div></div><div class="col-6 col-sm-12"><label class="form-label">Total Product Price</label><div class="form-group"><input type="text" placeholder="Enter" value="20,000"  class="form-control"></div></div><div class="col-6 col-sm-12"><label class="form-label">Downpayment</label><div class="form-group"><input type="text" placeholder="Enter" value="20,000"  class="form-control"></div></div><div class="col-6 col-sm-12"><button type="button" class="btn underline w-100 removeItem"><img src="../assets/images/remove-ic.svg" alt="Remove Icon">Remove</button></div></div></div>`);
+                    $('select').niceSelect();
+                },10);
+            });
+    
+            $(".append-container").on('click', '.removeItem', function(e){
+                $(this).closest(".appended-wrap").fadeOut('200', function() { 
+                    $(this).closest(".appended-wrap").remove();
+                });
+            });
+
+            $(".add-supplier").on('click', function(e){
+                setTimeout(function(){
+                    $(".append-container-wrap").append(`<div class="appended-wrap"><div class="row"><div class="col-6 col-sm-12"><label class="form-label">Supplier Name</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Supplier Mobile no</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Supplier Frequency of Purchase</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Supplier Know the Client since</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="">Select</option><option value="Lorem 1">Lorem 1</option><option value="Lorem 2">Lorem 2</option><option value="Lorem 3">Lorem 3</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Supplier Feedback about the Client</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><button type="button" class="btn underline w-100 removeItem"><img src="../assets/images/remove-ic.svg" alt="Remove Icon">Remove</button></div></div></div>`);
+                    $('select').niceSelect();
+                },10);
+            });
+    
+            $(".append-container-wrap").on('click', '.removeItem', function(e){
+                $(this).closest(".appended-wrap").fadeOut('200', function() { 
+                    $(this).closest(".appended-wrap").remove();
+                });
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.tablinks').click(function(){
+                $('.tablinks').removeClass('active');
+                $(this).addClass('active');
+                var tagid = $(this).data('tag');
+                $('.tabcontent').removeClass('active').addClass('hide');
+                $('#'+tagid).addClass('active').removeClass('hide');
+            });
+            $("#loan-product").on("change", function () {
+                let selected = $("#loan-product").val();
+                if(selected=="JLG") {
+                    $(".for-jlg").removeClass("hide");
+                    $(".product-details").addClass("hide");
+                    $("#client-politically,#client-related-politically").addClass("hide");
+                    $("#loan-product-code").removeClass("hide");
+                    $("#choice-of-repayment").removeClass("hide");
+                    $("#applied-amount,#recommened-amount,#tenure-in-month").addClass("hide");
+                    $(".education").addClass("hide");
+                    $(".co-applicant-details,.technical-evaluation,.existing-dairy-income-details,.selling-value-added-product,.disability-details").addClass("hide");
+                    $(".business-details").addClass("hide");
+                    $(".land-title-ror-details").addClass("hide");
+                }
+                else if(selected=="Dairy"){
+                    $(".product-details").addClass("hide");
+                    $(".for-jlg").addClass("hide");
+                    $("#recommened-amount").removeClass("hide");
+                    $("#client-politically,#client-related-politically").addClass("hide");
+                    $("#applied-amount,#recommened-amount,#loan-product-code").removeClass("hide");
+                    $(".education").addClass("hide");
+                    $("#choice-of-repayment").removeClass("hide");
+                    $(".co-applicant-details,.technical-evaluation,.existing-dairy-income-details,.selling-value-added-product").removeClass("hide");
+                    $(".business-details").addClass("hide");
+                    $(".disability-details").addClass("hide");
+                    $(".land-title-ror-details").addClass("hide");
+                }
+                else if(selected=="Education"){
+                    $(".product-details").addClass("hide");
+                    $(".education").removeClass("hide");
+                    $("#choice-of-repayment").addClass("hide");
+                    $("#client-politically,#client-related-politically").addClass("hide");
+                    $("#applied-amount,#recommened-amount,#loan-product-code").removeClass("hide");
+                    $(".co-applicant-details,.technical-evaluation,.existing-dairy-income-details,.selling-value-added-product,.disability-details").addClass("hide");
+                    $(".business-details").addClass("hide");
+                    $(".land-title-ror-details").addClass("hide");
+                }
+                else if(selected=="Business"){
+                    $(".product-details").addClass("hide");
+                    $(".business-details").removeClass("hide");
+                    $(".education").addClass("hide");
+                    $("#choice-of-repayment").addClass("hide");
+                    $("#client-politically,#client-related-politically").addClass("hide");
+                    $("#applied-amount,#recommened-amount,#loan-product-code").removeClass("hide");
+                    $(".co-applicant-details,.land-title-ror-details").addClass("hide");
+                    $(".technical-evaluation,.existing-dairy-income-details,.selling-value-added-product,.disability-details").addClass("hide");
+                    $(".land-title-ror-details").addClass("hide");
+                }
+                else if(selected=="CDL"){
+                    $(".product-details").removeClass("hide");
+                    $(".business-details").addClass("hide");
+                    $(".education").addClass("hide");
+                    $("#choice-of-repayment").addClass("hide");
+                    $("#client-politically,#client-related-politically,#applied-amount,#recommened-amount,#loan-product-code").addClass("hide");
+                    $(".co-applicant-details,.technical-evaluation,.existing-dairy-income-details,.selling-value-added-product,.disability-details").addClass("hide");
+                    $(".land-title-ror-details").addClass("hide");
+                }
+                else if(selected=="Swasth"){
+                    $(".product-details").addClass("hide");
+                    $(".business-details").addClass("hide");
+                    $(".education").addClass("hide");
+                    $("#choice-of-repayment").removeClass("hide");
+                    $("#client-politically,#client-related-politically").addClass("hide");
+                    $("#applied-amount,#recommened-amount,#loan-product-code").removeClass("hide")
+                    $(".co-applicant-details,.technical-evaluation,.existing-dairy-income-details,.selling-value-added-product,disability-details").addClass("hide");
+                    $(".land-title-ror-details").addClass("hide");
+                }
+                else if(selected=="Samarth"){
+                    $(".product-details").addClass("hide");
+                    $(".business-details").addClass("hide");
+                    $(".education").addClass("hide");
+                    $("#choice-of-repayment").removeClass("hide");
+                    $("#client-politically,#client-related-politically").addClass("hide");
+                    $("#applied-amount,#recommened-amount,#loan-product-code,#tenure-in-month").removeClass("hide")
+                    $(".technical-evaluation,.existing-dairy-income-details,.selling-value-added-product").addClass("hide");
+                    $(".co-applicant-details,.disability-details").removeClass("hide");
+                    $(".land-title-ror-details").addClass("hide");
+                }
+                else if(selected=="HIL"){
+                    $("#client-politically,#client-related-politically").addClass("hide");
+                    $(".co-applicant-details,.land-title-ror-details").removeClass("hide");
+                    $(".disability-details,.for-jlg").addClass("hide");
+                    $("#choice-of-repayment").removeClass("hide");
+                    $("#tenure-in-month").removeClass("hide");
+                    $(".product-details").addClass("hide");
+                    $(".business-details").addClass("hide");
+                    $(".education").addClass("hide");
+                    $(".technical-evaluation,.existing-dairy-income-details,.selling-value-added-product").addClass("hide");
+                }
+                else{
+                    $(".product-details").addClass("hide");
+                    $(".for-jlg").addClass("hide");
+                    $(".education").addClass("hide");
+                    $("#choice-of-repayment").removeClass("hide");
+                    $("#applied-amount,#recommened-amount,#tenure-in-month,#loan-product-code").removeClass("hide");
+                    $(".co-applicant-details,.technical-evaluation,.existing-dairy-income-details,.selling-value-added-product,.disability-details").addClass("hide");
+                    $(".business-details").addClass("hide");
+                    $("#client-politically,#client-related-politically").addClass("hide");
+                    $(".land-title-ror-details").addClass("hide");
+
+                }
+            });
+        });
+    </script>
+    <script>
+        $("#passbook-upload").change(function () {
+            const file = this.files[0];
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function (event) {
+                    $("#imgPreview").attr("src", event.target.result);
+                    $(".cam-icon").addClass("hide");
+                    $("#imgPreview").removeClass("hide");
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        function goToCGT() {
+            window.location.href = "cgt.html";
+        }
+        var acc = document.getElementsByClassName("accordian");
+        var accHeading = document.getElementsByClassName("accordian-heading");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+          accHeading[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+          });
+        }
+    </script>
+</body>
+
+</html>

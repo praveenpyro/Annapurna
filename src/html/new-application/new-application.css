@@ -1,0 +1,332 @@
+.client-detail-found-page .white-card .radio-cover {
+    width: 50px;
+    background: #F6F6F7;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -15px;
+}
+
+.client-detail-found-page .white-card .includes-radio {
+    width: calc(100% - 40px);
+}
+
+.client-detail-found-page .borrower-cover {
+    background: #F6F6F7;
+    border-radius: 10px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.client-detail-found-page .borrower-cover .id-cover {
+    background: rgba(80, 93, 124, 0.16);
+    border-radius: 10px;
+    padding: 10px 24px;
+    margin-left: 20px;
+}
+
+.client-detail-found-page .search-cover {
+    background: #F6F6F7;
+    border-radius: 10px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.basic-detail-page {
+    padding-bottom: 100px;
+}
+
+.basic-detail-page .tab button {
+    background: #505d7c29;
+    border: 0;
+    cursor: pointer;
+    padding: 16px 26px;
+    color: #000;
+    font-size: 14px;
+}
+
+.basic-detail-page .tab-content {
+    display: none !important;
+}
+
+.basic-detail-page .btn-danger {
+    background: rgba(255, 112, 112, 0.1);
+    border: 1px solid #FF7070;
+    color: #ff7070;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 6px 10px;
+    height: 48px;
+}
+
+.basic-detail-page .btn-add {
+    background: #f2f2f2;
+    border: 1px solid #E0E0E0;
+    color: #442477;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 6px 10px;
+    height: 48px;
+}
+
+.basic-detail-page .profile-info-cover {
+    padding-right:20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+.custom-accordian{
+    display:none;
+}
+.show-basic-details{
+    position: absolute;
+    right:0;
+    top:0;
+}
+.show-basic-details .accordian-arrow{
+    width:16px;
+    height:10px;
+    display:inline-block;
+    vertical-align: middle;
+    background:url("../assets/images/accordian-arrow.svg") no-repeat center center;
+    transition:0.3s ease-in;
+}
+.show-basic-details.active .accordian-arrow{
+    transform: rotate(180deg);
+}
+.basic-detail-page .profile-info-cover img {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    border: 1px solid #B2B3B5;
+}
+
+.basic-detail-page .count-cover {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.basic-detail-page .plus {
+    background: #F2F2F2;
+    border-radius: 8px;
+    border: none;
+    padding: 15px 12px;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.white-card.no-flex{
+    display: block;
+}
+.check-ic{
+    position: absolute;
+    top:10px;
+    left:5px;
+}
+.form-control.verify-input{
+    padding-left:45px;
+}
+.select-input-group{
+    display: flex;
+    align-items: flex-start;
+}
+.select-wrap{
+    width:100px;
+}
+.input-wrap{
+    width:calc(100% - 100px);
+    padding-left:15px;
+}
+.update-wrap{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translateY(-50%);
+}
+.update-wrap img{
+    margin-right:5px;
+}
+.update-wrap span{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 34px;
+    text-decoration-line: underline;
+    color: #442477;
+}
+.adhar-note{
+    margin-bottom:15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    position: relative;
+    top:-15px;
+}
+.sent-otp{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.forgot-password a, .sent-otp a{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: underline;
+    color: #442477;
+}
+.otp-input ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0 -3px 10px -2px;
+}
+.otp-input li{
+    padding:0 3px 0 2px;
+}
+.otp-input li input{
+    max-width:70px;
+    text-align: center;
+}
+.info p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+}
+.back-link{
+    width:100%;
+    height:54px;
+    margin-top:15px;
+    background: #ffffff;
+    border:solid 1px #442477;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #442477;
+    text-decoration: none;
+}
+.btn-wrap {
+    margin-top: 25px;
+}
+.popup-view-image .navigation-thumbs{
+    margin-top:15px;
+}
+.popup-view-image .navigation-thumbs figure{
+    width: 100%;
+    height: 78px;
+    border-radius: 10px;
+    border: 2px solid #B2B3B5;
+    overflow: hidden;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.popup-view-image .navigation-thumbs figure img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.popup-view-image .navigation-thumbs p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #442477;
+}
+#sync1 .item{
+    margin: 0;
+    text-align: center;
+}
+@media (max-width: 1024px) {
+    .client-detail-found-page .white-card .radio-cover{
+        border-radius:8px;
+    }
+    .client-detail-found-page .borrower-cover {
+        padding: 8px 15px;
+        border-radius:8px;
+    }
+    .client-detail-found-page .search-cover {
+        font-size: 16px;
+        padding: 12px 15px;
+        border-radius:8px;
+    }
+
+    .client-detail-found-page .search-cover img {
+        width: 28px;
+    }
+    .basic-detail-page .plus{
+        border-radius:6px;
+    }
+}
+
+@media (max-width: 767px) {
+    .client-detail-found-page .search-cover{
+        border-radius:5px;
+    }
+    .client-detail-found-page .white-card .radio-cover{
+        border-radius:5px;
+    }
+    .update-wrap span{
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .update-wrap img {
+        width: 18px;
+    }
+    .check-ic {
+        width: 28px;
+        top: 8px;
+    }
+    .adhar-note{
+        margin-bottom: 10px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    .basic-detail-page .plus {
+        border-radius: 4px;
+        padding: 12px;
+    }
+    .client-detail-found-page .borrower-cover {
+        padding: 8px 10px;
+        border-radius:5px;
+    }
+    .client-detail-found-page .borrower-cover .id-cover {
+        padding: 8px 15px;
+        border-radius:5px;
+        margin-left:10px;
+    }
+    
+    .client-detail-found-page .search-cover {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+    .client-detail-found-page .search-cover img {
+        width: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .basic-detail-page .plus{
+        border-radius: 4px;
+        padding: 8px;
+    }
+}

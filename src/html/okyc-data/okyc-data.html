@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OKYC Data</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/typography.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="okyc-data.css" />
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</head>
+
+<body>
+    <main class="main-wrap">
+        <header class="header">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="hamburger-wrap">
+                        <a href="javascript:void(0)" class="open-sidebar"><img src="../assets/images/Hamburger.svg"
+                                alt="Hamburger Icon" /></a>
+                    </div>
+                    <div class="brand">
+                        <a href="../dashboard.html"><img src="../assets/images/Annapurna-small-logo.svg"
+                                alt="Annapurna Logo" /></a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="right-inner">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" class="open-info">
+                                    <img src="../assets/images/info-ic.svg" alt="Info Icon" />
+                                </a>
+                                <ul class="info-dropdown">
+                                    <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                    <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                    <li><a href="../help/faq.html">FAQs</a></li>
+                                    <li><a href="../help/video.html">Videos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../notification/notification.html"><img src="../assets/images/notification-icon.svg" alt="Notification Icon" /></a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="profile-wrap">
+                        <a href="javascript:void(0)" class="user-wrap">
+                            <img src="../assets/images/profile-ic.svg" class="mr-10" alt="Profile Icon" />
+                            <span>Vivek Sharma</span>
+                            <img src="../assets/images/arrow-down.svg" alt="Arrow Down Icon" />
+                        </a>
+                        <ul class="user-info-dropdown">
+                            <li><a href="../change-password.html">Change Password</a></li>
+                            <li><a data-toggle="modal" data-target="#logOutDialog">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <div class="user-info">
+                <figure>
+                    <img src="../assets/images/user-pic.png" alt="User Pic" />
+                </figure>
+                <div class="info-user">
+                    <h4 class="name">Vivek Sharma</h4>
+                    <p class="designation">Field Credit Officer</p>
+                </div>
+                <a href="javascript:void(0)" class="close-sidebar"><img src="../assets/images/close-sidebar.svg"
+                        alt="Close Sidebar" /></a>
+            </div>
+            <div class="navigation-logout-wrap">
+                <div class="navigation-wrap">
+                    <ul>
+                        <li>
+                            <a href="../new-application/search-client.html">
+                                <figure><img src="../assets/images/new-application-ic.svg" alt="New Application Icon" />
+                                </figure><span>New Application</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../laf-status/search-client.html">
+                                <figure><img src="../assets/images/laf-status-ic.svg" alt="LAF Status Icon" /></figure>
+                                <span>LAF Status</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../luc-check/search-client.html">
+                                <figure><img src="../assets/images/luc-check-ic.svg" alt="LUC Check Icon" /></figure>
+                                <span>LUC Check</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../village/get-location.html">
+                                <figure><img src="../assets/images/village-addition-ic.svg"
+                                        alt="Village Addition Icon" /></figure><span>Village Addition</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../cb-deviation/cb-deviation.html">
+                                <figure><img src="../assets/images/cb-approval-ic.svg"
+                                        alt="CB Rejection Data Icon" /></figure><span>CB Rejection Data</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../fee-and-charges/list.html">
+                                <figure><img src="../assets/images/fees-and-charges-ic.svg"
+                                        alt="Fees and Charges Icon" /></figure><span>Fees and Charges</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../notification/notification.html"><figure><img src="../assets/images/ic-notification.svg" alt="Notification Icon" /></figure><span>Notification</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="parent-menu"><figure><img src="../assets/images/help-ic.svg" alt="Help Icon"/></figure><span>Help</span></a>
+                            <ul class="sub-menu">
+                                <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                <li><a href="../help/faq.html">FAQs</a></li>
+                                <li><a href="../help/video.html">Videos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../change-password.html">
+                                <figure><img src="../assets/images/change-password-ic.svg" alt="Change Password Icon" />
+                                </figure><span>Change Password</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logout-wrap">
+                    <a data-toggle="modal" data-target="#logOutDialog" class="logout">Logout</a>
+                </div>
+                <p class="version">Version 1.0.0</p>
+            </div>
+        </aside>
+       
+        <div class="breadcrumb-cover">
+            <ul class="breadcrumb-wrap">
+                <li><a href="../dashboard.html">Home</a></li>
+                <li><a href="../luc-check/client-detail.html">Client Details</a></li>
+                <li>OKYC Data</li>
+            </ul>
+        </div>
+        <div class="okyc-data-page pb-40">
+            <div class="center-bg-white medium">
+                <div class="custom-tabs">
+                    <button class="tablinks active" data-tag="clientPicture">
+                        Client Picture
+                    </button>
+                    <button class="tablinks" data-tag="idVerification">
+                        ID Verification
+                    </button>
+                    <button class="tablinks" data-tag="OKYCProfileReview">
+                        OKYC Profile Review
+                    </button>
+                </div>
+                <div id="clientPicture" class="tabcontent">
+                    <h1 class="center bold mt-20">Capture Client Photo</h1>
+                    <p class="center mt-10 mb-10">Make sure the customer’s face aligned and
+                        towards the camera!</p>
+                    <figure class="dummy-upload">
+                        <img src="../assets/images/dummy-user-img.svg" />
+                    </figure>
+                    <button class="btn btn-primary w-350 mt-10 mb-30" data-toggle="modal"
+                        data-target="#openCameraForPhoto"><img src="../assets/images/camera-icon.svg" alt="Camera Icon" class="camera-ic"/>Open Camera</button>
+                </div>
+                <div id="idVerification" class="tabcontent hide">
+                    <div id="verifyId">
+                        <h1 class="center bold mt-20 tab-heading">Please verify your ID</h1>
+                        <p class="center adhar-card-description hide">Select one of the options to complete the process</p>
+                        <div class="sub-tabs mt-20 mb-20">
+                            <div class="single-sub-tab active voter-id-card" data-tag="voterID">
+                                <h3><span>1</span> Voter Id Card</h3>
+                            </div>
+                            <div class="single-sub-tab adhar-card" data-tag="AadharCard">
+                                <h3><span>2</span> Aadhar Card</h3>
+                            </div>
+                        </div>
+
+                        <div class="subtabcontent" id="voterID">
+                            <h3 class="bold">Voter ID Output</h3>
+
+                            <div class="white-card">
+                                <div class="row detail-wrapper">
+                                    <div class="col-12">
+                                        <label>Address</label>
+                                        <p>Village/Locality - Dakarangia G. Pitown - Greesingia P.S. - G.Udayagiri</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>Age</label>
+                                        <p>22</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>Date of Birth</label>
+                                        <p>05 Apr 1990</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>Father’s Name</label>
+                                        <p>Lorem</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>Gender</label>
+                                        <p>Male</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>ID No.</label>
+                                        <p>32323</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>Name</label>
+                                        <p>Lorem</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>State</label>
+                                        <p>Lorem</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>Year of Birth</label>
+                                        <p>1993</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>District</label>
+                                        <p>Lorem</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>House No.</label>
+                                        <p>3434</p>
+                                    </div>
+                                    <div class="col-4 col-md-6 col-sm-12">
+                                        <label>Pin Code</label>
+                                        <p>23232</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn w-350 mt-30" onclick="openEditInformation()">Edit Information</button>
+                            <button class="btn btn-primary w-350 mt-20">Confirm</button>
+
+                        </div>
+                        <div class="subtabcontent hide" id="AadharCard">
+                            <div id="primaryAadharContent">
+                                <div class="adhar-option-list mt-30">
+                                    <div class="single-aadhar-option active open-adhar-ocr">
+                                        <h3>Aadhar OCR</h3>
+                                    </div>
+                                    <div class="single-aadhar-option open-ekyc">
+                                        <h3>Aadhar EKYC</h3>
+                                    </div>
+                                </div>
+                                <div class="ekyc-thumb-wrap">
+                                    <figure class="thumb-dummy-img">
+                                        <img src="../assets/images/thumb-print-dummy.svg" alt="">
+                                    </figure>
+                                    <button class="btn btn-primary w-350">Proceed</button>
+                                </div>
+                            </div>
+
+                            <div id="aadharOcrContent">
+                                <div class="row">
+                                    <div class="col-5 mb-30">
+                                        <div class="mb-20">
+                                            <label class="custom-radio" for="singleSide">
+                                                <input type="radio" id="singleSide" name="adhar-side" value="singleSide">
+                                                <span class="radio-mark"></span>
+                                                &nbsp; <span>Single Side</span>
+                                            </label>
+                                        </div>
+                                        <img src="./../assets/images/single-side-aadhar.svg" alt="">
+                                    </div>
+                                    <div class="col-7 mb-30">
+                                        <div class="mb-20">
+                                            <label class="custom-radio" for="doubleSide">
+                                                <input type="radio" id="doubleSide" name="adhar-side" value="doubleSide">
+                                                <span class="radio-mark"></span>
+                                                &nbsp; <span>Double Side</span>
+                                            </label>
+                                        </div>
+                                        <img src="./../assets/images/front-aadhar.svg" class="mb-20" alt="">
+
+                                        <img src="./../assets/images/back-aadhar.svg" alt="">
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary w-350 mt-30 mb-30">Proceed</button>
+                                <!-- <button class="btn btn-primary w-350 mt-30 mb-30" data-toggle="modal"
+                                    data-target="#openCameraForSingleSideAadhar">Open Camera single-side</button>
+                                <button class="btn btn-primary w-350 mb-30" data-toggle="modal"
+                                    data-target="#openCameraForFrontAadhar">Open Camera double-side</button> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="editInformation">
+                        <h1 class="center bold mt-20">Edit Information</h1>
+
+                        <form>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label class="form-label">Address</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Age</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Date of Birth</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="DD MM YYYY" class="form-control date-picker" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">District</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Father</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Gender</label>
+                                    <div class="form-group">
+                                        <select name="cars" id="cars" class="form-control" aria-placeholder="Select">
+                                            <option value="Select">Select</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">House No.</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">ID No.</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Name</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Pin code</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">State</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Year of Birth</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary w-350"
+                                onclick="closeEditInformation()">Update</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="OKYCProfileReview" class="tabcontent hide">
+                    <div class="accordian mt-20">
+                        <div class="accordian-heading">
+                            <h3 class="bold">Existing Data</h3>
+                            <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image" />
+                        </div>
+                        <div class="accordian-content">
+                            <div class="row detail-wrapper">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Customer ID</label>
+                                    <p>123</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Applicant’s Name</label>
+                                    <p>Jai Prakash</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Gender</label>
+                                    <p>Male</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Spouse</label>
+                                    <p>Lata Kumari</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Father</label>
+                                    <p>Ranjit Kumar</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>DOB</label>
+                                    <p>05 April 1991</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Voter No.</label>
+                                    <p>234234</p>
+                                </div>
+                                <div class="col-8 col-md-12">
+                                    <label>Address</label>
+                                    <p>Village/Locality - Dakarangia G. Pitown - Greesingia P.S. G.Udayagiri</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordian-heading">
+                            <h3 class="bold">Voter OCR Data</h3>
+                            <img src="../assets/images/down-circle-arrow.svg" alt="down circle image" />
+                        </div>
+                        <div class="accordian-content">
+                            <div class="row detail-wrapper">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Customer ID</label>
+                                    <p>123</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Applicant’s Name</label>
+                                    <p>Jai Prakash</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Gender</label>
+                                    <p>Male</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Spouse</label>
+                                    <p>Lata Kumari</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Father</label>
+                                    <p>Ranjit Kumar</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>DOB</label>
+                                    <p>05 April 1991</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Voter No.</label>
+                                    <p>234234</p>
+                                </div>
+                                <div class="col-8 col-md-12">
+                                    <label>Address</label>
+                                    <p>Village/Locality - Dakarangia G. Pitown - Greesingia P.S. G.Udayagiri</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordian-heading">
+                            <h3 class="bold">Voter Edited Data</h3>
+                            <img src="../assets/images/down-circle-arrow.svg" alt="down circle image" />
+                        </div>
+                        <div class="accordian-content">
+                            <div class="row detail-wrapper">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Customer ID</label>
+                                    <p>123</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Applicant’s Name</label>
+                                    <p>Jai Prakash</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Gender</label>
+                                    <p>Male</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Spouse</label>
+                                    <p>Lata Kumari</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Father</label>
+                                    <p>Ranjit Kumar</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>DOB</label>
+                                    <p>05 April 1991</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Voter No.</label>
+                                    <p>234234</p>
+                                </div>
+                                <div class="col-8 col-md-12">
+                                    <label>Address</label>
+                                    <p>Village/Locality - Dakarangia G. Pitown - Greesingia P.S. G.Udayagiri</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordian-heading">
+                            <h3 class="bold">Voter Verified Data</h3>
+                            <img src="../assets/images/down-circle-arrow.svg" alt="down circle image" />
+                        </div>
+                        <div class="accordian-content">
+                            <div class="row detail-wrapper">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Customer ID</label>
+                                    <p>123</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Applicant’s Name</label>
+                                    <p>Jai Prakash</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Gender</label>
+                                    <p>Male</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Spouse</label>
+                                    <p>Lata Kumari</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Father</label>
+                                    <p>Ranjit Kumar</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>DOB</label>
+                                    <p>05 April 1991</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Voter No.</label>
+                                    <p>234234</p>
+                                </div>
+                                <div class="col-8 col-md-12">
+                                    <label>Address</label>
+                                    <p>Village/Locality - Dakarangia G. Pitown - Greesingia P.S. G.Udayagiri</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordian-heading">
+                            <h3 class="bold">Aadhar OCR Data</h3>
+                            <img src="../assets/images/down-circle-arrow.svg" alt="down circle image" />
+                        </div>
+                        <div class="accordian-content">
+                            <div class="row detail-wrapper">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Customer ID</label>
+                                    <p>123</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Applicant’s Name</label>
+                                    <p>Jai Prakash</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Gender</label>
+                                    <p>Male</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Spouse</label>
+                                    <p>Lata Kumari</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Father</label>
+                                    <p>Ranjit Kumar</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>DOB</label>
+                                    <p>05 April 1991</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Aadhar No.</label>
+                                    <p>********3473</p>
+                                </div>
+                                <div class="col-8 col-md-12">
+                                    <label>Address</label>
+                                    <p>Village/Locality - Dakarangia G. Pitown - Greesingia P.S. G.Udayagiri</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordian">
+                        <div class="accordian-heading">
+                            <h3 class="bold">Aadhar Edited Data</h3>
+                            <img src="../assets/images/down-circle-arrow.svg" alt="down circle image" />
+                        </div>
+                        <div class="accordian-content">
+                            <div class="row detail-wrapper">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Customer ID</label>
+                                    <p>123</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Applicant’s Name</label>
+                                    <p>Jai Prakash</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Gender</label>
+                                    <p>Male</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Spouse</label>
+                                    <p>Lata Kumari</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Father</label>
+                                    <p>Ranjit Kumar</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>DOB</label>
+                                    <p>05 April 1991</p>
+                                </div>
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <label>Aadhar No.</label>
+                                    <p>********3473</p>
+                                </div>
+                                <div class="col-8 col-md-12">
+                                    <label>Address</label>
+                                    <p>Village/Locality - Dakarangia G. Pitown - Greesingia P.S. G.Udayagiri</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="row mt-20">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">POI Type</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select">
+                                        <option value="">Select</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">POI No.</label>
+                                <div class="form-group">
+                                    <input type="number" placeholder="Enter" value="0" default class="form-control" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">POA Type</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select">
+                                        <option value="">Select</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">POA No.</label>
+                                <div class="form-group">
+                                    <input type="number" placeholder="Enter" value="0" default class="form-control" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Alternate KYC Type</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select">
+                                        <option value="">Select</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Alternate KYC No.</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" value="2434" default class="form-control" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Marital Status</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select">
+                                        <option value="">Select</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Permanent Address</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select">
+                                        <option value="">Select</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Inquiry Purpose</label>
+                                <div class="form-group">
+                                    <select class="form-control" aria-placeholder="Select">
+                                        <option value="">Select</option>
+                                        <option value="lorem">lorem</option>
+                                        <option value="lorem2">lorem2</option>
+                                        <option value="lorem3">lorem3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Applied Amount</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="white-card mt-0">
+                            <div class="row detail-wrapper present-address">
+                                <div class="col-12">
+                                    <label>Present Address</label>
+                                    <p class="bold">Village/Locality - Dakarangia G. Pitown - Greesingia P.S.
+                                        G.Udayagiri</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="images-data-cover">
+                            <h3 class="bold">Images Data</h3>
+                            <p>Click on the thumbnail for full image preview</p>
+                            <ul class="images-list">
+                                <li>
+                                    <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                        <img src="../assets/images/client-image.png" alt="Client Image">
+                                    </figure>
+                                    <p>Client</p>
+                                </li>
+                                <li>
+                                    <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                        <img src="../assets/images/POI.png" alt="POI Image">
+                                    </figure>
+                                    <p>POI Front</p>
+                                </li>
+                                <li>
+                                    <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                        <img src="../assets/images/POI.png" alt="POI Image">
+                                    </figure>
+                                    <p>POI Rear</p>
+                                </li>
+                                <li>
+                                    <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                        <img src="../assets/images/POA.png" alt="POA Image">
+                                    </figure>
+                                    <p>POA Front</p>
+                                </li>
+                                <li>
+                                    <figure class="pointer" data-toggle="modal" data-target="#imageViewerDialog">
+                                        <img src="../assets/images/POA.png" alt="POA Image">
+                                    </figure>
+                                    <p>POA Rear</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="row mt-20">
+                            <div class="col-6">
+                                <button class="btn w-100" type="button" data-toggle="modal"
+                                data-target="#voterVerificationFailedDialog">VID Verification</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-primary w-100" type="button" onclick="openBasicDetail()">Proceed</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 col-sm-6">
+                                <button class="btn w-100 mt-20" type="button" data-toggle="modal"
+                                    data-target="#kycIdAlreadyExistDialog">
+                                    KYC already exist</button>
+                            </div>
+                            <div class="col-4 col-sm-6">
+                                <button class="btn w-100 mt-20" type="button" data-toggle="modal"
+                                    data-target="#noRecordFoundDialog">
+                                    No record found</button>
+                            </div>
+                            <div class="col-4 col-sm-6">
+                                <button class="btn w-100 mt-20" type="button" data-toggle="modal"
+                                    data-target="#viewCBSuccessDialog">
+                                    CB check successfull</button>
+                            </div>
+                            <div class="col-4 col-sm-6">
+                                <button class="btn w-100 mt-20" type="button" data-toggle="modal"
+                                    data-target="#viewCBFailedDialog">
+                                    CB check failer</button>
+                            </div>
+                            <div class="col-4 col-sm-6">
+                                <button class="btn w-100 mt-20" type="button" data-toggle="modal"
+                                    data-target="#deviationFoundDialog">
+                                    Deviation found</button>
+                            </div>
+                            <div class="col-4 col-sm-6">
+                                <button class="btn w-100 mt-20" type="button" data-toggle="modal"
+                                    data-target="#clientEligibleDialog">
+                                    Client eligible</button>
+                            </div>
+                            <div class="col-4 col-sm-6">
+                                <button class="btn w-100 mt-20" type="button" data-toggle="modal"
+                                    data-target="#clientNotEligibleDialog">
+                                    Client not eligible</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Dialog for photo capture -->
+    <div class="modal fade" id="openCameraForPhoto" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-screen-wrap">
+                <h1 class="for-tab">Capture Client Photo</h1>
+                <div class="capture-area for-photo"></div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Capture Client Photo</h1>
+                <button class="btn btn-primary w-350" data-toggle="modal" data-target="#photoCapturedSuccessDialog"
+                    data-dismiss="modal"><img src="../assets/images/camera-icon.svg" alt="Camera Icon" class="camera-ic"/>Capture</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- photoCaptured success dialog -->
+    <div class="modal fade" id="photoCapturedSuccessDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/successfully-checked.svg" />
+                </div>
+                <h2 class="bold center mb-20">Photo captured
+                    successfully.</h2>
+                <button class="btn w-100" data-toggle="modal" data-target="#openCameraForFrontVoterId"
+                    data-dismiss="modal">Capture Voter Id</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog for front voter capture -->
+    <div class="modal fade" id="openCameraForFrontVoterId" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-voter-wrap">
+                <h1 class="for-tab">Capture Voter Id</h1>
+                <div class="capture-area for-voter-id">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Capture Voter Id</h1>
+                <div class="center">
+                    <h3 class="bold">Front of your voter ID</h3>
+                    <p class="mb-20">Make sure your card details are clear to read.</p>
+                    <button class="btn btn-primary w-350" data-toggle="modal" data-target="#confirmFrontVoterIdDialog"
+                        data-dismiss="modal"><img src="../assets/images/camera-icon.svg" alt="Camera Icon" class="camera-ic"/> Capture</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog for confirm front voter -->
+    <div class="modal fade" id="confirmFrontVoterIdDialog" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-voter-wrap">
+                <h1 class="for-tab">Confirm Voter Id</h1>
+                <div class="capture-area for-voter-id">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Confirm Voter Id</h1>
+                <div class="center">
+                    <p class="mb-20">Make sure the photo is not blurry.</p>
+                    <div class="btn-cover">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn w-100" data-toggle="modal" data-target="#openCameraForFrontVoterId"
+                                    data-dismiss="modal">Retake</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-primary w-100" data-toggle="modal"
+                                    data-target="#openCameraForBackVoterId" data-dismiss="modal">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog for back voter capture -->
+    <div class="modal fade" id="openCameraForBackVoterId" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-voter-wrap">
+                <h1 class="for-tab">Capture Voter Id</h1>
+                <div class="capture-area for-voter-id">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Capture Voter Id</h1>
+                <div class="center">
+                    <h3 class="bold">Back of your voter ID</h3>
+                    <p class="mb-20">Make sure your card details are clear to read.</p>
+                    <button class="btn btn-primary w-350" data-toggle="modal" data-target="#confirmBackVoterIdDialog"
+                        data-dismiss="modal"><img src="../assets/images/camera-icon.svg" alt="Camera Icon" class="camera-ic"/>Capture</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog for confirm back voter -->
+    <div class="modal fade" id="confirmBackVoterIdDialog" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-voter-wrap">
+                <h1 class="for-tab">Confirm Voter Id</h1>
+                <div class="capture-area for-voter-id">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Confirm Voter Id</h1>
+                <div class="center">
+                    <p class="mb-20">Make sure the photo is not blurry.</p>
+                    <div class="btn-cover">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn w-100" data-toggle="modal" data-target="#openCameraForBackVoterId"
+                                    data-dismiss="modal">Retake</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-primary w-100" data-dismiss="modal">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- voterIdCaptured success dialog -->
+    <div class="modal fade" id="voterIdCapturedSuccessDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/successfully-checked.svg" />
+                </div>
+                <h2 class="bold center mb-20">Voter ID captured
+                    successfully.</h2>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal">Initiate Voter OCR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog for single aadhar capture -->
+    <div class="modal fade" id="openCameraForSingleSideAadhar" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-voter-wrap">
+                <h1 class="for-tab">Capture Aadhar Card</h1>
+                <div class="capture-area for-single-aadhar">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Capture Aadhar Card</h1>
+                <div class="center">
+                    <h3 class="bold">Single Side Aadhar Card</h3>
+                    <p class="mb-20">Make sure your card details are clear to read.</p>
+                    <button class="btn btn-primary w-350" data-toggle="modal"
+                        data-target="#confirmSingleSideAadharDialog" data-dismiss="modal"><img src="../assets/images/camera-icon.svg" alt="Camera Icon" class="camera-ic"/> Capture</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog for confirm single aadhar -->
+    <div class="modal fade" id="confirmSingleSideAadharDialog" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-voter-wrap">
+                <h1 class="for-tab">Confirm Aadhar Card</h1>
+                <div class="capture-area for-voter-id">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Confirm Aadhar Card</h1>
+                <div class="center">
+                    <p class="mb-20">Make sure the photo is not blurry.</p>
+                    <div class="btn-cover">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn w-100" data-toggle="modal"
+                                    data-target="#openCameraForSingleSideAadhar" data-dismiss="modal">Retake</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-primary w-100" data-dismiss="modal" data-toggle="modal"
+                                    data-target="#aadharCapturedSuccessDialog">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog for front aadhar capture -->
+    <div class="modal fade" id="openCameraForFrontAadhar" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-voter-wrap">
+                <h1 class="for-tab">Capture Aadhar Card</h1>
+                <div class="capture-area for-double-aadhar">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Capture Aadhar Card</h1>
+                <div class="center">
+                    <h3 class="bold">Front of Aadhar Card</h3>
+                    <p class="mb-20">Make sure your card details are clear to read.</p>
+                    <button class="btn btn-primary w-350" data-toggle="modal" data-target="#confirmFrontAadharDialog"
+                        data-dismiss="modal"><img src="../assets/images/camera-icon.svg" alt="Camera Icon" class="camera-ic"/>Capture</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog for confirm front Aadhar -->
+    <div class="modal fade" id="confirmFrontAadharDialog" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-voter-wrap">
+                <h1 class="for-tab">Confirm Aadhar Card</h1>
+                <div class="capture-area for-double-aadhar">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Confirm Aadhar Card</h1>
+                <div class="center">
+                    <p class="mb-20">Make sure the photo is not blurry.</p>
+                    <div class="btn-cover">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn w-100" data-toggle="modal" data-target="#openCameraForFrontAadhar"
+                                    data-dismiss="modal">Retake</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-primary w-100" data-toggle="modal"
+                                    data-target="#openCameraForBackAadhar" data-dismiss="modal">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog for back Aadhar capture -->
+    <div class="modal fade" id="openCameraForBackAadhar" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-voter-wrap">
+                <h1 class="for-tab">Capture Aadhar Card</h1>
+                <div class="capture-area for-double-aadhar">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Capture Aadhar Card</h1>
+                <div class="center">
+                    <h3 class="bold">Back of your Aadhar Card</h3>
+                    <p class="mb-20">Make sure your card details are clear to read.</p>
+                    <button class="btn btn-primary w-350" data-toggle="modal" data-target="#confirmBackAadharDialog"
+                        data-dismiss="modal"><img src="../assets/images/camera-icon.svg" alt="Camera Icon" class="camera-ic"/>Capture</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog for confirm back Aadhar -->
+    <div class="modal fade" id="confirmBackAadharDialog" role="dialog">
+        <div class="capture-screen">
+            <div class="capture-voter-wrap">
+                <h1 class="for-tab">Confirm Aadhar Card</h1>
+                <div class="capture-area for-double-aadhar">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h1 class="for-desktop">Confirm Aadhar Card</h1>
+                <div class="center">
+                    <p class="mb-20">Make sure the photo is not blurry.</p>
+                    <div class="btn-cover">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn w-100" data-toggle="modal" data-target="#openCameraForBackAadhar"
+                                    data-dismiss="modal">Retake</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-primary w-100" data-toggle="modal"
+                                    data-target="#aadharCapturedSuccessDialog" data-dismiss="modal">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- aadharCardCaptured success dialog -->
+    <div class="modal fade" id="aadharCapturedSuccessDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/successfully-checked.svg" />
+                </div>
+                <h2 class="bold center mb-20">Aadhar card captured
+                    successfully.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+    <!-- kycIdAlreadyExist dialog -->
+    <div class="modal fade" id="kycIdAlreadyExistDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">KYC ID 4567890 already exists
+                    for Borrower ID 341.</h2>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal" data-toggle="modal"
+                    data-target="#addRemarkDialog">Raise Request</button>
+                <button class="btn w-100 mt-20" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- addRemark dialog -->
+    <div class="modal fade" id="addRemarkDialog" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h2 class="center mb-20">Please Enter Reason of Raising Request</h2>
+                <div class="form-group">
+                    <textarea rows="3" type="text" placeholder="Add Remark" class="form-control"></textarea>
+                </div>
+                <button class="btn btn-primary w-280 mt-30" type="button" data-dismiss="modal" data-toggle="modal"
+                data-target="#requestRaisedSuccessDialog">Submit</button>
+                <button class="btn w-280 mt-30" type="button" data-dismiss="modal">Cancel</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- voterVerificationFailed dialog -->
+    <div class="modal fade" id="voterVerificationFailedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/verification-failed.svg" />
+                </div>
+                <h2 class="center">Voter Verification Failed</h2>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal">Retry</button>
+                <button class="btn w-100 mt-20" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- noRecordFound dialog -->
+    <div class="modal fade" id="noRecordFoundDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/no-data-available.svg" />
+                </div>
+                <h2 class="center">No record found!</h2>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal">Retry</button>
+                <button class="btn w-100 mt-20" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- imageViewer dialog -->
+    <div class="modal fade" id="imageViewerDialog" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="popup-view-image">
+                    <figure>
+                        <img src="../assets/images/client-image.png" alt="Image"/>
+                    </figure>
+                </div>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal">Reprofiling</button>
+                <button class="btn w-100 mt-20" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- View CB success dialog -->
+    <div class="modal fade" id="viewCBSuccessDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/cb-check-successfull.svg" />
+                </div>
+                <h2 class="bold center mb-20">CB check successful!</h2>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal">Check Eligibility</button>
+                <button class="btn w-100 mt-30" data-dismiss="modal">View Report</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- View CB Failed dialog -->
+    <div class="modal fade" id="viewCBFailedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/cb-check-failed.svg" />
+                </div>
+                <h2 class="bold center mb-20">CB check failure!</h2>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal">Send to CB</button>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- deviationFound dialog -->
+    <div class="modal fade" id="deviationFoundDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Deviation Found!</h2>
+                <button class="btn btn-primary w-100 mt-30" type="button" data-dismiss="modal">Raise Approval</button>
+                <button class="btn w-100 mt-30" type="button" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- requestRaisedSuccess dialog -->
+    <div class="modal fade" id="requestRaisedSuccessDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/successfully-checked.svg" />
+                </div>
+                <h2 class="center">Request raised successfully.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client is eligible dialog -->
+    <div class="modal fade" id="clientEligibleDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/eligible.svg" />
+                </div>
+                <h2 class="center">Client is eligible!</h2>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal">Proceed</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client is not eligible dialog -->
+    <div class="modal fade" id="clientNotEligibleDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/eligible.svg" />
+                </div>
+                <h2 class="center">Client is not eligible!</h2>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal">Review</button>
+                <button class="btn w-100 mt-20" data-dismiss="modal">Reject</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- contactUsDialog dialog -->
+    <div class="modal fade" id="contactUsDialog" role="dialog">
+        <div class="modal-dialog large">
+            <div class="modal-content">
+                <h1 class="center mb-30 mt-0 bold">Contact Us</h1>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/call-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Support No.</h4>
+                            <h3 class="semi-bold">+91-9663546786</h3>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/mail-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Email Address</h4>
+                            <h3 class="semi-bold">support@annapurna.com</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn w-280 mt-30" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- enrollment restricted dialog -->
+    <div class="modal fade" id="restrictedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Enrolment Restricted! Contact Administrator.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+    <!-- Logout dialog -->
+    <div class="modal fade" id="logOutDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Are you sure you want to log out?</h2>
+                <a href="../login.html" class="btn btn-primary w-100 mt-30">Yes</a>
+                <button class="btn w-100 mt-20" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/datepicker.min.js"></script>
+    <script src="../assets/js/moment.min.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').niceSelect();
+            $('.date-picker').datepicker({
+                format: 'dd/mm/yyyy',
+                todayHighlight: 'TRUE',
+                autoclose: true,
+            });
+            $(".open-ekyc").on("click", function(){
+                $(".ekyc-thumb-wrap").slideDown();
+                $(this).addClass("active");
+                $(".open-adhar-ocr").removeClass("active");
+                $("#aadharOcrContent").slideUp();
+            });
+            $(".open-adhar-ocr").on("click", function(){
+                $("#aadharOcrContent").slideDown();
+                $(this).addClass("active");
+                $(".open-ekyc").removeClass("active");
+                $(".ekyc-thumb-wrap").slideUp();
+            });
+            $(".images-list").on("click", "figure", function(){
+                var getImagePath=$(this).find("img").attr("src");
+                $("#imageViewerDialog").on('shown.bs.modal', function(){
+                    setTimeout(function(){
+                        $("#imageViewerDialog").find("img").attr("src",getImagePath);
+                    },10);
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.tablinks').click(function(){
+                $('.tablinks').removeClass('active');
+                $(this).addClass('active');
+                var tagid = $(this).data('tag');
+                $('.tabcontent').removeClass('active').addClass('hide');
+                $('#'+tagid).addClass('active').removeClass('hide');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.single-sub-tab').click(function(){
+                $('.single-sub-tab').removeClass('active');
+                $(this).addClass('active');
+                var tagid = $(this).data('tag');
+                $('.subtabcontent').removeClass('active').addClass('hide');
+                $('#'+tagid).addClass('active').removeClass('hide');
+            });
+            $(".adhar-card").on("click", function(){
+                $("#verifyId").find(".tab-heading").text("Capture Aadhar Card");
+                $("#verifyId").find(".adhar-card-description").removeClass("hide");
+            });
+            $(".voter-id-card").on("click", function(){
+                $("#verifyId").find(".tab-heading").text("Please verify your ID");
+                $("#verifyId").find(".adhar-card-description").addClass("hide");
+            });
+        });
+    </script>
+
+    <script>
+        var acc = document.getElementsByClassName("accordian");
+        var accHeading = document.getElementsByClassName("accordian-heading");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            accHeading[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+            });
+        }
+    </script>
+
+    <script>
+        function openAadharOCR() {
+            document.getElementById("primaryAadharContent").style.display = "none";
+            document.getElementById("aadharOcrContent").style.display = "block";
+        }
+        function openEditInformation() {
+            document.getElementById("verifyId").style.display = "none";
+            document.getElementById("editInformation").style.display = "block";
+        }
+        function closeEditInformation() {
+            document.getElementById("editInformation").style.display = "none";
+            document.getElementById("verifyId").style.display = "block";
+        }
+        function openBasicDetail(){
+            window.location.href = "../new-application/basic-details.html";
+        }
+    </script>
+
+</body>
+
+</html>

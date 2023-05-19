@@ -1,0 +1,31 @@
+.loan-processing-list-page .with-header {
+    flex-direction: column;
+}
+
+.loan-processing-list-page .with-header .card-header {
+    padding: 15px 20px;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    background-color: #DBDEE3;
+    margin: -20px -20px 20px -20px;
+}
+
+
+.loan-processing-list-page .total-fee-collected {
+    background: #DBDEE3;
+    border-radius: 10px;
+    padding: 20px;
+}
+.loan-processing-list-page .white-card{
+    padding:20px;
+}
+@media screen and (max-width: 768px) {
+    .loan-processing-list-page .with-header .card-header {
+        margin: -15px -15px 15px -15px;
+        padding: 12px 15px;
+    }
+    .loan-processing-list-page .total-fee-collected {
+        padding: 15px;
+        border-radius: 6px;
+    }
+}

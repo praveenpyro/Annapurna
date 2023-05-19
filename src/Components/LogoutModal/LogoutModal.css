@@ -1,0 +1,8 @@
+.custom-modal-logout {
+    display: flex;
+    align-items: center;
+}
+
+.custom-modal-logout-content {
+    margin: auto;
+}

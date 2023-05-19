@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAF Detail</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/typography.css" />
+    <link rel="stylesheet" type="text/css" href="loan-detail.css" />
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</head>
+<body>
+    <main class="main-wrap">
+        <header class="header">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="hamburger-wrap">
+                        <a href="javascript:void(0)" class="open-sidebar"><img src="../assets/images/Hamburger.svg"
+                                alt="Hamburger Icon" /></a>
+                    </div>
+                    <div class="brand">
+                        <a href="../dashboard.html"><img src="../assets/images/Annapurna-small-logo.svg"
+                                alt="Annapurna Logo" /></a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="right-inner">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" class="open-info">
+                                    <img src="../assets/images/info-ic.svg" alt="Info Icon" />
+                                </a>
+                                <ul class="info-dropdown">
+                                    <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                    <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                    <li><a href="../help/faq.html">FAQs</a></li>
+                                    <li><a href="../help/video.html">Videos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../notification/notification.html"><img src="../assets/images/notification-icon.svg" alt="Notification Icon" /></a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="profile-wrap">
+                        <a href="javascript:void(0)" class="user-wrap">
+                            <img src="../assets/images/profile-ic.svg" class="mr-10" alt="Profile Icon" />
+                            <span>Vivek Sharma</span>
+                            <img src="../assets/images/arrow-down.svg" alt="Arrow Down Icon" />
+                        </a>
+                        <ul class="user-info-dropdown">
+                            <li><a href="../change-password.html">Change Password</a></li>
+                            <li><a data-toggle="modal" data-target="#logOutDialog">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <div class="user-info">
+                <figure>
+                    <img src="../assets/images/user-pic.png" alt="User Pic" />
+                </figure>
+                <div class="info-user">
+                    <h4 class="name">Vivek Sharma</h4>
+                    <p class="designation">Field Credit Officer</p>
+                </div>
+                <a href="javascript:void(0)" class="close-sidebar"><img src="../assets/images/close-sidebar.svg"
+                        alt="Close Sidebar" /></a>
+            </div>
+            <div class="navigation-logout-wrap">
+                <div class="navigation-wrap">
+                    <ul>
+                        <li>
+                            <a href="../new-application/search-client.html">
+                                <figure><img src="../assets/images/new-application-ic.svg" alt="New Application Icon" />
+                                </figure><span>New Application</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../laf-status/search-client.html">
+                                <figure><img src="../assets/images/laf-status-ic.svg" alt="LAF Status Icon" /></figure>
+                                <span>LAF Status</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../luc-check/search-client.html">
+                                <figure><img src="../assets/images/luc-check-ic.svg" alt="LUC Check Icon" /></figure>
+                                <span>LUC Check</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../village/get-location.html">
+                                <figure><img src="../assets/images/village-addition-ic.svg"
+                                        alt="Village Addition Icon" /></figure><span>Village Addition</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../cb-deviation/cb-deviation.html">
+                                <figure><img src="../assets/images/cb-approval-ic.svg"
+                                        alt="CB Rejection Data Icon" /></figure><span>CB Rejection Data</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../fee-and-charges/list.html">
+                                <figure><img src="../assets/images/fees-and-charges-ic.svg"
+                                        alt="Fees and Charges Icon" /></figure><span>Fees and Charges</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../notification/notification.html"><figure><img src="../assets/images/ic-notification.svg" alt="Notification Icon" /></figure><span>Notification</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="parent-menu"><figure><img src="../assets/images/help-ic.svg" alt="Help Icon"/></figure><span>Help</span></a>
+                            <ul class="sub-menu">
+                                <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                <li><a href="../help/faq.html">FAQs</a></li>
+                                <li><a href="../help/video.html">Videos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../change-password.html">
+                                <figure><img src="../assets/images/change-password-ic.svg" alt="Change Password Icon" />
+                                </figure><span>Change Password</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logout-wrap">
+                    <a data-toggle="modal" data-target="#logOutDialog" class="logout">Logout</a>
+                </div>
+                <p class="version">Version 1.0.0</p>
+            </div>
+        </aside>
+        <div class="breadcrumb-cover">
+            <ul class="breadcrumb-wrap">
+                <li><a href="../dashboard.html">Home</a></li>
+                <li><a href="loan-detail.html">LAF Status</a></li>
+                <li>Loan Details</li>
+            </ul>
+        </div>
+        <div class="hil-wrap">
+            <div class="center-bg-white">
+                <div class="row">
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Types of Business</label>
+                        <div class="form-group">
+                            <select class="form-control"
+                                aria-placeholder="Select">
+                                <option value="">Select</option>
+                                <option value="Business 1">Business 1</option>
+                                <option value="Business 2">Business 2</option>
+                                <option value="Business 3">Business 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Area Name</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Business Address Line 1</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Business Address Line 2</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">City/Town/Village</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">District</label>
+                        <div class="form-group">
+                            <select class="form-control"
+                                aria-placeholder="Select">
+                                <option value="">Select</option>
+                                <option value="District 1">District 1</option>
+                                <option value="District 2">District 2</option>
+                                <option value="District 3">District 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">State</label>
+                        <div class="form-group">
+                            <select class="form-control"
+                                aria-placeholder="Select">
+                                <option value="">Select</option>
+                                <option value="State 1">State 1</option>
+                                <option value="State 2">State 2</option>
+                                <option value="State 3">State 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Pin Code</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Land Mark</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Entity Type</label>
+                        <div class="form-group">
+                            <select class="form-control"
+                                aria-placeholder="Select">
+                                <option value="">Select</option>
+                                <option value="Entity 1">Entity 1</option>
+                                <option value="Entity 2">Entity 2</option>
+                                <option value="Entity 3">Entity 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Business Place Ownership Status</label>
+                        <div class="form-group">
+                            <select class="form-control"
+                                aria-placeholder="Select">
+                                <option value="">Select</option>
+                                <option value="Business 1">Business 1</option>
+                                <option value="Business 2">Business 2</option>
+                                <option value="Business 3">Business 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Distance From Branch</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Name of the Business Enterprise</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">GSTIN No, if registered with GST</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Annual Turnover (Rs.)</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Total Business Experience</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <label class="form-label">Present Business Vintage (Years)</label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="accordian">
+                    <div class="accordian-heading active">
+                        <h3 class="bold">Upload Documents</h3>
+                        <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                    </div>
+                    <div class="accordian-content">
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Proof of Business</label>
+                                <div class="form-group">
+                                    <select class="form-control"
+                                        aria-placeholder="Select">
+                                        <option value="">Select</option>
+                                        <option value="Agreement 1">Agreement 1</option>
+                                        <option value="Agreement 2">Agreement 2</option>
+                                        <option value="Agreement 3">Agreement 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <div class="form-group">
+                                    <div class="capture-wrap">
+                                        <input type="file"/>
+                                        <img src="../assets/images/camera-ic.svg" alt="Camera Icon"/>
+                                        <span>Capture Document</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <div class="form-group">
+                                    <a class="btn btn-primary view-sample" data-toggle="modal" data-target="#viewSample"><img src="../assets/images/ic-view.svg" alt="View Icon"/>View Sample </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordian">
+                    <div class="accordian-heading active">
+                        <h3 class="bold">Reference Details(Supplier)</h3>
+                        <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                    </div>
+                    <div class="accordian-content">
+                        <div class="append-container-wrap">
+                            <div class="row">
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Supplier Name</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Supplier Mobile no</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Supplier Frequency of Purchase</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Supplier Know the Client since</label>
+                                    <div class="form-group">
+                                        <select class="form-control" aria-placeholder="Select">
+                                            <option value="">Select</option>
+                                            <option value="Lorem 1">Lorem 1</option>
+                                            <option value="Lorem 2">Lorem 2</option>
+                                            <option value="Lorem 3">Lorem 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <label class="form-label">Supplier Feedback about the Client</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
+                                    <div class="form-group">
+                                        <button type="button" class="btn underline w-100 add-supplier"><img src="../assets/images/plus-circle.svg" alt="Plus Icon"/>Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordian">
+                    <div class="accordian-heading active">
+                        <h3 class="bold">Reference Details (Neighbour)</h3>
+                        <img src="../assets/images/down-circle-arrow.svg" alt="upper circle image">
+                    </div>
+                    <div class="accordian-content">
+                        <div class="row">
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Name</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Mobile No</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <label class="form-label">Know the Client since</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Feedback about the Client</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Client (Enquire about previous credit)</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary w-350">Next</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Politically Exposed dialog -->
+
+    <div class="modal fade" id="politicallyExposedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">The Client is a politically Exposed Person/Related to a Politically Exposed Person
+                    therefore the proposal shall be subjected to scrutiny by Higher Authorities,
+                    Do you wish to continue?</h2>
+                <button class="btn btn-primary w-100 mt-30" type="button" data-dismiss="modal">Yes</button>
+                <button class="btn w-100 mt-30" type="button" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="viewSample" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+               <h3>Sample document of proof of Business</h3>
+               <h4>Lease agreement</h4>
+               <div class="sample-list">
+                    <ul>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                    </ul>
+               </div>
+               <h4>Other Document</h4>
+               <div class="sample-list">
+                    <ul>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                        <li><figure><img src="../assets/images/agreement-image.png" alt="Agreement Image"/></figure></li>
+                    </ul>
+                </div>
+                <div class="button-wrap">
+                    <button class="btn w-320" type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- otpDialog dialog -->
+    <div class="modal fade" id="otpDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/successfully-checked.svg" />
+                </div>
+                <h2 class="center">OTP Sent Successfully!</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal" data-toggle="modal"
+                    data-target="#verifyNumberDialog">Okay</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- verifyNumber dialog -->
+    <div class="modal fade" id="verifyNumberDialog" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/verify-mobile-number.svg" />
+                </div>
+                <h1 class="bold mb-20">Verify Mobile Number</h1>
+                <label class="form-label">OTP</label>
+                <div class="form-group">
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                    <input type="number" placeholder="" value="1" class="form-control" />
+                </div>
+                <h4>(Please enter verification code sent on your number)</h4>
+                <button class="btn btn-primary w-280 mt-30" type="button" data-dismiss="modal">Submit</button>
+                <button class="btn w-280 mt-30" type="button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- accountAlreadyExist dialog -->
+    <div class="modal fade" id="accountAlreadyExistDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Bank account number already exists with borrower ID 341.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- beneCheckFailed dialog -->
+    <div class="modal fade" id="beneCheckFailedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Bene check failed.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal" data-toggle="modal"
+                    data-target="#beneCheckSuccessDialog">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- beneCheckSuccess dialog -->
+    <div class="modal fade" id="beneCheckSuccessDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/successfully-checked.svg" />
+                </div>
+                <h2 class="center">Bene check Successful!</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+    <!-- contactUsDialog dialog -->
+    <div class="modal fade" id="contactUsDialog" role="dialog">
+        <div class="modal-dialog large">
+            <div class="modal-content">
+                <h1 class="center mb-30 mt-0 bold">Contact Us</h1>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/call-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Support No.</h4>
+                            <h3 class="semi-bold">+91-9663546786</h3>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/mail-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Email Address</h4>
+                            <h3 class="semi-bold">support@annapurna.com</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn w-280 mt-30" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- enrollment restricted dialog -->
+    <div class="modal fade" id="restrictedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Enrolment Restricted! Contact Administrator.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+    <!-- Logout dialog -->
+    <div class="modal fade" id="logOutDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Are you sure you want to log out?</h2>
+                <a href="../login.html" class="btn btn-primary w-100 mt-30">Yes</a>
+                <button class="btn w-100 mt-20" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/datepicker.min.js"></script>
+    <script src="../assets/js/moment.min.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').niceSelect();
+            $('.date-picker').datepicker({
+                format: 'dd/mm/yyyy',
+                todayHighlight: 'TRUE',
+                autoclose: true,
+            });
+            $(".add-sub-product").on('click', function(e){
+                setTimeout(function(){
+                    $(".append-container").append(`<div class="appended-wrap"><div class="row"><div class="col-6 col-sm-12"><label class="form-label">Sub Products Name</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="Sub Product Name">Sub Product Name</option><option value="lorem">lorem</option><option value="lorem2">lorem2</option><option value="lorem3">lorem3</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Loan Product Code</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="456">456</option><option value="lorem">lorem</option><option value="lorem2">lorem2</option><option value="lorem3">lorem3</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Product Price</label><div class="form-group"><input type="text" placeholder="Enter" value="2100" class="form-control"></div></div><div class="col-6 col-sm-12"><label class="form-label">Total Product Price</label><div class="form-group"><input type="text" placeholder="Enter" value="20,000"  class="form-control"></div></div><div class="col-6 col-sm-12"><label class="form-label">Downpayment</label><div class="form-group"><input type="text" placeholder="Enter" value="20,000"  class="form-control"></div></div><div class="col-6 col-sm-12"><button type="button" class="btn underline w-100 removeItem"><img src="../assets/images/remove-ic.svg" alt="Remove Icon">Remove</button></div></div></div>`);
+                    $('select').niceSelect();
+                },10);
+            });
+    
+            $(".append-container").on('click', '.removeItem', function(e){
+                $(this).closest(".appended-wrap").fadeOut('200', function() { 
+                    $(this).closest(".appended-wrap").remove();
+                });
+            });
+
+            $(".add-supplier").on('click', function(e){
+                setTimeout(function(){
+                    $(".append-container-wrap").append(`<div class="appended-wrap"><div class="row"><div class="col-6 col-sm-12"><label class="form-label">Supplier Name</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Supplier Mobile no</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Supplier Frequency of Purchase</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><label class="form-label">Supplier Know the Client since</label><div class="form-group"><select class="form-control" aria-placeholder="Select"><option value="">Select</option><option value="Lorem 1">Lorem 1</option><option value="Lorem 2">Lorem 2</option><option value="Lorem 3">Lorem 3</option></select></div></div><div class="col-6 col-sm-12"><label class="form-label">Supplier Feedback about the Client</label><div class="form-group"><input type="text" placeholder="Enter" class="form-control" /></div></div><div class="col-6 col-sm-12"><button type="button" class="btn underline w-100 removeItem"><img src="../assets/images/remove-ic.svg" alt="Remove Icon">Remove</button></div></div></div>`);
+                    $('select').niceSelect();
+                },10);
+            });
+    
+            $(".append-container-wrap").on('click', '.removeItem', function(e){
+                $(this).closest(".appended-wrap").fadeOut('200', function() { 
+                    $(this).closest(".appended-wrap").remove();
+                });
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.tablinks').click(function(){
+                $('.tablinks').removeClass('active');
+                $(this).addClass('active');
+                var tagid = $(this).data('tag');
+                $('.tabcontent').removeClass('active').addClass('hide');
+                $('#'+tagid).addClass('active').removeClass('hide');
+            });
+        });
+    </script>
+    <script>
+        $("#passbook-upload").change(function () {
+            const file = this.files[0];
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function (event) {
+                    $("#imgPreview").attr("src", event.target.result);
+                    $(".cam-icon").addClass("hide");
+                    $("#imgPreview").removeClass("hide");
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        function goToDashboard() {
+            window.location.href = "../dashboard.html";
+        }
+        var acc = document.getElementsByClassName("accordian");
+        var accHeading = document.getElementsByClassName("accordian-heading");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+          accHeading[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+          });
+        }
+    </script>
+</body>
+
+</html>

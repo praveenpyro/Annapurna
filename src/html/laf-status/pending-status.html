@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Status</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/typography.css" />
+    <link rel="stylesheet" type="text/css" href="./laf-status.css" />
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</head>
+
+<body>
+    <main class="main-wrap">
+        <header class="header">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="hamburger-wrap">
+                        <a href="javascript:void(0)" class="open-sidebar"><img src="../assets/images/Hamburger.svg"
+                                alt="Hamburger Icon" /></a>
+                    </div>
+                    <div class="brand">
+                        <a href="../dashboard.html"><img src="../assets/images/Annapurna-small-logo.svg" alt="Annapurna Logo" /></a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="right-inner">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" class="open-info">
+                                    <img src="../assets/images/info-ic.svg" alt="Info Icon" />
+                                </a>
+                                <ul class="info-dropdown">
+                                    <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                    <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                    <li><a href="../help/faq.html">FAQs</a></li>
+                                    <li><a href="../help/video.html">Videos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../notification/notification.html"><img src="../assets/images/notification-icon.svg" alt="Notification Icon" /></a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="profile-wrap">
+                        <a href="javascript:void(0)" class="user-wrap">
+                            <img src="../assets/images/profile-ic.svg" class="mr-10" alt="Profile Icon" />
+                            <span>Vivek Sharma</span>
+                            <img src="../assets/images/arrow-down.svg" alt="Arrow Down Icon" />
+                        </a>
+                        <ul class="user-info-dropdown">
+                            <li><a href="../change-password.html">Change Password</a></li>
+                            <li><a data-toggle="modal" data-target="#logOutDialog">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <div class="user-info">
+                <figure>
+                    <img src="../assets/images/user-pic.png" alt="User Pic" />
+                </figure>
+                <div class="info-user">
+                    <h4 class="name">Vivek Sharma</h4>
+                    <p class="designation">Field Credit Officer</p>
+                </div>
+                <a href="javascript:void(0)" class="close-sidebar"><img src="../assets/images/close-sidebar.svg"
+                        alt="Close Sidebar" /></a>
+            </div>
+            <div class="navigation-logout-wrap">
+                <div class="navigation-wrap">
+                    <ul>
+                        <li>
+                            <a href="../new-application/search-client.html"><figure><img src="../assets/images/new-application-ic.svg" alt="New Application Icon" /></figure><span>New Application</span></a>
+                        </li>
+                        <li>
+                            <a href="../laf-status/search-client.html"><figure><img src="../assets/images/laf-status-ic.svg" alt="LAF Status Icon" /></figure><span>LAF Status</span></a>
+                        </li>
+                        <li>
+                            <a href="../luc-check/search-client.html"><figure><img src="../assets/images/luc-check-ic.svg" alt="LUC Check Icon" /></figure><span>LUC Check</span></a>
+                        </li>
+                        <li>
+                            <a href="../village/get-location.html"><figure><img src="../assets/images/village-addition-ic.svg" alt="Village Addition Icon" /></figure><span>Village Addition</span></a>
+                        </li>
+                        <li>
+                            <a href="../cb-deviation/cb-deviation.html"><figure><img src="../assets/images/cb-approval-ic.svg" alt="CB Rejection Data Icon" /></figure><span>CB Rejection Data</span></a>
+                        </li>
+                        <li>
+                            <a href="../fee-and-charges/list.html"><figure><img src="../assets/images/fees-and-charges-ic.svg" alt="Fees and Charges Icon" /></figure><span>Fees and Charges</span></a>
+                        </li>
+                        <li>
+                            <a href="../notification/notification.html"><figure><img src="../assets/images/ic-notification.svg" alt="Notification Icon" /></figure><span>Notification</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="parent-menu"><figure><img src="../assets/images/help-ic.svg" alt="Help Icon"/></figure><span>Help</span></a>
+                            <ul class="sub-menu">
+                                <li><a data-toggle="modal" data-target="#contactUsDialog">Contact Us</a></li>
+                                <li><a data-toggle="modal" data-target="#restrictedDialog">Restricted</a></li>
+                                <li><a href="../help/faq.html">FAQs</a></li>
+                                <li><a href="../help/video.html">Videos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../change-password.html"><figure><img src="../assets/images/change-password-ic.svg" alt="Change Password Icon" /></figure><span>Change Password</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logout-wrap">
+                    <a data-toggle="modal" data-target="#logOutDialog" class="logout">Logout</a>
+                </div>
+                <p class="version">Version 1.0.0</p>
+            </div>
+        </aside>
+        <div class="breadcrumb-cover">
+            <ul class="breadcrumb-wrap">
+                <li><a href="../dashboard.html">Home</a></li>
+                <li><a href="search-client.html">Search Client</a></li>
+                <li>Client Details</li>
+            </ul>
+        </div>
+        <div class="client-detail-found-page pb-40">
+            <div class="center-bg-white">
+                <div class="row mb-20">
+                    <div class="col-7">
+                        <div class="borrower-cover">
+                            <h3 class="color-gray">Voter Id</h3>
+                            <div class="id-cover">
+                                <h3 class="bold">ABC32748</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="search-cover h-100">
+                            <img src="../assets/images/search-circular-icon.svg" class="mr-20" alt="" />
+                            <a href="" class="bold color-primary">Search</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="white-card">
+                    <div class="row detail-wrapper">
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <label>Application No.</label>
+                            <p>Dakarangia</p>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <label>Applicant Name</label>
+                            <p>Lorem</p>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <label>Father</label>
+                            <p>Abhinash</p>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <label>Primary KYC No.</label>
+                            <p>232323</p>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <label>Application Date</label>
+                            <p>10 Oct 2022</p>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <label>Last CB Check date</label>
+                            <p>10 Oct 2022</p>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <label>CB Status</label>
+                            <p>Active</p>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <label>Applied Amount</label>
+                            <p>1000</p>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <label>Stage Status</label>
+                            <p>BM Approval Pending</p>
+                        </div>
+                        <div class="col-12">
+                            <label>Present Address</label>
+                            <p>Village/Locality - Dakarangia G. Pitown- Greesingia P.S. - G.Udayagiri</p>
+                        </div>
+                        <div class="col-12">
+                            <div class="flex-center">
+                                <button class="btn cb-report-view" data-toggle="modal"
+                                data-target="#viewCBReportDialog">
+                                    <img src="../assets/images/view-circular-icon.svg" class="mr-10" alt="" />
+                                    View CB Report
+                                </button>
+                                <a href="" class="ml-20">
+                                    <img src="../assets/images/repeat-circular.svg" class="mr-10" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-20">
+                    <div class="col-6">
+                        <button type="button" class="btn w-100" data-toggle="modal"
+                            data-target="#rejectClientDialog">Reject</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary w-100">Send to CB</button>
+                    </div>
+                    <div class="col-12">
+                        <button type="button" class="btn btn-primary w-350 mt-20">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Reject Client dialog -->
+
+    <div class="modal fade" id="rejectClientDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Are you sure you want to reject
+                    Pawan Kumar?</h2>
+                <button class="btn btn-primary w-100 mt-30" type="button" data-dismiss="modal">Yes! Reject</button>
+                <button class="btn w-100 mt-30" type="button" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- View CB report dialog -->
+
+    <div class="modal fade" id="viewCBReportDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="./../assets/images/view-cb-report.svg" />
+                </div>
+                <h2 class="bold center mb-20">Please select user to view CB report.</h2>
+                <div class="form-group">
+                    <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select">
+                        <option value="volvo">Volvo</option>
+                        <option value="lorem">lorem</option>
+                        <option value="lorem2">lorem2</option>
+                        <option value="lorem3">lorem3</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary w-100 mt-30" data-dismiss="modal">View</button>
+                <button class="btn w-100 mt-20" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- contactUsDialog dialog -->
+    <div class="modal fade" id="contactUsDialog" role="dialog">
+        <div class="modal-dialog large">
+            <div class="modal-content">
+                <h1 class="center mb-30 mt-0 bold">Contact Us</h1>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/call-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Support No.</h4>
+                            <h3 class="semi-bold">+91-9663546786</h3>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="contact-cover">
+                            <img src="../assets/images/mail-icon.svg" style="margin:auto;" />
+                            <h4 class="mt-10 mb-5">Email Address</h4>
+                            <h3 class="semi-bold">support@annapurna.com</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn w-280 mt-30" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- enrollment restricted dialog -->
+    <div class="modal fade" id="restrictedDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Enrolment Restricted! Contact Administrator.</h2>
+                <button class="btn w-100 mt-30" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+    <!-- Logout dialog -->
+    <div class="modal fade" id="logOutDialog" role="dialog">
+        <div class="modal-dialog small">
+            <div class="modal-content">
+                <div class="info-img">
+                    <img src="../assets/images/restricted.svg" />
+                </div>
+                <h2 class="center">Are you sure you want to log out?</h2>
+                <a href="../login.html" class="btn btn-primary w-100 mt-30">Yes</a>
+                <button class="btn w-100 mt-20" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').niceSelect();
+        });
+    </script>
+</body>
+</html>

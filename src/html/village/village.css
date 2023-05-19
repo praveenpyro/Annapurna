@@ -1,0 +1,18 @@
+.village-location-page .map-cover {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.village-location-page .map-cover iframe{
+    width: 100%;
+}
+@media screen and (max-width: 768px){
+    .village-location-page .remove-icon{
+        width: 20px;
+    }
+}
+@media screen and (max-width: 420px){
+    .village-location-page .remove-icon{
+        width: 16px;
+    }
+}

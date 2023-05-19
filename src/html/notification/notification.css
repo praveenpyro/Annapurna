@@ -1,0 +1,17 @@
+.notification-page .space-between {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.notification-page ul {
+    margin: 0;
+}
+.notification-page ul li {
+    padding-top: 14px;
+}
+.notification-page ul li:not(:last-child) {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 14px;
+}
+.notification-page ul li h6 {
+    color: #b3b3b3;
+}

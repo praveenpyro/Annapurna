@@ -1,0 +1,331 @@
+.onboarding{
+    min-height:100vh;
+    padding:50px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    position: relative;
+}
+.onboarding::before{
+    width:50%;
+    min-height:100%;
+    background:url("../images/login-top-vector.png") no-repeat;
+    background-size:100%;
+    background-position: left top;
+    position: absolute;
+    content:"";
+    left:0;
+    top:0;
+}
+.onboarding::after{
+    width:50%;
+    min-height:100%;
+    background:url("../images/bottom-bg-shape.svg") no-repeat;
+    background-size:100%;
+    background-position: right bottom;
+    position: absolute;
+    content:"";
+    right:0;
+    bottom:0;
+}
+.onboarding .container{
+    width: 1268px;
+    max-width:100%;
+    padding:5px;
+    margin:0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index:9;
+    background: linear-gradient(180deg, #5FBC2D 0%, #E9751E 51.56%, #5F4686 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+}
+.left-section{
+    width:50%;
+    padding-bottom:50px;
+    position: relative;
+    background:#fff;
+    border-top-left-radius:10px;
+}
+.logo{
+    margin-bottom:15px;
+}
+.right-section{
+    width:50%;
+    padding:50px;
+    background:#fff;
+    position: relative;
+}
+.right-inner{
+    max-width:440px;
+    margin:0 auto;
+}
+.reset-pass-note{
+    display: flex;
+    align-items: center;
+}
+.reset-pass-note img{
+    margin-right:10px;
+}
+.reset-pass-note p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FA0E0E;
+}
+.page-name{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom:10px;
+}
+.page-description{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    margin-bottom:15px;
+}
+.btn-wrap{
+    margin-top:25px;
+}
+.btn-wrap button{
+    margin-bottom:15px;
+}
+.btn-primary{
+    width:100%;
+    height:54px;
+    background: #442477;
+    border:solid 1px #442477;
+    box-shadow: 0 5px 5px rgba(68, 36, 119, 0.16);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+}
+.btn-wrap .back-link{
+    width:100%;
+    height:54px;
+    background: #ffffff;
+    border:solid 1px #442477;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #442477;
+    text-decoration: none;
+}
+.btn-primary:disabled{
+    background: #F2F2F2;
+    border: 1px solid #E0E0E0;
+    color: #777373;
+    box-shadow:none;
+}
+.remember-forgot-wrap{
+    margin-bottom:15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sent-otp{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.forgot-password a, .sent-otp a{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: underline;
+    color: #442477;
+}
+.otp-input ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0 -3px 10px -2px;
+}
+.otp-input li{
+    padding:0 3px 0 2px;
+}
+.otp-input li input{
+    max-width:70px;
+    text-align: center;
+}
+.info p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+}
+.description{
+    margin-bottom:15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.error{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FA1212;
+    margin-bottom:10px;
+}
+.error img{
+    margin-right:5px;
+}
+.sent-otp p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    color: #000000;
+}
+.form-group {
+    margin-bottom:15px;
+}
+@media (max-width: 1240px) {
+    .info p{
+        font-size:15px;
+        line-height:20px;
+    }
+    .right-section{
+        padding:40px;
+    }
+    .onboarding{
+        padding:40px;
+    }
+    .page-name {
+        font-size: 28px;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+    .forgot-password a, .sent-otp a{
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .btn-primary {
+        height: 60px;
+        box-shadow: 0 5px 5px rgb(68 36 119 / 16%);
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .btn-wrap .back-link{
+        height: 60px;
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+@media (max-width: 1024px) {
+    .sent-otp{
+        margin-bottom:10px;
+    }
+    .info p{
+        font-size:14px;
+        line-height:1.2;
+    }
+    .right-section{
+        padding:30px;
+    }
+    .onboarding{
+        padding:30px;
+    }
+    .btn-primary {
+        height: 54px;
+        box-shadow: 0 5px 5px rgb(68 36 119 / 16%);
+        border-radius: 6px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .page-name {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 15px;
+    }
+    .forgot-password a, .sent-otp a{
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .btn-primary {
+        height: 54px;
+        box-shadow: 0 5px 5px rgb(68 36 119 / 16%);
+        border-radius: 6px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .btn-wrap .back-link{
+        height: 54px;
+        border-radius: 6px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 875px) {
+    .right-section{
+        padding:25px;
+    }
+    .forgot-password a, .sent-otp a{
+        font-size: 14px;
+        line-height: 22px;  
+    }
+}
+@media (max-width: 767px) {
+    .onboarding {
+        padding: 15px;
+    }
+    .right-section {
+        padding:15px;
+    }
+    .page-name {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+    .forgot-password a, .sent-otp a{
+        font-size: 12px;
+    }
+    .description {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .onboarding .container{
+        flex-direction: column-reverse;
+    }
+    .left-section{
+        display:none;
+    }
+    .right-section{
+        width:100%;
+        border-radius: 5px;
+    }
+}
+@media (max-width: 576px) {
+    .remember-forgot-wrap{
+        align-items: flex-start;
+    }
+    .error {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+}

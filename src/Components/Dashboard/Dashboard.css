@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+.bm-menu {
+    background: white;
+  }
+  
+  .bm-menu a {
+    color: #b8b7ad;
+  }
+  
+  .bm-menu a:hover,
+  .bm-menu a:focus {
+    color: #c94e50;
+  }
+
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    width: 410 !important;
+  }
+
+
+  /* Styles for mobile devices */
+@media only screen and (max-width: 576px) {
+    .bm-menu-wrap {
+        position: fixed;
+        height: 100%;
+        width: 260px !important;
+      }
+  }
+  
+  /* Styles for medium-sized screens and above */
+  @media only screen and (min-width: 576px) {
+    .bm-menu-wrap {
+        position: fixed;
+        height: 100%;
+        width: 410px !important;
+      }
+
+  }
+  
+  
+
+  .bm-burger-button {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 24px;
+  }
+
+.header-left-dash {
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+}
+
+.dash-figure {
+    margin: 0;
+}
+
+.info-user-width {
+    width: auto !important;
+}
+
+.close-sidebar-dash {
+    top: 5% !important;
+}
+
+.menu-list {
+    padding-left: 0 !important;
+}
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
