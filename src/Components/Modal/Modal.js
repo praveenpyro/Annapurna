@@ -8,7 +8,7 @@ const Modal = ({data, close}) => {
     <div className="modal custom-modal" id="invalidMatchDialog" role="dialog">
     <div className="modal-dialog small">
         <div className="modal-content custom-modal-content">
-            <div class="info-img">
+            <div className="info-img">
                 <img src={require('../../html/assets/images/invalid-ic.svg').default} />
             </div>
             <h2 className="regular center">Invalid Credentials.</h2>

@@ -16,12 +16,19 @@ import eyeopen from '../../html/assets/images/eye-open.svg';
 import erroric from '../../html/assets/images/error-ic.svg';
 import $ from 'jquery';
 import Modal  from '../Modal/Modal';
+import Loader from '../Loader/Loader';
+import { callApi } from '../../api/callApi';
 const Login = () => {
-    const [userName, setUserName] = useState('');
-    const [password, setPassword] = useState('');
+    const [userName, setUserName] = useState('Admin');
+    const [password, setPassword] = useState('Jayam@123');
     const [showModal, setShowModal] = useState(false);
+    const [showLoader, setShowLoader] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const username_auth = 'Jayam';
+    const password_auth = 'Jayam@123';
+    const url = 'https://jspl.jayamsolutions.com:9097/AFPL_React/API/Login';
+    const loginDetailsUrl = 'https://jspl.jayamsolutions.com:9097/AFPL_React/API/LoginDetails';
     const handleUserName = (event) => {
         setUserName(event.target.value);
     }
@@ -30,11 +37,49 @@ const Login = () => {
         setPassword(event.target.value);
     }
 
-    const handleLogin = () => {
-        if(userName === 'FCO' || userName ==='BHM' ) {
-            dispatch(login({ name : userName, password:password, age : 10, email : "jayam@jayam.com"}));
-            localStorage.setItem("login",true);
-            navigate('/dashboard');
+    const  fetchLoginStatus = async() => {
+        const request = {
+            "UserId": userName,
+            "Password": password,
+            "MACID": "12345",
+            "Version": "1.1"
+          };
+
+          const headers=  {
+            Authorization: `Basic ${btoa(`${username_auth}:${password_auth}`)}`,
+            'Content-Type': 'application/json',
+          }
+        const response = await callApi({url, method: 'POST', headers: headers, data: request});
+        console.log(response);
+        return response;
+    }
+
+    const  fetchLoginDetails = async() => {
+        const request = { "UserId": userName, "Password": password };
+        const response = await callApi({url:loginDetailsUrl, method: 'POST', data: request});
+        console.log(response);
+        return response;
+    }
+
+    const handleLogin = async() => {
+        if( !!userName  && !!password ) {
+            
+              setShowLoader(true);
+              const { status, data }  = await fetchLoginStatus() ;
+              const { LoginDetails } = await fetchLoginDetails();
+              setShowLoader(false);
+              if(status) {
+                localStorage.setItem("login",true);
+                localStorage.setItem("jwtToken",data.token);
+                localStorage.setItem("userName", userName);
+                localStorage.setItem("password", password);
+                dispatch(login(LoginDetails));
+                navigate('/dashboard');
+                
+              } else {
+                setShowModal(true);
+              }
+           
         } else {
             setShowModal(true);
         }
@@ -62,7 +107,7 @@ const Login = () => {
                         <form>
                             <label className="form-label text-start">Username</label>
                             <div className="form-group">
-                                <input type="text" placeholder="Enter Username" className="form-control" value={userName} onChange={handleUserName}/>
+                                <input type="text" placeholder="Enter Username" className="form-control" value={userName} onChange={handleUserName} />
                             </div>
                             <label className="form-label text-start">Password</label>
                             <div className="form-group">
@@ -97,8 +142,11 @@ const Login = () => {
             </div>
         </div>
        { showModal && <Modal close={close}/> }
+       {showLoader && <Loader/>}
     </>            
   )
 }
+
+
 
 export default Login

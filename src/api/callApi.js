@@ -14,12 +14,15 @@ apiInstance.interceptors.request.use((config) => {
 });
 
 // Utility function to make API calls
-export async function callApi(url, method = 'GET', data = null, options = {}) {
+export async function callApi(requestdata) {
+  const {url, method = 'GET', headers, data = null, options = {}} = requestdata;
   try {
     const response = await apiInstance({
       url,
       method,
+      headers,
       data,
+      withCredentials: false,
       ...options,
     });
     return response.data;

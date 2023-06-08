@@ -13,6 +13,7 @@ import UserInfo from '../UserInfo/UserInfo';
 import SideNavMenu from '../SideNavMenu/SideNavMenu';
 import DashboardMain from '../DashboardMain/DashboardMain';
 import LogoutModal from '../LogoutModal/LogoutModal';
+import { Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
   const user = useSelector((state) => state.user.value);
@@ -45,12 +46,16 @@ const Dashboard = () => {
   return (
     <>
       <div >
-        <Header/>
-        <DashboardMain  user={user} />
+        <Header user={user}/>
+        {/* <DashboardMain /> */}
+        {/* <Routes>
+            <Route  path='/review' element={ <DashboardMain/>}/>
+        </Routes> */}
+        <Outlet/>
       </div>
       <Menu customBurgerIcon={ <img src={hamburger} /> } isOpen={isOpen}  onOpen={handleIsOpen} onClose={handleIsOpen} >
-        <UserInfo closeSideNav={closeSideNav}/>
-        <SideNavMenu user={user} closeSideNav={closeSideNav} handleLogoutPopup={handleLogoutPopup}/>
+        <UserInfo closeSideNav={closeSideNav} user={user}/>
+        <SideNavMenu closeSideNav={closeSideNav} handleLogoutPopup={handleLogoutPopup}/>
       </Menu>
       { showLogoutModal && <LogoutModal handleLogoutModal = {handleLogoutModal} handleLogout={handleLogout}/>}
     </>

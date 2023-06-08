@@ -1,24 +1,47 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './DashboardMain.css';
 import Barchart from '../../Charts/Barchart';
-import { SideNavMenuConfig_FCO, SideNavMenuConfig_BM } from '../SideNavMenu/SideNavMenuConfig';
+import { Menu } from '../SideNavMenu/SideNavMenuConfig';
+import { useSelector, useDispatch } from 'react-redux';
+import Loader from '../Loader/Loader';
+import { callApi } from '../../api/callApi';
+import { login } from '../../reducers/user'
 
 const DashboardMain = (props) => {
-    const { user } = props;
-    const menu = (user.name === 'FCO' ? SideNavMenuConfig_FCO : SideNavMenuConfig_BM).filter(item => item.showOnDashboard);
+    const user = useSelector((state) => state.user.value);
+    const dispatch = useDispatch();
+    const roles = user?.roles?.split('|');
+    const updateRoles = roles?.map(role => Menu.find(m => m.id === role)) || [];
+    const MENU_LIST = [...updateRoles];
+    const [showLoader, setShowLoader] = useState(false);
+    const loginDetailsUrl = 'https://jspl.jayamsolutions.com:9097/AFPL_React/API/LoginDetails';
+
+    const handleReload = async() => {
+        setShowLoader(true);
+        const userName = localStorage.getItem('userName');
+        const password = localStorage.getItem('password');
+        const request = { "UserId": userName, "Password": password };
+        const { LoginDetails } = await callApi({url:loginDetailsUrl, method: 'POST', data: request});
+        setShowLoader(false);
+        dispatch(login(LoginDetails));
+    }
+
+    useEffect(() => {
+        handleReload();
+    },[]);
   return (
     <div className="dashboard-main dash-content">
             <div className="dashboard-header">
-                <h1 className="branch-name">Branch Name: Branch one <span>Medium Risk</span></h1>
+                <h1 className="branch-name">Branch Name: {user.branch} <span>{user.branch_status}</span></h1>
                 <div className="transection-login-date">
-                    <p>Transaction Date: <b>09:09:2022</b></p>
-                    <p>Login Date and Time : <b>10:09:2022, 3:40PM</b></p>
+                    <p>Transaction Date: <b>{user.transactiondate}</b></p>
+                    <p>Login Date and Time : <b>{user.login_date}</b></p>
                 </div>
             </div>
             <div className="info-card-listing">
                 <div className="card-row">
                     { 
-                        menu.map((item) => (
+                        MENU_LIST.map((item) => (
                             <div className="card-col">
                                 <div className="card-inner">
                                     <a href="new-application/search-client.html">
@@ -35,7 +58,7 @@ const DashboardMain = (props) => {
             </div>
             <div className="insights-wrapper">
                 <div className="insights-header">
-                    <h3>Insights <a><img src={require("../../html/assets/images/loader-ic.svg").default} alt="Icon" /></a></h3>
+                    <h3>Insights <a><img src={require("../../html/assets/images/loader-ic.svg").default} alt="Icon" onClick={() => handleReload()}/></a></h3>
                     <div className="right-tabs">
                         <ul>
                             <li className="active"><a>MTD</a></li>
@@ -48,43 +71,43 @@ const DashboardMain = (props) => {
                     <div className="insights-col">
                         <div className="insights-inner">
                             <h3 className="heading">No. of Applications</h3>
-                            <h2 className="value">2345</h2>
-                            <p>Amount: Rs. <span>1,00,000</span></p>
+                            <h2 className="value">{user.noofapps}</h2>
+                            <p>Amount: Rs. <span>{user.noofapps_amount}</span></p>
                         </div>
                     </div>
                     <div className="insights-col">
                         <div className="insights-inner">
                             <h3 className="heading">Applications Sanctioned</h3>
-                            <h2 className="value">3456</h2>
-                            <p>Amount: Rs. <span>1,00,000</span></p>
+                            <h2 className="value">{user.noofapps_sanctioned}</h2>
+                            <p>Amount: Rs. <span>{user.noofapps_sanctioned_amount}</span></p>
                         </div>
                     </div>
                     <div className="insights-col">
                         <div className="insights-inner">
                             <h3 className="heading">In process Clients</h3>
-                            <h2 className="value">6786</h2>
-                            <p>Amount: Rs. <span>1,00,000</span></p>
+                            <h2 className="value">{user.inprocess_clients}</h2>
+                            <p>Amount: Rs. <span>{user.inprocess_clients_amount}</span></p>
                         </div>
                     </div>
                     <div className="insights-col">
                         <div className="insights-inner">
                             <h3 className="heading">Disbursed Applicants</h3>
-                            <h2 className="value">567</h2>
-                            <p>Amount: Rs. <span>1,00,000</span></p>
+                            <h2 className="value">{user.disb_apps}</h2>
+                            <p>Amount: Rs. <span>{user.disb_apps_amount}</span></p>
                         </div>
                     </div>
                     <div className="insights-col">
                         <div className="insights-inner">
                             <h3 className="heading">Rejected Applications</h3>
-                            <h2 className="value">300</h2>
-                            <p>Amount: Rs. <span>1,00,000</span></p>
+                            <h2 className="value">{user.reject_apps}</h2>
+                            <p>Amount: Rs. <span>{user.reject_apps_amount}</span></p>
                         </div>
                     </div>
                     <div className="insights-col">
                         <div className="insights-inner">
                             <h3 className="heading">Active Clients</h3>
-                            <h2 className="value">9367</h2>
-                            <p>Amount: Rs. <span>1,00,000</span></p>
+                            <h2 className="value">{user.active_clients}</h2>
+                            <p>Amount: Rs. <span>{user.active_clients_amount}</span></p>
                         </div>
                     </div>
                 </div>
@@ -110,6 +133,7 @@ const DashboardMain = (props) => {
                     <Barchart barchartid="barchart1"/>
                 </div>
             </div>
+            {showLoader && <Loader/>}
         </div>
   )
 }

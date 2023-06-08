@@ -4,7 +4,8 @@ import notificationic from '../../html/assets/images/notification-icon.svg';
 import profileicon from '../../html/assets/images/profile-ic.svg';
 import arrowdown from '../../html/assets/images/arrow-down.svg';
 import logo from '../../html/assets/images/Annapurna-logo.svg';
- const Header = () => {
+ const Header = (props) => {
+    const { user } = props;
     const [isInfoVisible, setIsInfoVisible] = useState(false);
     const [isProfileMenuVisible, setIsProfileMenuVisible] = useState(false);
     const handleInfoClick = () => {
@@ -42,7 +43,7 @@ import logo from '../../html/assets/images/Annapurna-logo.svg';
             <div className="profile-wrap">
                 <a  className="user-wrap" onClick={()=>{handleProfileMenuClick()}}>
                     <img src={profileicon} className="mr-10" alt="Profile Icon" />
-                    <span>Vivek Sharma</span>
+                    <span>{user.empname}</span>
                     <img src={arrowdown} alt="Arrow Down Icon" />
                 </a>
                 <ul className="user-info-dropdown" style={{ display: isProfileMenuVisible ? 'block' : 'none' }}>
