@@ -1,9 +1,4 @@
 import React from 'react'
-import '../../html/assets/css/nice-select.css';
-import '../../html/assets/css/global.css';
-import '../../html/assets/css/grid.css';
-import '../../html/assets/css/typography.css';
-import '../../html/assets/css/new-application.css';
 import './ClientDetails.css';
 import {useNavigate} from 'react-router-dom';
 function ClientDetails() {

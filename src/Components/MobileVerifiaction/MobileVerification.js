@@ -1,21 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './MobileVerification.css';
-import '../../html/assets/css/page.css';
-import '../../html/assets/css/global.css';
-import '../../html/assets/css/nice-select.css';
-import '../../html/assets/css/grid.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import {useNavigate} from 'react-router-dom';
+import ClientEnrolmentModal from '../ClientEnrolmentModal/ClientEnrolmentModal';
 function MobileVerification() {
     const navigate = useNavigate();
+    const [showClientEnrolmentModal, setShowClientEnrolmentModal] = useState(false);
+    const handleClientEnrolmentBranch = () => {
+        setShowClientEnrolmentModal(false);
+        navigate('/dashboard/newapplication/okycdata')
+    }
+
+    const handleClientEnrolmentField = () => {
+        setShowClientEnrolmentModal(false);
+    }
 
   return (
     <div className='mobile-wrap search-client'>
          <div className="container">
                 <ul className="breadcrumb-wrap">
-                    <li><a onClick={() => { navigate('/dashboard'); }}>Home</a></li>
-                    <li><a onClick={() => { navigate('/dashboard/newapplication/searchclient'); }}>New Application</a></li>
+                    <li><a onClick={() => { navigate('/dashboard') }}>Home</a></li>
+                    <li><a onClick={() => { navigate('/dashboard/newapplication/searchclient') }}>New Application</a></li>
                     <li>Movbile Verification</li>
                 </ul>
         </div>
@@ -65,13 +69,14 @@ function MobileVerification() {
                                 </div>
                                 <div className="btn-wrap">
                                     <button type="button" className="btn-primary" data-toggle="modal"
-                                        data-target="#clientEnrollmentDialog">Save & Next</button>
+                                        data-target="#clientEnrollmentDialog" onClick={() => setShowClientEnrolmentModal(true)}>Save & Next</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+            { showClientEnrolmentModal && <ClientEnrolmentModal handleClientEnrolmentBranch = {handleClientEnrolmentBranch} handleClientEnrolmentField = {handleClientEnrolmentField}/>}
     </div>
   )
 }

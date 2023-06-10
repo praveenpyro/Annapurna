@@ -5,63 +5,99 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 am4core.useTheme(am4themes_animated);
 const Barchart = ({barchartid}) => {
 
-    const chart = useRef(null);
+  const chart = useRef(null);
+  useEffect(() => {
+    const monthsArray = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+    // Initialize chart
+    am4core.useTheme(am4themes_animated);
+    let chart = am4core.create('barchart1', am4charts.XYChart);
 
-    useLayoutEffect(() => {
-        let x = am4core.create(barchartid, am4charts.XYChart);
-         // Add data
-         x.data = [{
-            "country": "Number of Applications",
-            "visits": 10
-        }, {
-            "country": "Number of Applications Sanction",
-            "visits": 15
-        }, {
-            "country": "Inprogresss Client",
-            "visits": 25
-        }, {
-            "country": "Disburced Application",
-            "visits": 14
-        }, {
-            "country": "Total rejected Application",
-            "visits": 0
-        }];
+    // Set data
+    chart.data = [
+      {
+        month: 'Jan',
+        disbursed: 40,
+        rejected: 30,
+      },
+      {
+        month: 'Feb',
+        disbursed: 10,
+        rejected: 50,
+      },
+      {
+        month: 'Mar',
+        disbursed: 5,
+        rejected: 10,
+      },{
+        month: 'Apr',
+        disbursed: 100,
+        rejected: 10,
+      },{
+        month: 'May',
+        disbursed: 25,
+        rejected: 25,
+      },{
+        month: 'Jun',
+        disbursed: 10,
+        rejected: 40,
+      },{
+        month: 'Jul',
+        disbursed: 40,
+        rejected: 30,
+      },{
+        month: 'Aug',
+        disbursed: 40,
+        rejected: 30,
+      },{
+        month: 'Sep',
+        disbursed: 40,
+        rejected: 30,
+      }
+    ];
 
-        // Create axes
+    // Create axes
+    let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = 'month';
+    categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.cellStartLocation = 0.2; // Adjust the start location of each category
+    categoryAxis.renderer.cellEndLocation = 0.8;
+    categoryAxis.renderer.minGridDistance = 20;
+    categoryAxis.renderer.labels.template.adapter.add('dy', (dy, target) => {
+      if (chart.innerWidth < 768) {
+        return dy + 15;
+      }
+      return dy;
+    });
+    categoryAxis.events.on('sizechanged', (ev) => {
+      categoryAxis.zoomToCategories(0, 3);
+    });
+    let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
-        let categoryAxis = x.xAxes.push(new am4charts.CategoryAxis());
-        categoryAxis.dataFields.category = "country";
-        categoryAxis.renderer.grid.template.location = 0;
-        categoryAxis.renderer.minGridDistance = 30;
-        // categoryAxis.renderer.labels.template.rotation = 270;
-        categoryAxis.renderer.labels.template.adapter.add("dy", function(dy, target) {
-        if (target.dataItem && target.dataItem.index & 2 == 2) {
-            return dy + 25;
-        }
-        return dy;
-        });
+    // Create series
+    let series1 = chart.series.push(new am4charts.ColumnSeries());
+    series1.dataFields.valueY = 'disbursed';
+    series1.dataFields.categoryX = 'month';
+    series1.name = 'Disbursed Applicants';
+    series1.fill = am4core.color('#51b716');
 
-        let valueAxis = x.yAxes.push(new am4charts.ValueAxis());
+    let series2 = chart.series.push(new am4charts.ColumnSeries());
+    series2.dataFields.valueY = 'rejected';
+    series2.dataFields.categoryX = 'month';
+    series2.name = 'Rejected Applicants';
+    series2.fill = am4core.color('#e97319');
+    // let series3 = chart.series.push(new am4charts.ColumnSeries());
+    // series3.dataFields.valueY = 'value3';
+    // series3.dataFields.categoryX = 'category';
+    // series3.name = 'Series 3';
 
-        // Create series
-        let series = x.series.push(new am4charts.ColumnSeries());
-        series.dataFields.valueY = "visits";
-        series.dataFields.categoryX = "country";
-        series.name = "Visits";
-        series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/]";
-        series.columns.template.fillOpacity = .8;
-        series.columns.template.width = am4core.percent(40);
+    // Add legend
+    chart.legend = new am4charts.Legend();
 
-        let columnTemplate = series.columns.template;
-        columnTemplate.strokeWidth = 2;
-        columnTemplate.strokeOpacity = 1;
-        chart.current = x;
-      return () => {
-        x.dispose();
-      };
-    }, [])
-    useEffect(() => {
-    },[])
+    // Clean up on component unmount
+    return () => {
+      chart.dispose();
+    };
+  }, []);
   return (
     <div id={barchartid} style={{ width: "100%", height: "300px" }}></div>
   )

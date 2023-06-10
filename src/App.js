@@ -14,7 +14,16 @@ import SearchClient from './Components/SearchClient/SearchClient';
 import ClientDetails from './Components/ClientDetails/ClientDetails';
 import ViewHouseholdDetails from './Components/ViewHouseholdDetails/ViewHouseholdDetails';
 import MobileVerification from './Components/MobileVerifiaction/MobileVerification';
+import OkycData from './Components/OkycData/OkycData';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './html/assets/css/nice-select.css';
+import './html/assets/css/global.css';
+import './html/assets/css/grid.css';
+import './html/assets/css/typography.css';
+import './html/assets/css/new-application.css';
+import './html/assets/css/buttons.css';
+import './html/assets/css/page.css';
+
 
 function App() {
   return (
@@ -32,6 +41,7 @@ function App() {
                 <Route exact path='clientdetails' element = {<ClientDetails/>}/>
                 <Route exact path='viewhousehold' element = {<ViewHouseholdDetails/>}/>
                 <Route exact path='mobileverifiaction' element = {<MobileVerification/>}/>
+                <Route exact path='okycdata' element = {<OkycData/>}/>
               </Route>
             </Route>
           </Route>

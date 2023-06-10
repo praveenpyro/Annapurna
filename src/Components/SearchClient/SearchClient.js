@@ -1,11 +1,5 @@
 import React from 'react'
 import './SearchClient.css';
-import '../../html/assets/css/page.css';
-import '../../html/assets/css/global.css';
-import '../../html/assets/css/nice-select.css';
-import '../../html/assets/css/grid.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import {useNavigate} from 'react-router-dom';
 
 function SearchClient() {
