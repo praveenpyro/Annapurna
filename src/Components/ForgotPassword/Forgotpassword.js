@@ -1,72 +1,71 @@
 
 import React from 'react'
-import logo from '../../Images/logo.jpg';
-import jymlogo from '../../Images/LogoImage.GIF';
 import {useNavigate} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from '../../reducers/user'
-
+import slidefirst from '../../html/assets/images/slide-first.png';
+import slidesecond from '../../html/assets/images/slide-second.png';
+import logo from '../../html/assets/images/Annapurna-logo.svg';
+import './Forgotpassword.css'
 const Forgotpassword = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
   return (
-    <div><section className="vh-100" style={{backgroundColor:'skyblue'}} >
-    <div className="container py-5 h-100">
-      <div className="row d-flex justify-content-center align-items-center h-100">
-        <div className="col col-xl-10">
-          <div className="card" style={{borderRadius : 'border-radius: 1rem;'}} >
-            <div className="row g-0">
-              <div className="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
-                  alt="login form" className="img-fluid" style={{borderRadius : 'border-radius: 1rem 0 0 1rem;'}}/>
-              </div>
-              <div className="col-md-6 col-lg-7 d-flex align-items-center">
-                <div className="card-body p-4 p-lg-5 text-black">
-  
-                  <form>
-  
-                    <div className="d-flex align-items-center mb-3 pb-1">
-                      <i className="fas fa-cubes fa-2x me-3" style={{color : '#ff6219;'}} ></i>
-                      {/* <span className="h1 fw-bold mb-0">Logo</span> */}
-                      <img src={logo}/>
-                    </div>
-  
-                    <h5 className="fw-normal mb-3 pb-3" style={{letterSpacing: 'letter-spacing: 1px;'}} >Reset password for your account</h5>
-  
-                    <div className="form-outline mb-4">
-                      <input type="email" id="form2Example17" className="form-control form-control-lg" />
-                      <label className="form-label" for="form2Example17">Email address</label>
-                    </div>
-  
-                    <div className="form-outline mb-4">
-                      <input type="password" id="form2Example27" className="form-control form-control-lg" />
-                      <label className="form-label" for="form2Example27">New Password</label>
-                    </div>
-  
-                    <div className="pt-1 mb-4">
-                      <button className="btn btn-dark btn-lg btn-block" type="button" onClick={() => {
-                        dispatch(login({ name : "Jayam", age : 10, email : "jayam@jayam.com"}));
-                        localStorage.setItem("login",false);
-                        navigate("/login");
-                        }}>Reset</button>
-                    </div>
-  
-                    <a className="small text-muted" href="#Forgotpassword">Forgot password?</a>
-                    {/* <p className="mb-5 pb-lg-2" style={{color : '#393f81'}} >Don't have an account? <a href="#!"
-                       style={{color : '#393f81'}} >Register here</a></p>
-                    <a href="#!" className="small text-muted">Terms of use.</a>
-                    <a href="#!" className="small text-muted">Privacy policy</a> */}
-
-                  </form>
-  
+    <>
+       <div className="onboarding">
+        <div className="container">
+            <div className="left-section">
+                <div className="flexslider">
+                  <div> <img src={slidefirst} alt="Slide First"/></div> 
                 </div>
-              </div>
             </div>
-          </div>
+            <div className="right-section">
+                <div className="right-inner">
+                    <div className="logo">
+                        <a><figure><img src={logo} alt="Annapurna Logo"/></figure></a>
+                    </div>
+                    <h1 className="page-name">Forgot Password</h1>
+                    <form>
+                        <label className="form-label">Employee ID</label>
+                        <div className="form-group">
+                            <input type="text" placeholder="Enter ID" className="form-control"/>
+                        </div>
+                        <label className="form-label">Registered Mobile Number </label>
+                        <div className="form-group">
+                            <input type="number" placeholder="Enter Number" className="form-control"/>
+                        </div>
+                        <div className="sent-otp">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#otpSentDialog">Send OTP</a>
+                        </div>
+                        <div className="sent-otp">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#maximumAttemptReachedDialog">Resend OTP in 120 seconds</a>
+                            <p className="note">(3 attempts left)</p>
+                        </div>
+                        <label className="form-label">OTP</label>
+                        <div className="otp-input">
+                            <ul>
+                                <li><input type="text" className="form-control" maxlength="1"/></li>
+                                <li><input type="text" className="form-control" maxlength="1"/></li>
+                                <li><input type="text" className="form-control" maxlength="1"/></li>
+                                <li><input type="text" className="form-control" maxlength="1"/></li>
+                                <li><input type="text" className="form-control" maxlength="1"/></li>
+                                <li><input type="text" className="form-control" maxlength="1"/></li>
+                            </ul>
+                        </div>
+                        <div className="info">
+                            <p>(Please enter verification code sent on your number.)</p>
+                        </div>
+                        <div className="btn-wrap">
+                            <button type="button" className="btn-primary" data-toggle="modal" data-target="#invalidMatchDialog">Verify & Next</button>
+                            <a href="" onClick={() => navigate('/login')} className="back-link">Back to Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section></div>
+
+    </>
   )
 }
 

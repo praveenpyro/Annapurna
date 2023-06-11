@@ -23,7 +23,8 @@ import './html/assets/css/typography.css';
 import './html/assets/css/new-application.css';
 import './html/assets/css/buttons.css';
 import './html/assets/css/page.css';
-
+import './html/assets/css/flexslider.css'
+import './html/assets/css/onbording.css'
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/login' element={ <Login/>}/>
+          <Route exact path='/forgotpassword' element= {<Forgotpassword/>}/>
           <Route element={<PrivateRoutes/>}>
             <Route exact path='/dashboard' element={ <Dashboard/>}>
               <Route exact path='' element = {<DashboardMain/>}/>

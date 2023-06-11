@@ -23,6 +23,9 @@ const Login = () => {
     const [password, setPassword] = useState('Jayam@123');
     const [showModal, setShowModal] = useState(false);
     const [showLoader, setShowLoader] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+    const [errorMessage , setErrorMessage ] = useState('');
+
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const username_auth = 'Jayam';
@@ -69,6 +72,7 @@ const Login = () => {
               const { LoginDetails } = await fetchLoginDetails();
               setShowLoader(false);
               if(status) {
+                setErrorMessage('');
                 localStorage.setItem("login",true);
                 localStorage.setItem("jwtToken",data.token);
                 localStorage.setItem("userName", userName);
@@ -77,10 +81,12 @@ const Login = () => {
                 navigate('/dashboard');
                 
               } else {
+                setErrorMessage('The username or password is incorrect!');
                 setShowModal(true);
               }
            
         } else {
+            setErrorMessage('The username or password is incorrect!');
             setShowModal(true);
         }
        
@@ -112,14 +118,14 @@ const Login = () => {
                             <label className="form-label text-start">Password</label>
                             <div className="form-group">
                                 <div className="pass-row">
-                                    <input type="password" placeholder="Enter Password" className="form-control" value={password} onChange={handlePassword}/>
-                                    <a className="suffix-icon">
-                                        <img src={eyeclose} alt="Eye Close Icon" className="eye-close"/>
-                                        <img src={eyeopen} alt="Eye Open Icon" className="eye-open hide"/>
+                                    <input  type={showPassword ? 'text' : 'password'}  placeholder="Enter Password" className="form-control" value={password} onChange={handlePassword}/>
+                                    <a className="suffix-icon" onClick={() => setShowPassword(!showPassword) }>
+                                       { (!showPassword) && <img src={eyeclose} alt="Eye Close Icon" className="eye-close"/>}
+                                        { showPassword && <img src={eyeopen} alt="Eye Open Icon" className="eye-open hide"/> }
                                     </a>
                                 </div>
                             </div>
-                            <p className="error"><img src={erroric} alt="Error Icon"/>The username or password is incorrect!</p>
+                            { (errorMessage) && <p className="error"><img src={erroric} alt="Error Icon"/>The username or password is incorrect!</p>}
                             <div className="remember-forgot-wrap">
                                 <div className="remember-me">
                                     <label className="checkbox-container">Remember Password
@@ -128,13 +134,11 @@ const Login = () => {
                                     </label>
                                 </div>
                                 <div className="forgot-password">
-                                    <a href="forgot-password.html">Forgot Password?</a>
+                                    <a href="" onClick={()=> {navigate('/forgotpassword')}}>Forgot Password?</a>
                                 </div>
                             </div>
                             <div className="btn-wrap">
-                                <button type="button" className="btn-primary" onClick={() => {
-                                handleLogin();
-                                }}>Login</button>
+                                <button type="button" className="btn-primary" onClick={() => { handleLogin() }}>Login</button>
                             </div>
                         </form>
                     </div>
