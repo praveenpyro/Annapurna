@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, forwardRef} from 'react';
 import './DashboardMain.css';
 import Barchart from '../../Charts/Barchart';
 import { Menu } from '../SideNavMenu/SideNavMenuConfig';
@@ -6,7 +6,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import Loader from '../Loader/Loader';
 import { callApi } from '../../api/callApi';
 import { login } from '../../reducers/user'
-
+import {useNavigate} from 'react-router-dom';
+import { REACT_APP_BASE_URL } from '../../api/apiUrl';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import {CustomInput} from '../../utils/CustomInput';
 const DashboardMain = (props) => {
     const user = useSelector((state) => state.user.value);
     const dispatch = useDispatch();
@@ -14,8 +18,10 @@ const DashboardMain = (props) => {
     const updateRoles = roles?.map(role => Menu.find(m => m.id === role)) || [];
     const MENU_LIST = [...updateRoles];
     const [showLoader, setShowLoader] = useState(false);
-    const loginDetailsUrl = 'https://jspl.jayamsolutions.com:9097/AFPL_React/API/LoginDetails';
-
+    const [selectedDateFrom, setSelectedFrom] = useState();
+    const [selectedDateTo, setSelectedTo] = useState();
+    const loginDetailsUrl = `${REACT_APP_BASE_URL}/LoginDetails`;
+    const navigate = useNavigate();
     const handleReload = async() => {
         setShowLoader(true);
         const userName = localStorage.getItem('userName');
@@ -42,9 +48,9 @@ const DashboardMain = (props) => {
                 <div className="card-row">
                     { 
                         MENU_LIST.map((item) => (
-                            <div className="card-col">
+                            <div className="card-col" onClick={() => { navigate(item.navigation);}}>
                                 <div className="card-inner">
-                                    <a href="new-application/search-client.html">
+                                    <a>
                                         <figure>
                                             <img src={item.dashimage} alt="Icon" />
                                         </figure>
@@ -118,10 +124,10 @@ const DashboardMain = (props) => {
                     <div className="date-picker-wrap">
                         <div className="date-picker-inner-wrap">
                             <div className="form-group">
-                                <input type="text" placeholder="From Date" className="form-control date-picker"></input>
+                                <DatePicker selected={selectedDateFrom} onChange={(date) => {setSelectedFrom(date)}} showYearDropdown  customInput={<CustomInput />}/>
                             </div>
                             <div className="form-group">
-                                <input type="text" placeholder="To Date" className="form-control date-picker"></input>
+                                <DatePicker selected={selectedDateTo} onChange={(date) => {setSelectedTo(date)}} customInput={<CustomInput />}/>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,34 @@
+@media only screen and (max-width: 576px) {
+    .luc-content {
+      padding-top: 74px;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      padding-bottom: 80px;
+  }
+  }
+  
+  /* Styles for medium-sized screens and above */
+  @media only screen and (min-width: 576px) {
+    .luc-content {
+      padding-top: 85px;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+  }
+  }
+  
+  .header-breadcrumb {
+  padding-left: 0%;
+  }
+  
+  
+  .search-wrap {
+    background-color: #E5E5E5;
+    min-height: 100vh;
+  }
+  .header-breadcrumb {
+    padding-left: 0%;
+  }

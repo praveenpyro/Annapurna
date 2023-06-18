@@ -15,6 +15,10 @@ import ClientDetails from './Components/ClientDetails/ClientDetails';
 import ViewHouseholdDetails from './Components/ViewHouseholdDetails/ViewHouseholdDetails';
 import MobileVerification from './Components/MobileVerifiaction/MobileVerification';
 import OkycData from './Components/OkycData/OkycData';
+import LUC_Check from './Components/LUC/LUC_Check/LUC_Check';
+import LUC from './Components/LUC/LUC';
+import ClientList from './Components/ClientList/ClientList';
+import LUC_ClientDetails from './Components/LUC/LUC_ClientDetails/LUC_ClientDetails';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './html/assets/css/nice-select.css';
 import './html/assets/css/global.css';
@@ -45,6 +49,12 @@ function App() {
                 <Route exact path='mobileverifiaction' element = {<MobileVerification/>}/>
                 <Route exact path='okycdata' element = {<OkycData/>}/>
               </Route>
+              <Route exact path='luc' element = {<LUC/>}>
+                <Route exact path='luc_check' element = {<LUC_Check/>}/>
+                <Route exact path='clientlist' element = {<ClientList/>}/>
+                <Route exact path='lucclientdetails' element = {<LUC_ClientDetails/>}/>
+              </Route>
+              
             </Route>
           </Route>
           <Route exact path='/' element={ <Login/>}/>

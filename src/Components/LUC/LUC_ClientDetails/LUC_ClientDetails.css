@@ -1,0 +1,87 @@
+.lucclientdetails-wrap {
+    background-color: #E5E5E5;
+    min-height: 100vh;
+}
+.client-list-page .borrower-cover {
+    background: #F6F6F7;
+    border-radius: 10px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.client-list-page .borrower-cover .id-cover {
+    background: rgba(80, 93, 124, 0.16);
+    border-radius: 10px;
+    padding: 10px 24px;
+    margin-left: 20px;
+}
+.client-list-page .search-cover {
+    background: #F6F6F7;
+    border-radius: 10px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.client-detail-page .tranche-cover{
+    height: 140px;
+    margin-bottom:25px;
+    border: 1px solid #CDD3DC;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.client-detail-page .tranche-cover input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+.client-detail-page .tranche-cover .uploaded-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 992px) {
+    .client-list-page .borrower-cover {
+        padding: 8px 15px;
+    }
+
+    .client-list-page .search-cover {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+
+    .client-list-page .search-cover img {
+        width: 28px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .client-list-page .borrower-cover {
+        padding: 8px 10px;
+    }
+    .client-list-page .borrower-cover .id-cover {
+        padding: 8px 15px;
+    }
+
+    .client-list-page .search-cover {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+
+    .client-list-page .search-cover img {
+        width: 24px;
+    }
+}

@@ -15,7 +15,8 @@ export const Menu = [{
     name:'LUC Check',
     image : require('../../html/assets/images/luc-check-ic.svg').default,
     dashimage : require('../../html/assets/images/luc-check.svg').default,
-    showOnDashboard: true
+    showOnDashboard: true,
+    navigation : '/dashboard/luc/luc_check'
 },{
     id:'VA',
     name:'Village Addition',

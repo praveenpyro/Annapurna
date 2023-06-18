@@ -1,0 +1,1 @@
+export const REACT_APP_BASE_URL = "https://jspl.jayamsolutions.com:8084/AFPL_React/API";

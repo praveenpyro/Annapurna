@@ -18,6 +18,7 @@ import $ from 'jquery';
 import Modal  from '../Modal/Modal';
 import Loader from '../Loader/Loader';
 import { callApi } from '../../api/callApi';
+import { REACT_APP_BASE_URL } from '../../api/apiUrl';
 const Login = () => {
     const [userName, setUserName] = useState('Admin');
     const [password, setPassword] = useState('Jayam@123');
@@ -30,8 +31,8 @@ const Login = () => {
     const dispatch = useDispatch();
     const username_auth = 'Jayam';
     const password_auth = 'Jayam@123';
-    const url = 'https://jspl.jayamsolutions.com:9097/AFPL_React/API/Login';
-    const loginDetailsUrl = 'https://jspl.jayamsolutions.com:9097/AFPL_React/API/LoginDetails';
+    const url = `${REACT_APP_BASE_URL}/Login`;
+    const loginDetailsUrl = `${REACT_APP_BASE_URL}/LoginDetails`;
     const handleUserName = (event) => {
         setUserName(event.target.value);
     }
