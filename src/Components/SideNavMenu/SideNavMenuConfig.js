@@ -28,7 +28,8 @@ export const Menu = [{
     name:'CB Rejection Data',
     image : require('../../html/assets/images/cb-approval-ic.svg').default,
     dashimage : require('../../html/assets/images/cb-deviation-data.svg').default,
-    showOnDashboard: true
+    showOnDashboard: true,
+    navigation : '/dashboard/cbdeviation'
 },{
     id:'FAC',
     name:'Fees and Charges',

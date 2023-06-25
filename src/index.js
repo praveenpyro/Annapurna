@@ -7,10 +7,12 @@ import {configureStore} from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import userReducer from './reducers/user';
 import lucReducer from './reducers/luc';
+import cbDeviationReducer from './reducers/cbdeviation';
 const store = configureStore({
   reducer: {
     user : userReducer,
-    luc: lucReducer
+    luc: lucReducer,
+    cbDeviation : cbDeviationReducer
   }
 });
 

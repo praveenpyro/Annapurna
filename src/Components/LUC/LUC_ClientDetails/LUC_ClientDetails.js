@@ -8,8 +8,8 @@ import {CustomInput} from '../../../utils/CustomInput';
 const LUC_ClientDetails = () => {
   const navigate = useNavigate();
   const {selectedCenter, selectedGroup, selectedMember , value} = useSelector((state) => state.luc);
+  const user = useSelector((state) => state.user.value);
   const selectedMemberObj = value.find(center => center.centerId === selectedCenter)?.groups.find(group => group.groupId === selectedGroup).members.find(member => member.sNo === selectedMember);
-  console.log({'selectedMemberObj': selectedMemberObj});
   const [selectedDateVisit1, setSelectedVisit1] = useState();
   const [selectedDateVisit2, setSelectedVisit2] = useState();
   return (
@@ -147,7 +147,8 @@ const LUC_ClientDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
+                    {user.userrole === 'FCO' ?
+                        (<div className="row">
                         <div className="col-6">
                             <button className="btn w-100" onClick={(e) => {e.stopPropagation()}} type="button">Refresh</button>
                         </div>
@@ -156,7 +157,17 @@ const LUC_ClientDetails = () => {
                                >Submit</button>
 
                         </div>
-                    </div>
+                    </div>) : (<div className="row">
+                        <div className="col-6">
+                            <button className="btn w-100" onClick={(e) => {e.stopPropagation()}} type="button">Reject</button>
+                        </div>
+                        <div className="col-6">
+                            <button className="btn btn-primary w-100" type="button" data-toggle="modal"
+                               >Approve</button>
+
+                        </div>
+                    </div>)
+                    }
                 </form>
             </div>
         </div>

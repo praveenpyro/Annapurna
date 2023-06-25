@@ -19,6 +19,7 @@ import LUC_Check from './Components/LUC/LUC_Check/LUC_Check';
 import LUC from './Components/LUC/LUC';
 import ClientList from './Components/ClientList/ClientList';
 import LUC_ClientDetails from './Components/LUC/LUC_ClientDetails/LUC_ClientDetails';
+import CBDeviationData from './Components/CBDeviation/CBDeviationData';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './html/assets/css/nice-select.css';
 import './html/assets/css/global.css';
@@ -49,6 +50,7 @@ function App() {
                 <Route exact path='mobileverifiaction' element = {<MobileVerification/>}/>
                 <Route exact path='okycdata' element = {<OkycData/>}/>
               </Route>
+              <Route exact path='cbdeviation' element = {<CBDeviationData/>}/>
               <Route exact path='luc' element = {<LUC/>}>
                 <Route exact path='luc_check' element = {<LUC_Check/>}/>
                 <Route exact path='clientlist' element = {<ClientList/>}/>
