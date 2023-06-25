@@ -7,8 +7,9 @@ import 'react-datepicker/dist/react-datepicker.css';
 import {CustomInput} from '../../../utils/CustomInput';
 const LUC_ClientDetails = () => {
   const navigate = useNavigate();
-  const {selectedCenter, value} = useSelector((state) => state.luc);
-  const selectedCenterDetails = value.find(center => center.CenterId === selectedCenter);
+  const {selectedCenter, selectedGroup, selectedMember , value} = useSelector((state) => state.luc);
+  const selectedMemberObj = value.find(center => center.centerId === selectedCenter)?.groups.find(group => group.groupId === selectedGroup).members.find(member => member.sNo === selectedMember);
+  console.log({'selectedMemberObj': selectedMemberObj});
   const [selectedDateVisit1, setSelectedVisit1] = useState();
   const [selectedDateVisit2, setSelectedVisit2] = useState();
   return (
@@ -35,19 +36,19 @@ const LUC_ClientDetails = () => {
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Village</label>
-                            <p>{selectedCenterDetails.VillageName}</p>
+                            <p>{selectedMemberObj.villageName}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Center</label>
-                            <p>{selectedCenterDetails.CenterName}</p>
+                            <p>{selectedMemberObj.centerName}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Group Name</label>
-                            <p>{selectedCenterDetails.GroupName}</p>
+                            <p>{selectedMemberObj.groupName}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Member Name</label>
-                            <p>{selectedCenterDetails.MemberName}</p>
+                            <p>{selectedMemberObj.memberName}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Member Id</label>
@@ -55,15 +56,15 @@ const LUC_ClientDetails = () => {
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Loan No.</label>
-                            <p>{selectedCenterDetails.LoanId}</p>
+                            <p>{selectedMemberObj.loanId}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Loan Amount</label>
-                            <p>{selectedCenterDetails.LoanAmount}</p>
+                            <p>{selectedMemberObj.loanAmount}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Date of Disbursement</label>
-                            <p>{selectedCenterDetails.DisbursementDate}</p>
+                            <p>{selectedMemberObj.disbursementDate}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>LUC Status</label>
@@ -71,7 +72,7 @@ const LUC_ClientDetails = () => {
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Purpose</label>
-                            <p>{selectedCenterDetails.PurposeName}</p>
+                            <p>{selectedMemberObj.purposeName}</p>
                         </div>
                     </div>
                 </div>
@@ -148,11 +149,11 @@ const LUC_ClientDetails = () => {
                     </div>
                     <div className="row">
                         <div className="col-6">
-                            <button className="btn w-100">Refresh</button>
+                            <button className="btn w-100" onClick={(e) => {e.stopPropagation()}} type="button">Refresh</button>
                         </div>
                         <div className="col-6">
                             <button className="btn btn-primary w-100" type="button" data-toggle="modal"
-                                data-target="#lucDataSubmitDialog">Submit</button>
+                               >Submit</button>
 
                         </div>
                     </div>

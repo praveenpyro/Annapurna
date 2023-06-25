@@ -3,14 +3,16 @@ import './LUC_Check.css';
 import {useNavigate} from 'react-router-dom';
 import { callApi } from '../../../api/callApi';
 import Loader from '../../Loader/Loader';
-import {saveLUCDetails, setSelectedCenter} from '../../../reducers/luc';
+import {saveLUCDetails, setSelectedCenter, setSelectedGroup} from '../../../reducers/luc';
 import { useSelector, useDispatch } from 'react-redux';
 import { REACT_APP_BASE_URL } from '../../../api/apiUrl';
-
+import * as utils from './LUC_Check';
 function LUC_Check() {
     const navigate = useNavigate();
     const [showLoader, setShowLoader] = useState(false);
+    const [groups, setGroups] = useState([]);
     const [selectedCenter, setSlectedCenter] = useState('');
+    const [selectedGroup, setSlectedGroup] = useState('');
     const dispatch = useDispatch();
     const lucDetails = useSelector((state) => state.luc.value);
     const lucDetailsUrl = `${REACT_APP_BASE_URL}/LUCDetails`;
@@ -20,8 +22,9 @@ function LUC_Check() {
         const password = localStorage.getItem('password');
         const request = { "UserId": userName, "Password": password };
         const { LUCDetails } = await callApi({url:lucDetailsUrl, method: 'POST', data: request});
+        const LucData = await utils.parseLucObject(LUCDetails)
+        dispatch(saveLUCDetails(LucData));
         setShowLoader(false);
-        dispatch(saveLUCDetails(LUCDetails));
     }
     useEffect(() => {
         fetchLUCDetails();
@@ -47,23 +50,32 @@ function LUC_Check() {
                         <div className="search-form">
                             <h3>LUC Check</h3>
                             <form>
-                                <label className="form-label">Choose Search Type</label>
+                                <label className="form-label">Select Center</label>
                                 <div className="form-group">
-                                    <select  className="selectName form-control" onChange={(e) => setSlectedCenter(e.target.value)}>
-                                        <option>Select</option>
-                                        {
-                                           ((lucDetails && Object.keys(lucDetails).length > 0 )) &&  lucDetails.map((center) => (
-                                                <option key = {center.CenterId} value={center.CenterId}>{center.CenterName}</option>
-                                            ))
-                                        }
+                                    <select  className="selectName form-control" 
+                                        onChange={(e) => utils.handleCenterSelection({centerId: e.target.value, lucDetails: lucDetails}, {setSlectedCenter, setGroups})}>
+                                        <option value=''>Select</option>
+                                            {
+                                            ((lucDetails && Object.keys(lucDetails).length > 0 )) &&  lucDetails.map((center) => (
+                                                    <option key = {center.centerId} value={center.centerId}>{center.centerName}</option>
+                                                ))
+                                            }
                                     </select>
                                 </div>
-                                <label className="form-label">Enter Detail</label>
+
+                                <label className="form-label">Select Group</label>
                                 <div className="form-group">
-                                    <input type="text" placeholder="Enter Details" className="form-control" />
+                                    <select disabled={!selectedCenter} className="selectName form-control"  onChange={(e) => utils.handleGroupSelection({groupId: e.target.value}, {setSlectedGroup})}>
+                                        <option value=''>Select</option>
+                                            {
+                                            ((groups && Object.keys(groups).length > 0 )) &&  groups.map((group) => (
+                                                    <option key = {group.groupId} value={group.groupId}>{group.groupName}</option>
+                                                ))
+                                            }
+                                    </select>
                                 </div>
                                 <div className="btn-wrap">
-                                    <button type="button" className="btn-primary" onClick={() => {  dispatch(setSelectedCenter(selectedCenter)); navigate(`/dashboard/luc/clientlist`) }}>Search</button>
+                                    <button disabled={!selectedCenter || !selectedGroup}type="button" className="btn-primary" onClick={() => { utils.handleNextButtonClick({selectedCenter, selectedGroup},{dispatch,setSelectedCenter,setSelectedGroup, navigate })   }}>Search</button>
                                 </div>
                             </form>
                         </div>
@@ -73,6 +85,78 @@ function LUC_Check() {
             {showLoader && <Loader/>}
         </div>
   )
+}
+
+export const handleCenterSelection = (data, methods) => {
+    const { centerId, lucDetails } = data;
+    const { setSlectedCenter, setGroups } = methods;
+    setSlectedCenter(centerId);
+    const groups = lucDetails.find(c => c.centerId === centerId)?.groups || [];
+    setGroups(groups);
+}
+
+export const handleGroupSelection = (data, methods) => {
+    const {groupId } = data;
+    const { setSlectedGroup } = methods;
+    setSlectedGroup(groupId);
+}
+
+export const handleNextButtonClick = (data, methods) => {
+    const {selectedCenter, selectedGroup} = data;
+    const {dispatch,setSelectedCenter, navigate, setSelectedGroup } = methods;
+    dispatch(setSelectedCenter(selectedCenter));
+    dispatch(setSelectedGroup(selectedGroup));
+    navigate(`/dashboard/luc/clientlist`);
+}
+
+export const parseLucObject = async(data) => {
+    const uniqueCenters = [...new Set(data.map(obj => obj.CenterId))];
+    const parsedData = uniqueCenters.reduce((acc, centerId) => {
+    const centerData = data.find(obj => obj.CenterId === centerId);
+    const centerName = centerData.CenterName;
+    const centerGroups = data.filter(obj => obj.CenterId === centerId);
+    const uniqueGroups = [...new Set(centerGroups.map(obj => obj.GroupId))];
+    const parsedGroups = uniqueGroups.map(groupId => {
+      const groupData = centerGroups.find(obj => obj.GroupId === groupId);
+      const groupName = groupData.GroupName;
+      const members = centerGroups
+        .filter(obj => obj.GroupId === groupId)
+        .map(obj => ({
+          sNo: obj.Sno,
+          villageId: obj.VillageId,
+          villageName: obj.VillageName,
+          centerId: obj.CenterId,
+          centerName: obj.CenterName,
+          groupName: obj.GroupName,
+          groupId: obj.GroupId,
+          memberName: obj.MemberName,
+          spouseName: obj.Spouse_Name,
+          loanId: obj.LoanId,
+          loanAmount: obj.LoanAmount,
+          purposeName: obj.PurposeName,
+          lucDate: obj.LUCDate,
+          disbursementDate: obj.DisbursementDate,
+          secondId: obj.Second_Id,
+          purposeId: obj.PurposeId
+        }));
+      
+      return {
+        groupId,
+        groupName,
+        members
+      };
+    });
+  
+    acc.push({
+      centerId,
+      centerName,
+      groups: parsedGroups
+    });
+  
+    return acc;
+  }, []);
+
+  return parsedData;
 }
 
 export default LUC_Check

@@ -2,11 +2,12 @@ import React from 'react'
 import './ClientList.css';
 import { useNavigate, useParams, useLocation  } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import {setSelectedMember} from '../../reducers/luc';
 
 const ClientList = () => {
     const navigate = useNavigate();
-    const {selectedCenter, value} = useSelector((state) => state.luc);
-    const selectedCenterDetails = value.find(center => center.CenterId === selectedCenter);
+    const {selectedCenter, selectedGroup,value} = useSelector((state) => state.luc);
+    const selectedCenterDetails = value.find(center => center.centerId === selectedCenter)?.groups.find(group => group.groupId).members;
     console.log({'selectedCenter': selectedCenterDetails})
     return (
         <div className='clientlist-wrap'>
@@ -24,7 +25,7 @@ const ClientList = () => {
                             <div className="borrower-cover">
                                 <h3 className="color-gray">Center</h3>
                                 <div className="id-cover">
-                                    <h3 className="bold">{selectedCenterDetails.CenterId}</h3>
+                                    <h3 className="bold">{selectedCenter}</h3>
                                 </div>
                             </div>
                         </div>
@@ -35,31 +36,44 @@ const ClientList = () => {
                             </div>
                         </div>
                     </div>
-                    <h3 className="bold mt-20 mb-20">Total Searched (23)</h3>
-                    <div className="white-card pointer" onClick={()=> {navigate('/dashboard/luc/lucclientdetails')}}>
-                        <div className="row detail-wrapper">
-                            <div className="col-4 col-md-6 col-sm-12">
-                                <label>Applicant Name</label>
-                                <p>{selectedCenterDetails.MemberName}</p>
-                            </div>
-                            <div className="col-4 col-md-6 col-sm-12">
-                                <label>Spouse</label>
-                                <p>{selectedCenterDetails.Spouse_Name}</p>
-                            </div>
-                            <div className="col-4 col-md-6 col-sm-12">
-                                <label>Voter Id</label>
-                                <p>{selectedCenterDetails.Second_Id}</p>
-                            </div>
-                            <div className="col-4 col-md-6 col-sm-12">
-                                <label>Center Name</label>
-                                <p>{selectedCenterDetails.CenterName}</p>
-                            </div>
-                            <div className="col-4 col-md-6 col-sm-12">
-                                <label>Group Name</label>
-                                <p>{selectedCenterDetails.GroupName}</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 className="bold mt-20 mb-20">Total Searched ({selectedCenterDetails.length})</h3>
+                    {
+                        selectedCenterDetails.map((item) => (
+                            <ClientListCard selectedCenterDetails={item}  />
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export const ClientListCard = (props) => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const selectedCenterDetails = props.selectedCenterDetails;
+    return(
+        <div className="white-card pointer" onClick={()=> {dispatch(setSelectedMember(selectedCenterDetails.sNo));navigate('/dashboard/luc/lucclientdetails')}}>
+            <div className="row detail-wrapper">
+                <div className="col-4 col-md-6 col-sm-12">
+                    <label>Applicant Name</label>
+                    <p>{selectedCenterDetails.memberName}</p>
+                </div>
+                <div className="col-4 col-md-6 col-sm-12">
+                    <label>Spouse</label>
+                    <p>{selectedCenterDetails.spouseName}</p>
+                </div>
+                <div className="col-4 col-md-6 col-sm-12">
+                    <label>Voter Id</label>
+                    <p>{selectedCenterDetails.secondId}</p>
+                </div>
+                <div className="col-4 col-md-6 col-sm-12">
+                    <label>Center Name</label>
+                    <p>{selectedCenterDetails.centerName}</p>
+                </div>
+                <div className="col-4 col-md-6 col-sm-12">
+                    <label>Group Name</label>
+                    <p>{selectedCenterDetails.groupName}</p>
                 </div>
             </div>
         </div>
