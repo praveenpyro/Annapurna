@@ -56,3 +56,12 @@
 .cb-deviation-page .detail-wrapper label{
     text-transform: capitalize;
 }
+
+.custom-modal-request {
+  display: flex;
+  align-items: center;
+}
+
+.custom-modal-request-content {
+  margin: auto;
+}

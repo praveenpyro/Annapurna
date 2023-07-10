@@ -1,0 +1,8 @@
+.custom-modal-generic {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-modal-generic-content {
+    margin: auto;
+  }

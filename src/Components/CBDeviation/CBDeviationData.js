@@ -7,16 +7,25 @@ import { useSelector, useDispatch } from 'react-redux';
 import Loader from '../Loader/Loader';
 import * as utils from './CBDeviationData';
 import { callApi } from '../../api/callApi';
+import GenericModal  from '../GenericModal/GenericModal';
 
 const CBDeviationData = () => {
     const navigate = useNavigate();
     const [showLoader, setShowLoader] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [modalConfig, setModalConfig] = useState();
     const cbDeviationData = useSelector((state) => state.cbDeviation.value);
-
+    const user = useSelector((state) => state.user.value);
     const dispatch = useDispatch();
     useEffect(() => {
         utils.fetchCDData({}, {setShowLoader, dispatch});
     },[]);
+
+    const handleModal = (config) => {
+      setShowModal(true);
+      setModalConfig(config);
+    }
+    
   return (
     <div className='cb-content cb-wrap'>
         <div className="breadcrumb-cover">
@@ -57,7 +66,7 @@ const CBDeviationData = () => {
                 <>
                     <h1 className="bold mb-20 mt-30 mb-xs-0 mt-xs-15">All Cb Data</h1>
                     {cbDeviationData.map( item => (
-                        <WhiteListCard cbDeviationData={item} />
+                        <WhiteListCard cbDeviationData={item} user = {user} handleModal={handleModal} setShowModal={setShowModal}/>
                     ))}
                 </>
                 
@@ -67,6 +76,13 @@ const CBDeviationData = () => {
       </div>
     </div>
     {showLoader && <Loader/>}
+    { (showModal && modalConfig) && <GenericModal  
+        message={modalConfig?.message}
+        buttons={modalConfig?.buttons}
+        imageUrl={modalConfig?.imageUrl}
+        textArea = {modalConfig?.textArea}
+        />
+        }
     </div>
   )
 }
@@ -86,7 +102,60 @@ export const fetchCDData = async(data, methods) => {
 
 export const WhiteListCard = (props) => {
     const cbDeviationData = props.cbDeviationData;
-    console.log({'cbDeviationData': cbDeviationData})
+    const setShowModal = props.setShowModal;
+    const user = props.user;
+    const handleButton1Click = () => {
+      setShowModal(false);
+    }
+    const handleButton2Click = () => {
+      setShowModal(false);
+    }
+    
+    const approveModalConfigBM = {
+      message:"CB data approved successfully!",
+      buttons:[
+        { label: 'Submit', handler: handleButton1Click, primary: true },
+        { label: 'Cancel', handler: handleButton2Click, primary: false },
+      ],
+      imageUrl:require('../../html/assets/images/successfully-checked.svg').default
+    }
+
+    const raiseRequestModalConfig = {
+      message:"Please Enter Reason of Raising Request",
+      buttons:[
+        { label: 'Submit', handler: handleButton1Click, primary: true },
+        { label: 'Cancel', handler: handleButton2Click, primary: false },
+      ],
+      textArea: true
+    }
+
+    const handleRejectBM = (data) => {
+      const { name } = data
+
+      const handleRejectButtonBM = () => {
+        setShowModal(false);
+        handleModal({
+          message:`${name} Rejected Successfully`,
+          buttons:[
+            { label: 'Okay', handler: handleButton1Click, primary: true },
+          ],
+          imageUrl:require('../../html/assets/images/successfully-checked.svg').default
+        })
+      }
+
+      handleModal( {
+        message:`Are you sure you want to ${name}?`,
+        buttons:[
+          { label: 'Submit', handler: handleRejectButtonBM, primary: true },
+          { label: 'Cancel', handler: handleButton2Click, primary: false },
+        ],
+        imageUrl:require('../../html/assets/images/restricted.svg').default
+      });
+
+    }
+
+
+    const handleModal = props.handleModal;
     return(
         <div className="white-card">
           <div className="row detail-wrapper">
@@ -125,15 +194,33 @@ export const WhiteListCard = (props) => {
                 View CB Report
               </a>
             </div>
-            <div className="col-4 col-md-6 col-sm-12">
-              <button type="button" className="btn btn-primary w-100 mt-xs-15" disabled>
-                Approve
-              </button>
-            </div>
-            <div className="col-4 col-md-6 col-sm-12">
-              <button type="button" className="btn w-100 mt-xs-15" data-toggle="modal"
-                data-target="#rejectDialog">Reject</button>
-            </div>
+
+            {
+              (user.userrole === 'BM') ? 
+              <>
+                <div className="col-4 col-md-6 col-sm-12"  onClick={() => {handleModal(raiseRequestModalConfig)}} >
+                  <button type="button" className="btn btn-primary w-100 mt-xs-15">
+                    Raise Request
+                  </button>
+                </div>
+                <div className="col-4 col-md-6 col-sm-12">
+                  <button type="button" className="btn w-100 mt-xs-15" data-toggle="modal"
+                    >Reject</button>
+                </div>
+              </> : 
+              <>
+                <div className="col-4 col-md-6 col-sm-12" onClick={() => {handleModal(approveModalConfigBM)}}>
+                  <button type="button" className="btn btn-primary w-100 mt-xs-15">
+                    Approve
+                  </button>
+                </div>
+                <div className="col-4 col-md-6 col-sm-12" onClick={() => {handleRejectBM({name : cbDeviationData.Member_Name})}}>
+                  <button type="button" className="btn w-100 mt-xs-15" data-toggle="modal"
+                    >Reject</button>
+                </div>
+              </>
+            }
+            
           </div>
         </div>
     )
