@@ -81,6 +81,8 @@ const CBDeviationData = () => {
         buttons={modalConfig?.buttons}
         imageUrl={modalConfig?.imageUrl}
         textArea = {modalConfig?.textArea}
+        dropdown = { modalConfig?.dropdown}
+        handler = { modalConfig?.handler }
         />
         }
     </div>
@@ -110,6 +112,10 @@ export const WhiteListCard = (props) => {
     const handleButton2Click = () => {
       setShowModal(false);
     }
+
+    const viewCbReportDropdown = (value) => {
+      // setShowModal(false);
+    }
     
     const approveModalConfigBM = {
       message:"CB data approved successfully!",
@@ -127,6 +133,22 @@ export const WhiteListCard = (props) => {
         { label: 'Cancel', handler: handleButton2Click, primary: false },
       ],
       textArea: true
+    }
+
+    const viewCbReportModalConfig = {
+      message:"Please Select User To View CB Report.",
+      imageUrl:require('../../html/assets/images//view-cb-report.svg').default,
+      dropdown: [
+        { label: 'Volvo', value: 'Volvo' },
+        { label: 'lorem', value: 'lorem' },
+        { label: 'lorem1', value: 'lorem1'},
+        { label: 'lorem2', value: 'lorem2'}
+      ],
+      buttons:[
+        { label: 'Submit', handler: () => {setShowModal(false); }, primary: true },
+        { label: 'Cancel', handler: () => {setShowModal(false); }, primary: false },
+      ],
+      handler : viewCbReportDropdown
     }
 
     const handleRejectBM = (data) => {
@@ -188,8 +210,8 @@ export const WhiteListCard = (props) => {
               <p>FCO name</p>
             </div>
             <div className="col-4 col-md-6 col-sm-12">
-              <a href="" className="link-with-icon mt-15 mt-sm-10 mt-xs-0" data-toggle="modal"
-                data-target="#viewCBReportDialog">
+              <a className="link-with-icon mt-15 mt-sm-10 mt-xs-0" data-toggle="modal"
+                onClick={() => {handleModal(viewCbReportModalConfig)}}>
                 <img src={require('../../html/assets/images/view-circular-icon.svg').default}  alt="" />
                 View CB Report
               </a>

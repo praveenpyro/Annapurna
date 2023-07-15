@@ -36,19 +36,19 @@ const LUC_ClientDetails = () => {
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Village</label>
-                            <p>{selectedMemberObj.villageName}</p>
+                            <p>{selectedMemberObj?.villageName}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Center</label>
-                            <p>{selectedMemberObj.centerName}</p>
+                            <p>{selectedMemberObj?.centerName}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Group Name</label>
-                            <p>{selectedMemberObj.groupName}</p>
+                            <p>{selectedMemberObj?.groupName}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Member Name</label>
-                            <p>{selectedMemberObj.memberName}</p>
+                            <p>{selectedMemberObj?.memberName}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Member Id</label>
@@ -56,11 +56,11 @@ const LUC_ClientDetails = () => {
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Loan No.</label>
-                            <p>{selectedMemberObj.loanId}</p>
+                            <p>{selectedMemberObj?.loanId}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Loan Amount</label>
-                            <p>{selectedMemberObj.loanAmount}</p>
+                            <p>{selectedMemberObj?.loanAmount}</p>
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Date of Disbursement</label>
@@ -72,7 +72,7 @@ const LUC_ClientDetails = () => {
                         </div>
                         <div className="col-4 col-md-6 col-sm-12">
                             <label>Purpose</label>
-                            <p>{selectedMemberObj.purposeName}</p>
+                            <p>{selectedMemberObj?.purposeName}</p>
                         </div>
                     </div>
                 </div>

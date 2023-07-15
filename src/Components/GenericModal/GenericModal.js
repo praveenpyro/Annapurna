@@ -2,7 +2,7 @@ import React from 'react';
 import './GenericModal.css';
 
 const GenericModal = (props) => {
-    const { message, buttons, imageUrl, textArea } = props;
+    const { message, buttons, imageUrl, textArea, dropdown, handler } = props;
     const handleButtonClick = (handler) => {
         handler();
     };
@@ -19,12 +19,24 @@ const GenericModal = (props) => {
             <textarea type="text" rows="3" placeholder="Add Remarks" className="form-control"></textarea>
           </div>
         }
+
+        {dropdown && 
+          <div class="form-group">
+            <select name="selectName" id="selectId" class="form-control" aria-placeholder="Select" onChange={(e) => { handler && handler(e.target.value)}}>
+              {
+                dropdown.map((value, index) =>(
+                  <option  key={index} value={value.value}>{value.label}</option>
+                ))
+              }
+            </select>
+          </div>
+        }
         
         {buttons?.map((button, index) => (
             <button
               key={index}
               onClick={() => handleButtonClick(button.handler)}
-              className={button.primary ? 'btn btn-primary w-280 mt-20' : 'btn w-280 mt-20'}
+              className={button.primary ? 'btn btn-primary w-100 mt-30' : 'btn w-100 mt-20'}
             >
               {button.label}
             </button>
