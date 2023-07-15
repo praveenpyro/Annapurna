@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from '../../reducers/user'
+import { saveMasterDetails } from '../../reducers/master'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import '../../html/assets/css/onbording.css'
@@ -33,6 +34,7 @@ const Login = () => {
     const password_auth = 'Jayam@123';
     const url = `${REACT_APP_BASE_URL}/Login`;
     const loginDetailsUrl = `${REACT_APP_BASE_URL}/LoginDetails`;
+    const masterDetailsUrl = `${REACT_APP_BASE_URL}/MasterDetails`;
     const handleUserName = (event) => {
         setUserName(event.target.value);
     }
@@ -65,12 +67,19 @@ const Login = () => {
         return response;
     }
 
+    const  fetchMasterDetails = async() => {
+        const request = { "UserId": userName, "Password": password };
+        const response = await callApi({url:masterDetailsUrl, method: 'POST', data: request});
+        return response;
+    }
+
     const handleLogin = async() => {
         if( !!userName  && !!password ) {
             
               setShowLoader(true);
               const { status, data }  = await fetchLoginStatus() ;
               const { LoginDetails } = await fetchLoginDetails();
+              const masterDetails = await fetchMasterDetails();
               setShowLoader(false);
               if(status) {
                 setErrorMessage('');
@@ -79,6 +88,7 @@ const Login = () => {
                 localStorage.setItem("userName", userName);
                 localStorage.setItem("password", password);
                 dispatch(login(LoginDetails));
+                dispatch(saveMasterDetails(masterDetails));
                 navigate('/dashboard');
                 
               } else {

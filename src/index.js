@@ -8,11 +8,13 @@ import { Provider } from 'react-redux';
 import userReducer from './reducers/user';
 import lucReducer from './reducers/luc';
 import cbDeviationReducer from './reducers/cbdeviation';
+import masterReducer from './reducers/master';
 const store = configureStore({
   reducer: {
     user : userReducer,
     luc: lucReducer,
-    cbDeviation : cbDeviationReducer
+    cbDeviation : cbDeviationReducer,
+    master : masterReducer
   }
 });
 

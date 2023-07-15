@@ -9,6 +9,7 @@ const LUC_ClientDetails = () => {
   const navigate = useNavigate();
   const {selectedCenter, selectedGroup, selectedMember , value} = useSelector((state) => state.luc);
   const user = useSelector((state) => state.user.value);
+  const masterDetails = useSelector((state) => state.master.value);
   const selectedMemberObj = value.find(center => center.centerId === selectedCenter)?.groups.find(group => group.groupId === selectedGroup).members.find(member => member.sNo === selectedMember);
   const [selectedDateVisit1, setSelectedVisit1] = useState();
   const [selectedDateVisit2, setSelectedVisit2] = useState();
@@ -88,10 +89,15 @@ const LUC_ClientDetails = () => {
                             <label className="form-label">Select Purpose</label>
                             <div className="form-group">
                                 <select name="cars" id="cars" className="form-control" aria-placeholder="Select">
-                                    <option value="Select">Select</option>
+                                    {/* <option value="Select">Select</option>
                                     <option value="37">37</option>
                                     <option value="38">38</option>
-                                    <option value="39">39</option>
+                                    <option value="39">39</option> */}
+                                    {
+                                        masterDetails?.Purpose && masterDetails.Purpose?.map( (purpose)=> (
+                                            <option value={purpose.Id}>{purpose.Name}</option>
+                                        ))
+                                    }
                                 </select>
                             </div>
                         </div>
